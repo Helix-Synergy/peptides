@@ -20,10 +20,12 @@ import {
   Dna,
   User,
   Lightbulb,
+  ArrowRight,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
 import industrialTourBanner from "../../assets/images/PageBanners/6.jpg";
+import { Link } from "react-router-dom";
 
 const tracksData = [
   { id: 1, title: "Manufacturing", icon: Wrench },
@@ -96,7 +98,7 @@ const IndustrialTours = () => {
     <div className="bg-white text-[#0f2920] min-h-screen font-inter overflow-hidden relative">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
+        className="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${industrialTourBanner})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -167,9 +169,33 @@ const IndustrialTours = () => {
                 <Lightbulb className="h-8 w-8 text-peptides-color-brown mr-2" />
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
+              <p className="text-sm text-gray-600 text-justify">{item.description}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-full py-16 px-4 lg:px-12 bg-[#d7f2da] text-black text-center mt-12">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 gradient-text">
+            Ready to Start Your Industrial Tour?
+          </h2>
+          <p className="text-lg mb-8 text-primary-text text-center">
+            Contact us today to arrange a customized tour for your institution.
+          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
+            >
+              Get Started <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>

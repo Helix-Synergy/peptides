@@ -1,12 +1,11 @@
 import React from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ReddyCollegeLogo from '../assets/images/collaborations/RBVRRCollegeLogo.png'
 import AVCollegeLogo from '../assets/images/collaborations/AVCollageLogo.jpg'
 import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollegeLogo.jpg'
 import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.png'
 import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.jpg'
+import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.png'
 
 const colleges = [
   {
@@ -44,6 +43,13 @@ const colleges = [
     city: 'Secunderabad',
     description: 'Established in 1973, this college is dedicated to providing value-based education, with a strong record in both academics and sports.',
   },
+  {
+    imageSrc: vvLogo1,
+    name: 'Vivekananda Government Degree College (Autonomous)',
+    address: 'Vidyanagar',
+    city: 'Hyderabad',
+    description: 'Fostering holistic development through academic rigor and community-oriented initiatives since 1966.',
+  },
 ];
 
 const CollaborationSection = () => {
@@ -56,51 +62,36 @@ const CollaborationSection = () => {
         </h2>
       </div>
 
-      <div className="w-full max-w-6xl px-4">
-        <Splide
-          options={{
-            type: 'loop',
-            autoplay: true,
-            interval: 4000,
-            speed: 800,
-            pauseOnHover: true,
-            perPage: 4, // Default for large screens
-            perMove: 1,
-            gap: '1.5rem',
-            arrows: true,
-            pagination: false,
-            breakpoints: {
-              1024: { perPage: 3 }, // Show 3 cards on tablets
-              768: { perPage: 2 }, // Show 2 cards on larger phones and tablets
-              480: { perPage: 1 }, // Show 1 card on small phones
-            },
-          }}
-        >
-          {colleges.map((college, idx) => (
-            <SplideSlide key={idx}>
-              <div
-                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 max-h-[450px]"
-              >
-                {/* Image Container */}
-                <div className="w-auto h-32 mb-4 overflow-hidden flex items-center justify-center">
-                  <img src={college.imageSrc} alt={college.name} className="w-auto h-32 object-contain" />
-                </div>
-
-                {/* College Info */}
-                <h3 className="text-xl font-bold text-gray-800 mb-1">{college.name}</h3>
-                <p className="text-gray-600 text-sm">{college.address}</p>
-                <p className="text-gray-600 text-sm mb-4">{college.city}</p>
-                <hr className="w-1/3 mx-auto my-2 border-gray-300" />
-                <p className="text-gray-700 text-sm mt-2">{college.description}</p>
+      <div className="w-full overflow-hidden relative mt-8">
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 py-4 px-2">
+          {[...colleges, ...colleges].map((college, idx) => (
+            <div
+              key={idx}
+              className="w-[280px] bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 shrink-0 h-[450px]"
+            >
+              {/* Image Container */}
+              <div className="w-auto h-32 mb-4 overflow-hidden flex items-center justify-center shrink-0">
+                <img src={college.imageSrc} alt={college.name} className="max-w-full max-h-full object-contain" />
               </div>
-            </SplideSlide>
+
+              {/* College Info */}
+              <div className="flex flex-col flex-grow w-full">
+                <h3 className="text-lg font-bold text-gray-800 mb-1 leading-tight line-clamp-2">{college.name}</h3>
+                <div className="mt-auto flex flex-col items-center w-full">
+                  {college.address && <p className="text-gray-600 text-sm text-center mb-1">{college.address}</p>}
+                  {college.city && <p className="text-gray-600 text-sm mb-4 text-center">{college.city}</p>}
+                  <hr className="w-1/3 mx-auto my-2 border-gray-300" />
+                  <p className="text-gray-700 text-xs mt-2 text-center line-clamp-4">{college.description}</p>
+                </div>
+              </div>
+            </div>
           ))}
-        </Splide>
+        </div>
       </div>
 
-{/* Button to navigate */}
+      {/* Button to navigate */}
       <div className="mt-8 flex justify-center">
-        <Link 
+        <Link
           to="/collaborations/academic" // Use 'to' prop for Link component
           className="px-8 py-3 bg-[#A67A2F] text-white font-semibold rounded-lg shadow-lg hover:bg-amber-500 transition-colors duration-300"
         >

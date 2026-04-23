@@ -90,10 +90,10 @@ const TechTalks = () => {
           className="relative z-10 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Tech Talks</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4 text-justify">
             Stay updated with the latest technological advancements
           </p>
-          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4">
+          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 text-justify">
             Our tech talks feature industry leaders and innovators sharing insights on emerging trends
           </p>
         </motion.div>
@@ -113,8 +113,8 @@ const TechTalks = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Discover the Future of Technology in Life Sciences
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Join our Tech Talks series to explore cutting-edge technologies, innovative solutions, 
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed text-justify">
+              Join our Tech Talks series to explore cutting-edge technologies, innovative solutions,
               and breakthrough discoveries that are shaping the future of biotechnology, healthcare, and research.
             </p>
           </motion.div>
@@ -144,10 +144,10 @@ const TechTalks = () => {
                     </span>
                     <span className="text-sm text-gray-500">{talk.attendees}</span>
                   </div>
-                  
+
                   <h4 className="text-xl font-bold text-gray-900 mb-3">{talk.title}</h4>
-                  <p className="text-gray-600 mb-4">{talk.description}</p>
-                  
+                  <p className="text-gray-600 mb-4 text-justify">{talk.description}</p>
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Calendar className="w-4 h-4" />
@@ -166,7 +166,7 @@ const TechTalks = () => {
                       <span>{talk.format}</span>
                     </div>
                   </div>
-                  
+
                   <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Register for Talk
@@ -197,7 +197,7 @@ const TechTalks = () => {
                 >
                   <div className="text-4xl mb-3">{category.icon}</div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">{category.name}</h4>
-                  <p className="text-sm text-gray-600 mb-3">{category.description}</p>
+                  <p className="text-sm text-gray-600 mb-3 text-justify">{category.description}</p>
                   <span className="text-blue-600 font-semibold">{category.count} talks</span>
                 </motion.div>
               ))}
@@ -240,7 +240,7 @@ const TechTalks = () => {
           >
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Stay Ahead of the Technology Curve</h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90 text-center">
                 Subscribe to our Tech Talks series and never miss an opportunity to learn from industry leaders
               </p>
               <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors duration-200 flex items-center mx-auto">

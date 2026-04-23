@@ -63,7 +63,7 @@ const ComingSoon = ({ pageName = "Coming Soon" }) => {
           className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl font-light"
           variants={itemVariants}
         >
-          We're working hard to bring this page to life. Stay tuned, exciting things are on the way! 🚀
+          We're working hard to bring this page to life. Stay tuned, exciting things are on the way!
         </motion.p>
 
         {/* Breathing Loader Animation */}

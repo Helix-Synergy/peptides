@@ -120,7 +120,7 @@ const JobOrientedTrainings = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <p className="text-lg md:text-xl text-gray-700">{jobTrainingData.intro}</p>
+          <p className="text-lg md:text-xl text-gray-700 text-justify">{jobTrainingData.intro}</p>
         </motion.div>
       </section>
 
@@ -168,7 +168,7 @@ const JobOrientedTrainings = () => {
                   className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
                 >
                   <h4 className="text-xl font-bold mb-2 text-[#714819]">{program.title}</h4>
-                  <p className="text-gray-700">{program.description}</p>
+                  <p className="text-gray-700 text-justify">{program.description}</p>
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -198,7 +198,7 @@ const JobOrientedTrainings = () => {
                   className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center text-center"
                 >
                   <Icon size={56} className="mb-4 text-[#714819]" />
-                  <p className="text-lg text-gray-700">{item.text}</p>
+                  <p className="text-lg text-gray-700 text-justify">{item.text}</p>
                 </motion.div>
               );
             })}

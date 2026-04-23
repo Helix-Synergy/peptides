@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from "framer-motion";
 
 import {
@@ -10,9 +10,9 @@ import {
   X,
 } from "lucide-react";
 
-const GOOGLE_API_KEY = "AIzaSyAlkUtY5j-rBzZY8B0s2ynqEPfqnCfffsg";
-const IMAGE_FOLDER_ID = "1fuxLVciboT4N1O0ZqKAJuuCUbSPiay35";
-const VIDEO_FOLDER_ID = "13cn_ACNtZfMTy86oE_56IR6YTPrOgp9F";
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+const IMAGE_FOLDER_ID = process.env.REACT_APP_GOOGLE_IMAGE_FOLDER_ID;
+const VIDEO_FOLDER_ID = process.env.REACT_APP_GOOGLE_VIDEO_FOLDER_ID;
 
 const SkeletonCard = () => (
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden animate-pulse">
@@ -92,16 +92,23 @@ const Gallery = () => {
     try {
       setLoadingImages(true);
       const res = await fetch(
-        `https://www.googleapis.com/drive/v3/files?q='${IMAGE_FOLDER_ID}'+in+parents+and+mimeType contains 'image/'&key=${GOOGLE_API_KEY}&fields=files(id,name,mimeType)`
+        `https://www.googleapis.com/drive/v3/files?q='${IMAGE_FOLDER_ID}'+in+parents+and+mimeType contains 'image/'&key=${GOOGLE_API_KEY}&fields=files(id,name,mimeType,thumbnailLink,webContentLink)`
       );
       const data = await res.json();
       if (data.files) {
         setImages(
-          data.files.map((file) => ({
-            ...file,
-            thumbnailLink: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`,
-            previewLink: `https://drive.google.com/uc?export=view&id=${file.id}`,
-          }))
+          data.files.map((file) => {
+            // For HEIC or images that fail thumbnail generation, we can use the direct preview or 
+            // construct a generic docs google com view link which handles HEIC in browser
+            const previewPath = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`;
+            const fallbackLink = `https://drive.google.com/uc?export=view&id=${file.id}`;
+            return {
+              ...file,
+              thumbnailLink: file.thumbnailLink ? file.thumbnailLink.replace(/=s\d+/, "=s1000") : previewPath,
+              previewLink: file.webContentLink || fallbackLink,
+              fallbackPreview: fallbackLink
+            };
+          })
         );
       }
     } catch (err) {
@@ -123,7 +130,7 @@ const Gallery = () => {
         setVideos(
           data.files.map((file) => ({
             ...file,
-            previewLink: `https://drive.google.com/uc?export=download&id=${file.id}`,
+            previewLink: `https://drive.google.com/file/d/${file.id}/preview`,
           }))
         );
       }
@@ -180,9 +187,8 @@ const Gallery = () => {
                 setActiveTab(tab);
                 setCurrentIndex(null);
               }}
-              className={`flex items-center gap-2 font-semibold transition-all px-4 py-2 rounded-full relative z-10 ${
-                activeTab === tab ? "text-white" : "text-gray-600"
-              }`}
+              className={`flex items-center gap-2 font-semibold transition-all px-4 py-2 rounded-full relative z-10 ${activeTab === tab ? "text-white" : "text-gray-600"
+                }`}
             >
               {tab === "images" ? (
                 <ImageIcon className="w-4 h-4" />
@@ -216,50 +222,50 @@ const Gallery = () => {
             exit={{ opacity: 0, x: activeTab === "images" ? 50 : -50 }}
             transition={{ duration: 0.4 }}
             className={`grid gap-6 
-              ${
-                activeTab === "images"
-                  ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"
-                  : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+              ${activeTab === "images"
+                ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"
+                : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
               }`}
           >
             {isLoading
               ? Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
               : displayData.map((file, i) => (
-                  <motion.div
-                    key={file.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: i * 0.05 }}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl cursor-pointer"
-                    onClick={() => openPreview(i)}
-                  >
-                    {activeTab === "images" ? (
-                      <img
-                        src={file.thumbnailLink}
-                        alt={file.name}
-                        className="w-full h-32 object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    ) : (
-                      <div className="relative group w-full h-64">
-                        <iframe
-                          src={`https://drive.google.com/file/d/${file.id}/preview`}
-                          className="w-full h-full object-cover rounded-2xl"
-                          allow="autoplay"
-                          allowFullScreen
-                          title={file.name}
-                        ></iframe>
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition rounded-2xl">
-                          <Play size={48} />
-                        </div>
+                <motion.div
+                  key={file.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl cursor-pointer"
+                  onClick={() => openPreview(i)}
+                >
+                  {activeTab === "images" ? (
+                    <img
+                      src={file.thumbnailLink}
+                      alt={file.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-32 object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="relative group w-full h-64">
+                      <iframe
+                        src={file.previewLink}
+                        className="w-full h-full object-cover rounded-2xl"
+                        allow="autoplay"
+                        allowFullScreen
+                        title={file.name}
+                      ></iframe>
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition rounded-2xl">
+                        <Play size={48} />
                       </div>
-                    )}
-                    {/* <div className="p-2">
+                    </div>
+                  )}
+                  {/* <div className="p-2">
                       <h3 className="font-semibold text-gray-800 text-center truncate">
                         {file.name}
                       </h3>
                     </div> */}
-                  </motion.div>
-                ))}
+                </motion.div>
+              ))}
           </motion.div>
         </AnimatePresence>
       )}
@@ -295,11 +301,12 @@ const Gallery = () => {
                 <img
                   src={displayData[currentIndex].thumbnailLink}
                   alt={displayData[currentIndex].name}
+                  referrerPolicy="no-referrer"
                   className="w-full max-h-[80vh] object-contain rounded-xl shadow-xl"
                 />
               ) : (
                 <iframe
-                  src={`https://drive.google.com/file/d/${displayData[currentIndex].id}/preview`}
+                  src={displayData[currentIndex].previewLink}
                   className="w-full max-h-[80vh] aspect-video rounded-xl shadow-xl"
                   allow="autoplay"
                   allowFullScreen
@@ -344,9 +351,9 @@ export default Gallery;
 //   X,
 // } from "lucide-react";
 
-// const GOOGLE_API_KEY = "AIzaSyAlkUtY5j-rBzZY8B0s2ynqEPfqnCfffsg";
-// const IMAGE_FOLDER_ID = "1fuxLVciboT4N1O0ZqKAJuuCUbSPiay35";
-// const VIDEO_FOLDER_ID = "13cn_ACNtZfMTy86oE_56IR6YTPrOgp9F";
+// const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+// const IMAGE_FOLDER_ID = process.env.REACT_APP_GOOGLE_IMAGE_FOLDER_ID;
+// const VIDEO_FOLDER_ID = process.env.REACT_APP_GOOGLE_VIDEO_FOLDER_ID;
 
 // const SkeletonCard = () => (
 //   <div className="bg-white rounded-2xl shadow-lg overflow-hidden animate-pulse">
@@ -489,7 +496,7 @@ export default Gallery;
 //   animate={{ opacity: 1, x: 0 }}
 //   exit={{ opacity: 0, x: activeTab === "images" ? 50 : -50 }}
 //   transition={{ duration: 0.4 }}
-//   className={`grid gap-6 
+//   className={`grid gap-6
 //     ${activeTab === "images"
 //       ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"
 //       : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"

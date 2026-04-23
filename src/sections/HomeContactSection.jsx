@@ -18,7 +18,7 @@ const HomeContactSection = () => {
           Let’s Connect & Start Our Journey
         </h2>
 
-        <p className="text-lg text-black max-w-2xl mb-10">
+        <p className="text-lg text-black max-w-2xl mb-10 text-justify">
           Have questions? Need guidance? or Looking to register? <br/>
           We’re here to help you every step of the way. 
         </p>

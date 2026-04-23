@@ -18,7 +18,7 @@ const AcademicCollaborations = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
             Our Academic Collaborations
           </h1>
-          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto opacity-90 text-justify">
             Partnering with World-class Institutions to forge a Brighter Future.
           </p>
         </div>
@@ -31,7 +31,7 @@ const AcademicCollaborations = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Explore Our Esteemed Partners
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-justify">
               We're proud to work with these leading academic Institutions, creating Innovative Opportunities for our students and faculty.
             </p>
           </div>
@@ -63,7 +63,7 @@ const AcademicCollaborations = () => {
                   <h3 className="text-3xl font-bold text-gray-800 mb-4">
                     {college.name}
                   </h3>
-                  <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                  <p className="text-gray-600 text-lg mb-6 leading-relaxed text-justify">
                     {college.collaborationDetails.collaborationText}
                   </p>
                   <Link
@@ -89,7 +89,7 @@ const AcademicCollaborations = () => {
           <h2 className="text-4xl md:text-5xl text-peptides-color-brown font-bold mb-4">
             Want to Collaborate with Us?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-peptides-dark">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-peptides-dark text-justify">
             If you're an academic institution or a company that shares our vision, we would love to connect with you. Let's build a better future together.
           </p>
           <Link

@@ -86,10 +86,10 @@ const StackUp = () => {
           className="relative z-10 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">StackUp</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4 text-justify">
             Technology Stack Optimization
           </p>
-          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4">
+          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 text-justify">
             Modernize your technology infrastructure with cutting-edge solutions and best practices
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ const StackUp = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Elevate Your Technology Infrastructure
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed text-justify">
               StackUp specializes in modernizing and optimizing technology stacks for biotechnology 
               companies. We help you build scalable, secure, and efficient systems that drive 
               innovation and business growth through cutting-edge technology solutions.
@@ -233,8 +233,8 @@ const StackUp = () => {
                   className="bg-white/40 backdrop-blur-lg border border-white/30 rounded-xl p-6"
                 >
                   <h4 className="font-semibold text-gray-900 mb-2">{study.company}</h4>
-                  <p className="text-sm text-gray-600 mb-2"><strong>Project:</strong> {study.project}</p>
-                  <p className="text-sm text-gray-700 mb-3"><strong>Outcome:</strong> {study.outcome}</p>
+                  <p className="text-sm text-gray-600 mb-2 text-justify"><strong>Project:</strong> {study.project}</p>
+                  <p className="text-sm text-gray-700 mb-3 text-justify"><strong>Outcome:</strong> {study.outcome}</p>
                   <div className="flex flex-wrap gap-2">
                     {study.tech.map((tech, idx) => (
                       <span key={idx} className="bg-violet-100 text-violet-800 px-2 py-1 rounded-full text-xs">
@@ -257,7 +257,7 @@ const StackUp = () => {
           >
             <div className="bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Modernize Your Tech Stack?</h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90 text-justify">
                 Let's discuss how our technology solutions can transform your business
               </p>
               <button className="bg-white text-violet-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors duration-200 flex items-center mx-auto">

@@ -13,7 +13,7 @@ const Events = () => {
     <main className="min-h-screen font-inter bg-white text-[#0f2920]">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
+        className="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${conferencesBanner})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -35,9 +35,8 @@ const Events = () => {
           <motion.button
             layout
             onClick={() => setActiveTab("Conferences")}
-            className={`flex-1 py-2 text-center font-semibold relative z-10 rounded-full ${
-              activeTab === "Conferences" ? "text-white" : "text-[#0f2920]"
-            }`}
+            className={`flex-1 py-2 text-center font-semibold relative z-10 rounded-full ${activeTab === "Conferences" ? "text-white" : "text-[#0f2920]"
+              }`}
           >
             {activeTab === "Conferences" && (
               <motion.span
@@ -52,9 +51,8 @@ const Events = () => {
           <motion.button
             layout
             onClick={() => setActiveTab("Seminars")}
-            className={`flex-1 py-2 text-center font-semibold relative z-10 rounded-full ${
-              activeTab === "Seminars" ? "text-white" : "text-[#0f2920]"
-            }`}
+            className={`flex-1 py-2 text-center font-semibold relative z-10 rounded-full ${activeTab === "Seminars" ? "text-white" : "text-[#0f2920]"
+              }`}
           >
             {activeTab === "Seminars" && (
               <motion.span

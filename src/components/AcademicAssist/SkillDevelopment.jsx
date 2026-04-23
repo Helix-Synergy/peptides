@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
     GraduationCap, FlaskConical, HeartHandshake, UserCog, Laptop, Award, Microscope, Brain, Users, BookOpen, Sparkles,
     Briefcase, GitFork, Shield, Cloud, MonitorSmartphone, Bitcoin, Settings, PenLine, Video, UserCheck, Megaphone,
@@ -7,7 +8,7 @@ import {
     Wallet, LightbulbOff, Atom, Calendar, Headset, TrendingUp, CircleDollarSign, Pill, Utensils, Globe2, Stethoscope, Building2,
     Calculator, Droplet, Clock, Target, Activity, Workflow, TrendingUp as TrendingUpIcon,
     Leaf, FileText, Type, Image, ShieldCheck, LampDesk, Film, BookMarked, Palette, Utensils as UtensilsIcon, Globe2 as Globe2Icon,
-    Stethoscope as StethoscopeIcon, UserCircle, Pill as PillIcon, Brain as BrainIcon
+    Stethoscope as StethoscopeIcon, UserCircle, Pill as PillIcon, Brain as BrainIcon, ArrowRight
 } from 'lucide-react';
 import skillsBanner from '../../assets/images/PageBanners/3.jpg';
 
@@ -113,7 +114,7 @@ const SkillDevelopment = () => {
         <div className="bg-white text-[#0f2920] min-h-screen font-inter overflow-hidden relative">
             {/* Hero Section */}
             <section
-                className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
+                className="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
                 style={{ backgroundImage: `url(${skillsBanner})` }}
             >
                 <div className="absolute inset-0 bg-black/50"></div>
@@ -136,7 +137,7 @@ const SkillDevelopment = () => {
                     className="text-center mb-2 md:mb-4 mt-8 px-4"
                 >
                     <h1 className="text-xl md:text-lg text-black font-bold mb-4">
-The future of work is here, and it's powered by Continuous Learning. We provide a dynamic learning experience that transforms your potential into Real-World Professional Expertise. Our curriculum goes beyond theory, focusing on Practical Skills that employers are actively seeking. Whether you're a Student preparing for your first job or a Professional looking to pivot, our comprehensive programs will give you the Knowledge, Confidence, and tools to Succeed.                    </h1>
+                        The future of work is here, and it's powered by Continuous Learning. We provide a dynamic learning experience that transforms your potential into Real-World Professional Expertise. Our curriculum goes beyond theory, focusing on Practical Skills that employers are actively seeking. Whether you're a Student preparing for your first job or a Professional looking to pivot, our comprehensive programs will give you the Knowledge, Confidence, and tools to Succeed.                    </h1>
                 </motion.div>
             </section>
             {/* Tracks Section */}
@@ -196,9 +197,33 @@ The future of work is here, and it's powered by Continuous Learning. We provide 
                                 <Sparkles className="h-8 w-8 text-peptides-color-brown mr-2" />
                                 {item.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{item.description}</p>
+                            <p className="text-sm text-gray-600 text-justify">{item.description}</p>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="w-full py-16 px-4 lg:px-12 bg-[#d7f2da] text-black text-center mt-12">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-3xl lg:text-4xl font-bold mb-6 gradient-text">
+                        Ready to Start Your Skill Development Program?
+                    </h2>
+                    <p className="text-lg mb-8 text-primary-text text-center">
+                        Contact us today to arrange a specialized training for your team.
+                    </p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <Link
+                            to="/contact"
+                            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
+                        >
+                            Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                        </Link>
+                    </motion.div>
                 </div>
             </section>
         </div>

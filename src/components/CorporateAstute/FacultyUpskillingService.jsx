@@ -93,7 +93,7 @@ const FacultyUpskillingServices = () => {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto"
         >
-          <p className="text-lg md:text-xl text-gray-700">{fusData.intro}</p>
+          <p className="text-lg md:text-xl text-gray-700 text-justify">{fusData.intro}</p>
         </motion.div>
       </section>
 
@@ -125,7 +125,7 @@ const FacultyUpskillingServices = () => {
                       </div>
                       <h4 className="text-xl font-bold text-[#0f2920]">{item.title}</h4>
                     </div>
-                    <p className="font-medium text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">{item.description}</p>
+                    <p className="font-medium text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300 text-justify">{item.description}</p>
                   </div>
                   <motion.div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -166,7 +166,7 @@ const FacultyUpskillingServices = () => {
                   className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center text-center"
                 >
                   <Icon size={56} className="mb-4 text-[#714819]" />
-                  <p className="text-lg text-gray-700">{item.text}</p>
+                  <p className="text-lg text-gray-700 text-justify">{item.text}</p>
                 </motion.div>
               );
             })}

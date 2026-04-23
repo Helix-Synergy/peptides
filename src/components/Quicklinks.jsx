@@ -142,36 +142,38 @@ const QuickLinks = () => {
         rel="noopener noreferrer"
         className="fixed bottom-2 right-2 z-30 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transform transition-all"
         title="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp className="h-7 w-7" />
       </a>
 
-      {/* Quick Links Drawer */}
-      <div className="fixed bottom-20 right-0 z-20 flex flex-col space-y-3">
+      {/* Quick Links Drawer - Hidden on mobile, visible on lg screens */}
+      <div className="hidden lg:flex fixed bottom-20 right-0 z-20 flex-col space-y-3">
         {links.map(({ id, icon: Icon, label, link }) => {
           const isActive = hoveredId === id;
           return (
-<Link
-  key={id}
-  to={link}
-  title={label}
-  onMouseEnter={() => setHoveredId(id)}
-  onMouseLeave={() => setHoveredId(null)}
-  className={`
+            <Link
+              key={id}
+              to={link}
+              title={label}
+              aria-label={label}
+              onMouseEnter={() => setHoveredId(id)}
+              onMouseLeave={() => setHoveredId(null)}
+              className={`
     flex items-center bg-white shadow-md rounded-lg overflow-hidden transform transition-all duration-300
     ${id === "contact" ? "animate-pulseShadow" : ""}
     ${isActive ? "lg:translate-x-8" : "lg:translate-x-40"} 
     translate-x-0
   `}
->
-  <div className="bg-one text-peptides-dark p-3 flex items-center justify-center rounded-l-full">
-    <Icon className="h-5 w-5" />
-  </div>
-  {/* Label only on desktop */}
-  <span className="hidden lg:inline ml-4 pr-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-    {label}
-  </span>
-</Link>
+            >
+              <div className="bg-one text-peptides-dark p-3 flex items-center justify-center rounded-l-full">
+                <Icon className="h-5 w-5" />
+              </div>
+              {/* Label only on desktop */}
+              <span className="hidden lg:inline ml-4 pr-4 text-sm font-medium text-gray-800 whitespace-nowrap">
+                {label}
+              </span>
+            </Link>
 
           );
         })}

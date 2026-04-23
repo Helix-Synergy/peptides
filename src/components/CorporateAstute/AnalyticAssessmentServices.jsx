@@ -177,7 +177,7 @@ const AAS = () => {
 
   return (
     <div className="bg-white text-[#1e1e1e] min-h-screen font-inter overflow-hidden relative">
-      
+
       {/* Hero Section */}
       <section
         className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
@@ -222,103 +222,104 @@ const AAS = () => {
       </section>
 
       {/* Content Section */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={selectedServiceId}
-          ref={contentRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-          className="w-full mx-auto px-4"
-        >
-          {selectedService && (
-            <>
-              {/* Intro */}
-              <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full bg-[#f0f0f0] flex items-center justify-center">
-                  <selectedService.icon size={36} className="text-[#714819]" />
+      <div ref={contentRef} className="scroll-mt-32">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedServiceId}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="w-full mx-auto px-4"
+          >
+            {selectedService && (
+              <>
+                {/* Intro */}
+                <div className="flex items-center gap-4">
+                  <div className="w-20 h-20 rounded-full bg-[#f0f0f0] flex items-center justify-center">
+                    <selectedService.icon size={36} className="text-[#714819]" />
+                  </div>
+                  <h2 className="text-4xl font-bold text-[#1e1e1e]">{selectedService.title}</h2>
                 </div>
-                <h2 className="text-4xl font-bold text-[#1e1e1e]">{selectedService.title}</h2>
-              </div>
-              <p className="text-gray-700 text-lg mb-12">{selectedService.content.intro}</p>
+                <p className="text-gray-700 text-lg mb-12 text-justify">{selectedService.content.intro}</p>
 
-              {/* Our Services Cards */}
-              <motion.div variants={listVariants} initial="hidden" animate="visible" className="grid md:grid-cols-2 gap-6 mb-12">
-                {selectedService.content.services.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    variants={itemVariants}
-                    className="group bg-white shadow-lg rounded-2xl p-6 min-h-32 hover:bg-gradient-to-r hover:from-[#714819] hover:to-[#b2874b] hover:text-white transition-all duration-300 cursor-pointer flex gap-4 items-start border border-gray-200"
-                  >
-                    <div>
-                      <item.icon size={40} className="text-[#714819] group-hover:text-white transition-all duration-300" />
-                    </div>
-                    <p className="font-medium text-gray-700 group-hover:text-white transition-all duration-300">{item.text}</p>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              {/* Why Choose Us Horizontal Scroll - FIXED */}
-              <div className="mb-12 ">
-                <h3 className="text-3xl font-bold text-[#0f2920] text-center mb-6">Why Choose Us?</h3>
-                <div className="flex overflow-x-auto gap-6 py-8  scrollbar-hide md:justify-center">
-                  {selectedService.content.whyChoose.map((item, i) => (
+                {/* Our Services Cards */}
+                <motion.div variants={listVariants} initial="hidden" animate="visible" className="grid md:grid-cols-2 gap-6 mb-12">
+                  {selectedService.content.services.map((item, i) => (
                     <motion.div
                       key={i}
-                      variants={glowAnimation}
-                      whileHover="whileHover"
-                      className="group flex-shrink-0 bg-gray-50 rounded-2xl shadow-lg p-6 w-64 border border-gray-200 hover:bg-gradient-to-r hover:from-[#714819] hover:to-[#b2874b] transition-all duration-300"
+                      variants={itemVariants}
+                      className="group bg-white shadow-lg rounded-2xl p-6 min-h-32 hover:bg-gradient-to-r hover:from-[#714819] hover:to-[#b2874b] hover:text-white transition-all duration-300 cursor-pointer flex gap-4 items-start border border-gray-200"
                     >
-                      <item.icon size={64} className="mb-3 text-[#714819] group-hover:text-white transition-all duration-300" />
-                      <p className="text-gray-700 group-hover:text-white transition-all duration-300">{item.text}</p>
+                      <div>
+                        <item.icon size={40} className="text-[#714819] group-hover:text-white transition-all duration-300" />
+                      </div>
+                      <p className="font-medium text-gray-700 group-hover:text-white transition-all duration-300 text-justify">{item.text}</p>
                     </motion.div>
                   ))}
-                </div>
-              </div>
+                </motion.div>
 
-      {/* CTA Section */}
-      <section className="w-full py-12 px-4 lg:px-12 bg-[#d7f2da] text-black text-center">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl lg:text-4xl font-bold"
-            style={{
-              background: 'linear-gradient(90deg, #215e14ff, #11501cff, #4a7b3dff)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            Get Started Today
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg mb-8 text-center text-[#1e1e1e]"
-          >
-            {selectedService.content.cta}
-          </motion.p>
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.4 }}
->
-  <Link
-    to="/contact"
-    className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
-  >
-    Get Started <ArrowRight className="ml-2 w-5 h-5" />
-  </Link>
-</motion.div>
-        </div>
-      </section>
-            </>
-          )}
-        </motion.div>
-      </AnimatePresence>
+                {/* Why Choose Us Horizontal Scroll - FIXED */}
+                <div className="mb-12 ">
+                  <h3 className="text-3xl font-bold text-[#0f2920] text-center mb-6">Why Choose Us?</h3>
+                  <div className="flex overflow-x-auto gap-6 py-8  scrollbar-hide md:justify-center">
+                    {selectedService.content.whyChoose.map((item, i) => (
+                      <motion.div
+                        key={i}
+                        variants={glowAnimation}
+                        whileHover="whileHover"
+                        className="group flex-shrink-0 bg-gray-50 rounded-2xl shadow-lg p-6 w-64 border border-gray-200 hover:bg-gradient-to-r hover:from-[#714819] hover:to-[#b2874b] transition-all duration-300"
+                      >
+                        <item.icon size={64} className="mb-3 text-[#714819] group-hover:text-white transition-all duration-300" />
+                        <p className="text-gray-700 group-hover:text-white transition-all duration-300 text-justify">{item.text}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA Section */}
+                <section className="w-full py-12 px-4 lg:px-12 bg-[#d7f2da] text-black text-center">
+                  <div className="max-w-4xl mx-auto">
+                    <motion.h2
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-3xl lg:text-4xl font-bold"
+                      style={{
+                        background: 'linear-gradient(90deg, #215e14ff, #11501cff, #4a7b3dff)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                      }}
+                    >
+                      Get Started Today
+                    </motion.h2>
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="text-lg mb-8 text-center text-[#1e1e1e]"
+                    >
+                      {selectedService.content.cta}
+                    </motion.p>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                      <Link
+                        to="/contact"
+                        className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
+                      >
+                        Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                      </Link>
+                    </motion.div>
+                  </div>
+                </section>
+              </>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </div>
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
             display: none;

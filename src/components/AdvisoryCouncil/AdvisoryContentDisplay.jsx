@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import AboutImage from "../../assets/images/PageBanners/aboutPOE.jpg";
 import BoardMeeting from '../../assets/images/boardMeeting.jpg'
 
@@ -21,6 +21,7 @@ import roseMary from "../../assets/images/advisory/rose-mary.jpg";
 import shivakrishna from "../../assets/images/advisory/shivakrishna.jpeg";
 import thomas from "../../assets/images/advisory/thomas.jpg";
 import Sunitha from "../../assets/images/advisory/sunithaGaru.jpeg";
+import StrategyBanner from '../../assets/images/strategyBanner.jpg';
 
 const advisoryContentData = {
   "about-advisory-board": {
@@ -57,7 +58,7 @@ const advisoryContentData = {
             alt: "Panel of Experts Meeting",
           },
           {
-            src: "https://images.stockcake.com/public/e/d/2/ed208da8-7ef7-4bb3-80a5-15fa6b817787_large/team-strategy-session-stockcake.jpg",
+            src: StrategyBanner,
             alt: "Strategy Session",
           },
         ],
@@ -195,7 +196,7 @@ const advisoryContentData = {
             image: sarika,
             role: "Senior Scientist – Biotechnology & Pharmaceuticals",
             subtitle: "MBA Candidate, Melbourne Business School",
-            country: "",
+            country: "Australia",
             bio: "Sarika Kosaraju is a seasoned Senior Scientist with over 12 years of experience in the biotechnology and pharmaceutical sectors, specializing in GMP-compliant vaccine development and manufacturing. With a strong foundation in molecular biology and process development, she has held pivotal roles that bridge research and quality operations. Sarika combines technical depth with operational leadership, and her current pursuit of an MBA at Melbourne Business School underscores her growing focus on strategic and cross-functional leadership.",
             achievements: [
               "Led development, scale-up, and optimization of vaccine manufacturing systems",
@@ -327,34 +328,34 @@ const advisoryContentData = {
               "Event management and academic leadership",
             ],
           },
-{
-    name: "Prof. E.M. Sunitha",
-    image: Sunitha,
-    role: "Professor & Head of Botany",
-    subtitle: "Babu Jagjivan Ram Government Degree College (A) Autonomous",
-    country: "India",
-    bio: "Prof. E.M. Sunitha is an accomplished Academician and Researcher with over two decades of experience in the fields of Teaching and Research. Currently serving as a Professor and Head of the Department of Botany at Babu Jagjivan Ram Government Degree College (A) Autonomous in Hyderabad, she has dedicated her career to fostering Student Growth and Innovation. She holds a Doctorate Degree in Genetics from Osmania University, which laid the foundation for her Interdisciplinary Skills. Beyond her Administrative and Teaching duties, Prof. Sunitha is a dynamic Leader known for implementing innovative practices such as the 'BJR Bionics YouTube Channel' and a Virtual/Digital Herbarium to enhance Blended Learning. Her commitment to Environmental Consciousness is evident through her supervision of projects like the establishment of a Miyawaki Garden and a Solar-Based Moisture Sensor, the latter of which received a National Award.",
-    achievements: [
-      "Recipient of the State Best Teacher Award – 2025.",
-        "Recipient of multiple Awards for Innovative Projects, including the National Hackathon Third Prize.",
-        "Initiated the 'BJR Bionics YouTube Channel' and a Virtual/Digital Herbarium for Student Learning.",
-        "Supervised the establishment of a Miyawaki Garden and a Medicinal Plant Garden.",
-        "Author of three Books on subjects like Tissue Culture and Mushroom Cultivation.",
-        "Holds a Doctorate in Genetics and has qualified for GATE and SLET Examinations.",
-        "Commissioned as a Lieutenant in the Army NCC.",
-        "Holder of a Patent in her field of Research.",
-        
-    ],
-    contributions: [
-        "Curriculum Development for B.Sc Botany.",
-        "Innovative Practices in ICT Teaching and Blended Learning.",
-        "Research in Plant Sciences and Environmental Consciousness."
-    ],
-},
+          {
+            name: "Prof. E.M. Sunitha",
+            image: Sunitha,
+            role: "Professor & Head of Botany",
+            subtitle: "Babu Jagjivan Ram Government Degree College (A) Autonomous",
+            country: "India",
+            bio: "Prof. E.M. Sunitha is an accomplished Academician and Researcher with over two decades of experience in the fields of Teaching and Research. Currently serving as a Professor and Head of the Department of Botany at Babu Jagjivan Ram Government Degree College (A) Autonomous in Hyderabad, she has dedicated her career to fostering Student Growth and Innovation. She holds a Doctorate Degree in Genetics from Osmania University, which laid the foundation for her Interdisciplinary Skills. Beyond her Administrative and Teaching duties, Prof. Sunitha is a dynamic Leader known for implementing innovative practices such as the 'BJR Bionics YouTube Channel' and a Virtual/Digital Herbarium to enhance Blended Learning. Her commitment to Environmental Consciousness is evident through her supervision of projects like the establishment of a Miyawaki Garden and a Solar-Based Moisture Sensor, the latter of which received a National Award.",
+            achievements: [
+              "Recipient of the State Best Teacher Award – 2025.",
+              "Recipient of multiple Awards for Innovative Projects, including the National Hackathon Third Prize.",
+              "Initiated the 'BJR Bionics YouTube Channel' and a Virtual/Digital Herbarium for Student Learning.",
+              "Supervised the establishment of a Miyawaki Garden and a Medicinal Plant Garden.",
+              "Author of three Books on subjects like Tissue Culture and Mushroom Cultivation.",
+              "Holds a Doctorate in Genetics and has qualified for GATE and SLET Examinations.",
+              "Commissioned as a Lieutenant in the Army NCC.",
+              "Holder of a Patent in her field of Research.",
+
+            ],
+            contributions: [
+              "Curriculum Development for B.Sc Botany.",
+              "Innovative Practices in ICT Teaching and Blended Learning.",
+              "Research in Plant Sciences and Environmental Consciousness."
+            ],
+          },
           {
             name: "Peri Anuradha",
             image: anuradha,
-            role: "Founding Principal",
+            role: "Principal",
             subtitle:
               "Pragathi Women’s Junior, Degree, and PG College, Hyderabad",
             country: "India",
@@ -394,8 +395,8 @@ const advisoryContentData = {
           {
             name: "Dr. Kalyani Paidikondala",
             image: kalyani,
-            role: "Women Scientist A (WOSA)-DST",
-            subtitle: "",
+            role: "Women Scientist",
+            subtitle: "A (WOSA)-DST",
             country: "India",
             bio: "Dr. Kalyani Paidikondala is currently working as a Women Scientist under the DST-WOSA (Department of Science and Technology–Women Scientists Scheme). Her major research focus lies in the synthesis and evaluation of biologically active compounds, particularly those with anti-inflammatory and anti-cancer properties, including the synthesis of metal complexes for therapeutic applications. She earned her Ph.D. in Chemistry from Jawaharlal Nehru Technological University, Hyderabad, India. Dr. Paidikondala is the author of six books, each highlighting advances in anticancer drug discovery and mechanisms of action. Her scientific contributions include 3 patents, 30 research publications and presentations at more than 25 national and international conferences, reflecting her active engagement with the global research community.",
             achievements: [
@@ -558,10 +559,10 @@ const AdvisoryContentDisplay = ({ pageType }) => {
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
             {content.heroTitle}
           </h1>
-          {/* <p className="text-lg md:text-xl max-w-3xl mx-auto">
+          {/* <p className="text-lg md:text-xl max-w-3xl mx-auto text-justify">
       Peptides Knowledge Park’s Academic Support Services
     </p>
-    <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto">
+    <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto text-justify">
       Enhancing student success and engagement through Tutoring,
       Mentoring, Writing Labs, Academic Advising, Skill-Building
       Workshops, Review Programs, Career Counselling, and more.
@@ -582,12 +583,17 @@ const AdvisoryContentDisplay = ({ pageType }) => {
             <ul className="space-y-2">
               {navigationLinks.map((link, i) => (
                 <li key={i}>
-                  <Link
+                  <NavLink
                     to={link.href}
-                    className="block py-2 px-3 rounded-lg hover:bg-green-800/20 transition text-black font-medium"
+                    className={({ isActive }) =>
+                      `block py-2 px-3 rounded-lg transition font-medium ${isActive
+                        ? "bg-green-800/20 text-peptides-color-brown font-bold"
+                        : "text-black hover:bg-green-800/20"
+                      }`
+                    }
                   >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -643,7 +649,7 @@ const AdvisoryContentDisplay = ({ pageType }) => {
                           <p className="text-sm font-semibold text-center text-gray-700 mb-2">
                             {member.role}
                           </p>
-                          <p className="text-xs text-gray-600 leading-snug line-clamp-3">
+                          <p className="text-xs text-gray-600 leading-snug line-clamp-3 text-justify">
                             {member.bio}
                           </p>
                         </Link>
@@ -666,10 +672,6 @@ const AdvisoryContentDisplay = ({ pageType }) => {
                           src={img.src}
                           alt={img.alt}
                           className="rounded-xl object-cover w-full h-60 hover:scale-[1.02] transition-transform"
-                          onError={(e) =>
-                            (e.target.src =
-                              "https://placehold.co/600x400/333333/FFFFFF?text=Image")
-                          }
                         />
                       </div>
                     ))}

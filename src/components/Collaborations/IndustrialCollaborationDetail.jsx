@@ -9,7 +9,7 @@ const IndustrialDetail = () => {
   if (!industry) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100 font-sans">
-        <p className="text-xl text-red-500 font-semibold">Industry partner not found.</p>
+        <p className="text-xl text-red-500 font-semibold text-justify">Industry partner not found.</p>
       </div>
     );
   }
@@ -46,7 +46,7 @@ const IndustrialDetail = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 {industry.about?.title}
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed text-justify">
                 {industry.about?.content}
               </p>
             </div>
@@ -68,7 +68,7 @@ const IndustrialDetail = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             {industry.projects?.sectionTitle}
           </h2>
-          <p className="text-gray-600 text-lg mb-8">{industry.projects?.description}</p>
+          <p className="text-gray-600 text-lg mb-8 text-justify">{industry.projects?.description}</p>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0">
             {industry.projects?.list?.map((project, idx) => (
               <li

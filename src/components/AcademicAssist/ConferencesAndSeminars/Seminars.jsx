@@ -195,7 +195,7 @@ const Seminars = () => {
                 <Sparkles className="h-8 w-8 text-peptides-dark mr-2" />
                 {item.title}
               </h3>
-              <p className="text-sm text-black">{item.description}</p>
+              <p className="text-sm text-black text-justify">{item.description}</p>
             </div>
           ))}
         </div>

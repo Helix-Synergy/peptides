@@ -40,7 +40,7 @@
 //         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
 //           Explore Trusted Research <br />Lab Products & Services
 //         </h2>
-//         <p className="text-gray-500 text-lg mb-6">
+//         <p className="text-gray-500 text-lg mb-6 text-justify">
 //           We are a research-focused center supporting scientific discovery, lab experimentation, and education. Our team delivers high-quality solutions for academia, biotech, and innovation sectors. We aim to bridge knowledge and practical application through impactful services and expert-led guidance for better outcomes.
 //         </p>
 
@@ -62,7 +62,7 @@
 //           </div>
 //         </div>
 
-//         <p className="text-gray-400 mb-8">
+//         <p className="text-gray-400 mb-8 text-justify">
 //           Our services empower students, researchers, and institutions with accessible and impactful research tools. With expert guidance and ethical practices, we’re driving forward sustainable solutions that shape knowledge, industry, and the future of biotech and science together.
 //         </p>
 //         <button className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl text-base shadow transition-all duration-200">
@@ -80,7 +80,7 @@
 
 
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AboutSectionImg from '../assets/images/aboutSectionImg.png'
 
 const AboutSection = () => {
@@ -100,9 +100,9 @@ const AboutSection = () => {
           </div>
 
           {/* Faded diamonds */}
-          <div className="absolute w-28 h-28 sm:w-40 sm:h-40 bg-gradient-to-br from-[#1f3b30] to-white rounded-2xl opacity-50 -left-12 -top-12 sm:-left-20 sm:-top-20 rotate-45" />
-          <div className="absolute w-28 h-28 sm:w-40 sm:h-40 bg-gradient-to-br from-[#1f3b30] to-white rounded-2xl opacity-50 -right-12 -top-12 sm:-right-20 sm:-top-20 rotate-45" />
-          <div className="absolute w-28 h-28 sm:w-40 sm:h-40 bg-gradient-to-br from-[#1f3b30] to-white rounded-2xl opacity-50 -left-12 -bottom-12 sm:-left-20 sm:-bottom-20 rotate-45" />
+          <div className="absolute w-28 h-28 sm:w-40 sm:h-40 bg-gradient-to-br from-[#714819] to-white rounded-2xl opacity-100 -left-12 -top-12 sm:-left-20 sm:-top-20 rotate-45" />
+          <div className="absolute w-28 h-28 sm:w-40 sm:h-40 bg-gradient-to-br from-[#714819] to-white rounded-2xl opacity-100 -right-12 -top-12 sm:-right-20 sm:-top-20 rotate-45" />
+          <div className="absolute w-28 h-28 sm:w-40 sm:h-40 bg-gradient-to-br from-[#714819] to-white rounded-2xl opacity-100 -left-12 -bottom-12 sm:-left-20 sm:-bottom-20 rotate-45" />
         </div>
       </div>
 
@@ -115,73 +115,73 @@ const AboutSection = () => {
           Explore Trusted Academic <br /> Support Services
         </h2>
         <p className="text-black text-base text-justify sm:text-lg mb-6">
-          Academic advising helps students navigate curriculum choices, align their studies with career goals, and explore interdisciplinary pathways. Skill-building workshops focus on time management, research methodology, exam strategies, and digital productivity tools. 
+          Academic advising helps students navigate curriculum choices, align their studies with career goals, and explore interdisciplinary pathways. Skill-building workshops focus on time management, research methodology, exam strategies, and digital productivity tools.
         </p>
 
         {/* Feature Cards */}
-<div className="flex flex-col sm:flex-row gap-4 w-full mb-6">
+        <div className="flex flex-col sm:flex-row gap-4 w-full mb-6">
 
-  <div className="flex-1 bg-white border border-gray-200 rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-    {/* <Users className="w-10 h-10 text-[#0f2920]" /> */}
-    <div>
-      <div className="font-bold text-lg text-gray-900 mb-1">
-        +5168
-      </div>
-      <div className="text-[#0f2920] text-sm">
-        Students Supported
-      </div>
-    </div>
-  </div>
+          <div className="flex-1 bg-white border border-gray-200 rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition">
+            {/* <Users className="w-10 h-10 text-[#0f2920]" /> */}
+            <div>
+              <div className="font-bold text-lg text-gray-900 mb-1">
+                +5168
+              </div>
+              <div className="text-[#0f2920] text-sm">
+                Students Supported
+              </div>
+            </div>
+          </div>
 
-  <div className="flex-1 bg-white border border-gray-200 rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-    {/* <LifeBuoy className="w-10 h-10 text-[#0f2920]" /> */}
-    <div>
-      <div className="font-bold text-lg text-gray-900 mb-1">
-        +2164
-      </div>
-      <div className="text-[#0f2920] text-sm">
-        Projects & Workshops
-      </div>
-    </div>
-  </div>
+          <div className="flex-1 bg-white border border-gray-200 rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition">
+            {/* <LifeBuoy className="w-10 h-10 text-[#0f2920]" /> */}
+            <div>
+              <div className="font-bold text-lg text-gray-900 mb-1">
+                +2164
+              </div>
+              <div className="text-[#0f2920] text-sm">
+                Projects & Workshops
+              </div>
+            </div>
+          </div>
 
-  <div className="flex-1 bg-white border border-gray-200 rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-    {/* <Users className="w-10 h-10 text-[#0f2920]" /> */}
-    <div>
-      <div className="font-bold text-lg text-gray-900 mb-1">
-        +17
-      </div>
-      <div className="text-[#0f2920] text-sm">
-        Years of Experience
-      </div>
-    </div>
-  </div>
+          <div className="flex-1 bg-white border border-gray-200 rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition">
+            {/* <Users className="w-10 h-10 text-[#0f2920]" /> */}
+            <div>
+              <div className="font-bold text-lg text-gray-900 mb-1">
+                +18
+              </div>
+              <div className="text-[#0f2920] text-sm">
+                Years of Experience
+              </div>
+            </div>
+          </div>
 
-</div>
+        </div>
 
 
         <p className="text-black text-base text-justify sm:text-lg mb-8">
           Review programs prepare students for competitive exams and certifications through mock tests, analytics, and targeted content. Learning resource hubs provide curated digital materials, simulations, and access to open-source academic tools. Career counselling services bridge academic learning with professional readiness, offering Resume building, Interview preparation & portfolio development tailored to specific sectors.
         </p>
-<Link
-  to="/about-us"
-  className="inline-flex items-center bg-[#0f2920] hover:bg-[#1f3b30] text-white font-bold py-3 px-8 rounded-xl text-base shadow transition-all duration-200"
->
-  READ MORE
-  <svg
-    className="ml-2 w-5 h-5"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M17 8l4 4m0 0l-4 4m4-4H3"
-    />
-  </svg>
-</Link>
+        <Link
+          to="/about-us"
+          className="inline-flex items-center bg-[#0f2920] hover:bg-[#1f3b30] text-white font-bold py-3 px-8 rounded-xl text-base shadow transition-all duration-200"
+        >
+          READ MORE
+          <svg
+            className="ml-2 w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </Link>
       </div>
     </section>
   );

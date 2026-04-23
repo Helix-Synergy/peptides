@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Banner from '../../assets/images/PageBanners/collaborations.jpg'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Banner from "../../assets/images/PageBanners/collaborations.jpg";
 
-// const API_URL = "http://localhost:5000"; // Replace with your live API URL
-const API_URL = "https://peptidesbackend.onrender.com"; // Replace with your live API URL
+// ✅ API URL from .env
+const API_URL = process.env.REACT_APP_API_URL;
 
 const CollaborationForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +15,7 @@ const CollaborationForm = () => {
     address: "",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
@@ -37,7 +38,10 @@ const CollaborationForm = () => {
       const data = await response.json();
 
       if (response.ok) {
-        toast.success(data.message, { autoClose: 10000 });
+        toast.success(data.message || "Form submitted successfully!", {
+          autoClose: 10000,
+        });
+
         setFormData({
           name: "",
           type: "Academic",
@@ -46,11 +50,17 @@ const CollaborationForm = () => {
           message: "",
         });
       } else {
-        toast.error(data.message || "Submission failed. Please try again.", { autoClose: 10000 });
+        toast.error(
+          data.message || "Submission failed. Please try again.",
+          { autoClose: 10000 }
+        );
       }
     } catch (error) {
       console.error("Submission error:", error);
-      toast.error("An error occurred. Please check your network and try again.", { autoClose: 10000 });
+      toast.error(
+        "An error occurred. Please check your network and try again.",
+        { autoClose: 10000 }
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -58,16 +68,14 @@ const CollaborationForm = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#f2efe9", color: "#714819" }}>
+      {/* Toast */}
       <ToastContainer
         position="top-right"
         autoClose={10000}
         hideProgressBar={false}
-        newestOnTop={false}
         closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
         pauseOnHover
+        draggable
         theme="light"
       />
 
@@ -77,6 +85,7 @@ const CollaborationForm = () => {
         style={{ backgroundImage: `url(${Banner})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
+
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,18 +98,16 @@ const CollaborationForm = () => {
         </motion.div>
       </section>
 
-      {/* Collaboration Form Section */}
-      <div
-        className="py-16 px-6"
-        style={{ backgroundColor: "#f2efe9", color: "#714819" }}
-      >
+      {/* Form Section */}
+      <div className="py-16 px-6" style={{ backgroundColor: "#f2efe9" }}>
         <div className="bg-white p-8 md:p-12 shadow-xl rounded-2xl w-full max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold text-center mb-8">
             Collaboration Form
           </h1>
+
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name + Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Name / Institution */}
               <div>
                 <label className="block font-semibold mb-2">
                   Name / Institution <span className="text-red-500">*</span>
@@ -108,14 +115,13 @@ const CollaborationForm = () => {
                 <input
                   type="text"
                   name="name"
-                  onChange={handleChange}
                   value={formData.name}
+                  onChange={handleChange}
                   required
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300 focus:outline-none transition"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300"
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <label className="block font-semibold mb-2">
                   Email <span className="text-red-500">*</span>
@@ -123,10 +129,10 @@ const CollaborationForm = () => {
                 <input
                   type="email"
                   name="email"
-                  onChange={handleChange}
                   value={formData.email}
+                  onChange={handleChange}
                   required
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300 focus:outline-none transition"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300"
                 />
               </div>
             </div>
@@ -139,10 +145,10 @@ const CollaborationForm = () => {
               <input
                 type="text"
                 name="address"
-                onChange={handleChange}
                 value={formData.address}
+                onChange={handleChange}
                 required
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300 focus:outline-none transition"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300"
               />
             </div>
 
@@ -155,7 +161,7 @@ const CollaborationForm = () => {
                 name="type"
                 value={formData.type}
                 onChange={handleChange}
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300 focus:outline-none transition"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300"
               >
                 <option value="Academic">Academic</option>
                 <option value="Industrial">Industrial</option>
@@ -169,20 +175,21 @@ const CollaborationForm = () => {
               </label>
               <textarea
                 name="message"
-                onChange={handleChange}
-                value={formData.message}
                 rows="4"
+                value={formData.message}
+                onChange={handleChange}
                 required
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300 focus:outline-none transition"
-              ></textarea>
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-300"
+              />
             </div>
 
+            {/* Submit Button */}
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="py-3 rounded-lg font-bold transition disabled:opacity-50 disabled:cursor-not-allowed w-full md:w-auto px-12"
-                style={{ backgroundColor: "#b89c6b", color: "#714819" }}
                 disabled={isSubmitting}
+                className="py-3 px-12 rounded-lg font-bold transition disabled:opacity-50"
+                style={{ backgroundColor: "#b89c6b", color: "#714819" }}
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>

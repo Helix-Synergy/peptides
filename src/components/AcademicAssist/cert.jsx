@@ -168,7 +168,7 @@ const CompetitiveExamsTraining = () => {
           <h1 className="text-4xl md:text-6xl mr-[5%] font-extrabold mb-4 drop-shadow-lg text-white">
             CERT
           </h1>
-          <p className="text-lg md:text-xl mr-[5%] mx-auto px-4 text-gray-300 font-semibold">
+          <p className="text-lg md:text-xl mr-[5%] mx-auto px-4 text-gray-300 font-semibold text-justify">
             Competitive Exams Related Training
           </p>
         </motion.div>
@@ -188,7 +188,7 @@ const CompetitiveExamsTraining = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 mb-6">
               Your Path to Success
             </h2>
-            <p className="text-lg text-neutral-600 max-w-5xl mx-auto leading-relaxed mb-6">
+            <p className="text-lg text-neutral-600 max-w-5xl mx-auto leading-relaxed mb-6 text-justify">
               We provide the expert guidance, comprehensive resources, and personalized strategy you need to ace your competitive exam. In the highly competitive world of government jobs and professional exams, preparation is key. We provide top-notch support as we are your dedicated partners in success. Our mission is to transform your aspirations into achievements through a proven methodology, a team of expert educators, and an unwavering commitment to your success.
             </p>
           </motion.div>
@@ -220,14 +220,14 @@ const CompetitiveExamsTraining = () => {
                   <h4 className="text-lg font-bold text-neutral-800 mb-2">
                     {service.title}
                   </h4>
-                  <p className="text-sm text-neutral-600">
+                  <p className="text-sm text-neutral-600 text-justify">
                     {service.description}
                   </p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-          
+
           {/* Exams Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -333,7 +333,7 @@ const CompetitiveExamsTraining = () => {
               <h3 className="text-2xl font-bold mb-4">
                 Ready to Start Your Journey?
               </h3>
-              <p className="text-lg mb-6 opacity-90 text-neutral-600">
+              <p className="text-lg mb-6 opacity-90 text-neutral-600 text-center">
                 Join our proven program and take the first step toward a successful career.
               </p>
               <button className="btn-outline text-neutral-800 border-neutral-800 font-bold py-3 px-8 rounded-xl hover:bg-neutral-800 hover:text-white transition-colors duration-200 flex items-center mx-auto">

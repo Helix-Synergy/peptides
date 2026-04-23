@@ -80,8 +80,8 @@ const pamData = {
         { title: '24/7 Priority Access', body: 'Contact your mentor anytime for urgent support.' },
         { title: 'Holistic Academic Planning', body: 'A complete, customized plan covering all aspects of your academic and career goals.' },
       ],
-      colorClass: 'text-emerald-500',
-      borderColor: 'border-t-emerald-500'
+      colorClass: 'text-gray-600',
+      borderColor: 'border-t-gray-600'
     },
   ],
   cta: {
@@ -105,7 +105,7 @@ const ctaAnimation = {
 const PeptidesAssistanceMembership = () => {
   return (
     <div className="bg-gray-50 text-[#1e1e1e] font-inter relative min-h-screen">
-      
+
       {/* Hero Section */}
       <section
         className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
@@ -132,7 +132,7 @@ const PeptidesAssistanceMembership = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto whitespace-pre-line"
         >
-          <p className="text-lg md:text-xl text-gray-700">{pamData.intro}</p>
+          <p className="text-lg md:text-xl text-gray-700 text-justify">{pamData.intro}</p>
         </motion.div>
       </section>
 
@@ -159,25 +159,25 @@ const PeptidesAssistanceMembership = () => {
                   <div className="flex flex-col items-center justify-center text-center w-full md:w-1/4 flex-shrink-0">
                     <Icon size={56} className={`mb-4 ${tier.colorClass}`} />
                     <h3 className="text-2xl font-bold mb-1 text-[#0f2920]">{tier.name}</h3>
-                    <p className="text-gray-600 font-medium">{tier.subtitle}</p>
+                    <p className="text-gray-600 font-medium text-justify">{tier.subtitle}</p>
                   </div>
-                  
+
                   {/* Tier Features */}
                   <div className="flex-grow w-full">
-                      <p className="text-lg text-gray-700 font-medium mb-4">{tier.description}</p>
-                      <ul className="text-left w-full space-y-3 text-gray-700">
-                          {tier.features.map((feature, idx) => (
-                              <li key={idx}>
-                                  <div className="flex items-start">
-                                      <Check size={20} className="text-[#714819] mr-2 flex-shrink-0" />
-                                      <div className="flex-grow">
-                                          <p className="font-semibold">{feature.title}</p>
-                                          {feature.body && <p className="text-sm text-gray-600">{feature.body}</p>}
-                                      </div>
-                                  </div>
-                              </li>
-                          ))}
-                      </ul>
+                    <p className="text-lg text-gray-700 font-medium mb-4 text-justify">{tier.description}</p>
+                    <ul className="text-left w-full space-y-3 text-gray-700">
+                      {tier.features.map((feature, idx) => (
+                        <li key={idx}>
+                          <div className="flex items-start">
+                            <Check size={20} className="text-[#714819] mr-2 flex-shrink-0" />
+                            <div className="flex-grow">
+                              <p className="font-semibold text-justify">{feature.title}</p>
+                              {feature.body && <p className="text-sm text-gray-600 text-justify">{feature.body}</p>}
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </motion.div>
               );
@@ -207,18 +207,18 @@ const PeptidesAssistanceMembership = () => {
           >
             {pamData.cta.body}
           </motion.p>
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.4 }}
->
-  <Link
-    to="/contact"
-    className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
-  >
-    Get Started <ArrowRight className="ml-2 w-5 h-5" />
-  </Link>
-</motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
+            >
+              Get Started <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>

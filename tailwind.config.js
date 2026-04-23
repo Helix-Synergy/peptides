@@ -16,8 +16,8 @@ module.exports = {
         // Text colors
         'peptides-text-light': '#ffffff',
         'peptides-text-muted': '#d9d9d9',
-        'peptides-color-brown' : '#714819',
-        
+        'peptides-color-brown': '#714819',
+
 
         // Buttons
         'btn-primary': '#0f2920',
@@ -28,7 +28,7 @@ module.exports = {
         // Gradient colors
         'gradient-start': '#0f2920',
         'gradient-end': '#3a4a3f',
- amber: {
+        amber: {
           500: "#ad9554", // now you can use bg-amber-500 with this hex
           600: "#9e8653ff"
         },
@@ -38,6 +38,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       scrollMargin: {
         'navbar': '96px',
@@ -45,6 +46,15 @@ module.exports = {
       backgroundImage: {
         'gradient-br-dark': 'linear-gradient(to bottom right, #0f2920, #3a4a3f)',
       },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      }
     },
   },
   plugins: [],

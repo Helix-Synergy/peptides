@@ -2,7 +2,6 @@ import React from "react";
 import AutoScrollingCarousel from "./AutoScrollingCarousel";
 import featuredConferenceData from "../../../data/conferenceData"; // move your array to a data file
 import hybridEventsData from "../../../data/hybridsData1";
-import webinarsData from "../../../data/webinarsData1";
 import { motion } from "framer-motion";
 
 const Conferences = () => {
@@ -30,12 +29,14 @@ const Conferences = () => {
       </motion.div>
 
       {/* Featured Conferences */}
-      <AutoScrollingCarousel
-        data={featuredConferenceData}
-        speed={50}
-        direction="left"
-        title="2025 Conferences"
-      />
+      {featuredConferenceData.length > 0 && (
+        <AutoScrollingCarousel
+          data={featuredConferenceData}
+          speed={50}
+          direction="left"
+          title="2025 Conferences"
+        />
+      )}
 
       {/* Hybrids */}
       <div
@@ -53,29 +54,21 @@ const Conferences = () => {
           data={hybridEventsData}
           speed={50}
           direction="left"
-          title="Upcoming Hybrids"
+          title="Upcoming Conferences"
         />
+        <div className="flex justify-center pb-8">
+          <a
+            href="https://helixconferences.com/Conferences-2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-[#1f3b30] text-white rounded-lg font-bold hover:bg-[#152a22] transition-colors shadow-md"
+          >
+            Show More Conferences
+          </a>
+        </div>
       </div>
 
-      {/* Webinars */}
-      <div
-        className="text-white relative overflow-hidden"
-        style={{
-          background: "white",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          //   boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.5)",
-          backdropFilter: "blur(15px)",
-          overflow: "hidden",
-          color: "brown",
-        }}
-      >
-        <AutoScrollingCarousel
-          data={webinarsData}
-          speed={55}
-          direction="right"
-          title="Upcoming Webinars"
-        />
-      </div>
+
     </div>
   );
 };

@@ -9,7 +9,7 @@ const AcademicDetail = () => {
   if (!college) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className="text-xl text-red-500 font-semibold">College not found.</p>
+        <p className="text-xl text-red-500 font-semibold text-justify">College not found.</p>
       </div>
     );
   }
@@ -46,7 +46,7 @@ const AcademicDetail = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 {college.about.title}
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed text-justify">
                 {college.about.content}
               </p>
             </div>
@@ -68,7 +68,7 @@ const AcademicDetail = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             {college.workshops.sectionTitle}
           </h2>
-          <p className="text-gray-600 text-lg mb-8">{college.workshops.description}</p>
+          <p className="text-gray-600 text-lg mb-8 text-justify">{college.workshops.description}</p>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0">
             {college.workshops.list.map((workshop, idx) => (
               <li

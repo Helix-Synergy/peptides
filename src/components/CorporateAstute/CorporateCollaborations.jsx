@@ -86,10 +86,10 @@ const CorporateCollaborations = () => {
           className="relative z-10 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Corporate Collaborations</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4 text-justify">
             Strategic Partnerships for Business Growth
           </p>
-          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4">
+          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 text-justify">
             Forge powerful alliances and unlock new opportunities through strategic corporate collaborations
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ const CorporateCollaborations = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Building Strategic Alliances for Success
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed text-justify">
               Our corporate collaboration services help biotechnology companies establish meaningful 
               partnerships that drive innovation, expand market reach, and create sustainable competitive 
               advantages. We facilitate strategic alliances that benefit all parties involved.
@@ -177,7 +177,7 @@ const CorporateCollaborations = () => {
                     {step.step}
                   </div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h4>
-                  <p className="text-sm text-gray-600">{step.description}</p>
+                  <p className="text-sm text-gray-600 text-justify">{step.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -208,9 +208,9 @@ const CorporateCollaborations = () => {
                     ))}
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">{story.company}</h4>
-                  <p className="text-sm text-gray-600 mb-2">{story.industry}</p>
-                  <p className="text-sm text-gray-700 mb-3"><strong>Collaboration:</strong> {story.collaboration}</p>
-                  <p className="text-sm text-gray-700"><strong>Outcome:</strong> {story.outcome}</p>
+                  <p className="text-sm text-gray-600 mb-2 text-justify">{story.industry}</p>
+                  <p className="text-sm text-gray-700 mb-3 text-justify"><strong>Collaboration:</strong> {story.collaboration}</p>
+                  <p className="text-sm text-gray-700 text-justify"><strong>Outcome:</strong> {story.outcome}</p>
                 </motion.div>
               ))}
             </div>
@@ -226,7 +226,7 @@ const CorporateCollaborations = () => {
           >
             <div className="bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Explore Collaboration Opportunities?</h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90 text-justify">
                 Let's discuss how strategic partnerships can accelerate your business growth
               </p>
               <button className="bg-white text-teal-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors duration-200 flex items-center mx-auto">

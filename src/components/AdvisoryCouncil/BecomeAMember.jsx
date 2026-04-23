@@ -103,7 +103,7 @@
 //       <section className="max-w-5xl mx-auto px-6 py-10">
 //         <div className="text-center mb-8">
 //           <h2 className="text-3xl font-bold">Join Us & Be A Part of Our Team</h2>
-//           <p className="mt-2">It should only take a couple of minutes to join our team.</p>
+//           <p className="mt-2 text-justify">It should only take a couple of minutes to join our team.</p>
 //         </div>
 
 //         <form ref={formRef} onSubmit={onSubmit} className="bg-white rounded-2xl shadow p-6">
@@ -215,8 +215,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import becomeMember from "../../assets/images/PageBanners/aboutPOE.jpg";
 
-// const API_URL = "http://localhost:5000"; // Replace with your live API URL
-const API_URL = "https://peptidesbackend.onrender.com"; // Replace with your live API URL
+const API_URL = process.env.REACT_APP_API_URL;
+if (!API_URL) console.error("REACT_APP_API_URL is missing in .env");
 
 const Required = () => <span className="ml-1 text-red-600">*</span>;
 
@@ -307,7 +307,7 @@ const BecomeAMember = () => {
         pauseOnHover
         theme="light"
       />
-      
+
       {/* Hero Section */}
       <section
         className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
@@ -329,7 +329,7 @@ const BecomeAMember = () => {
       <section className="max-w-5xl mx-auto px-6 py-10">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold">Join Us & Be A Part of Our Team</h2>
-          <p className="mt-2">It should only take a couple of minutes to join our team.</p>
+          <p className="mt-2 text-justify">It should only take a couple of minutes to join our team.</p>
         </div>
 
         <form ref={formRef} onSubmit={onSubmit} className="bg-white rounded-2xl shadow p-6">
@@ -361,19 +361,20 @@ const BecomeAMember = () => {
               <input id="currentWorkingOrganization" name="currentWorkingOrganization" required className="mt-1 px-3 py-2 rounded border border-gray-200" />
             </div>
 
-            <div className="flex flex-col">
-              <label htmlFor="totalYearsOfExperience" className="text-sm font-semibold flex items-center">Total Years Of Experience<Required /></label>
-              <input id="totalYearsOfExperience" name="totalYearsOfExperience" type="number" required className="mt-1 px-3 py-2 rounded border border-gray-200" />
-            </div>
-
-            {/* Upload + Preview */}
-            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-              <div className="flex flex-col">
-                <label htmlFor="profileImage" className="text-sm font-semibold flex items-center">Upload Profile Image<Required /> (JPG, JPEG, PNG, GIF - Max 5MB)</label>
-                <input id="profileImage" name="profileImage" type="file" accept=".jpg,.jpeg,.png,.gif" onChange={onFileChange} required className="mt-1" />
+            {/* Total Years, Upload & Preview Box */}
+            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col">
+                  <label htmlFor="totalYearsOfExperience" className="text-sm font-semibold flex items-center">Total Years Of Experience<Required /></label>
+                  <input id="totalYearsOfExperience" name="totalYearsOfExperience" type="number" required className="mt-1 px-3 py-2 rounded border border-gray-200" />
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="profileImage" className="text-sm font-semibold flex items-center">Upload Profile Image<Required /> (JPG, JPEG, PNG, GIF - Max 5MB)</label>
+                  <input id="profileImage" name="profileImage" type="file" accept=".jpg,.jpeg,.png,.gif" onChange={onFileChange} required className="mt-1" />
+                </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="w-64 h-64 mt-[-80px] border border-dashed border-gray-300 rounded-xl flex items-center justify-center overflow-hidden bg-gray-50">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 border border-dashed border-gray-300 rounded-xl flex items-center justify-center overflow-hidden bg-gray-50">
                   {profilePreview ? (
                     <img src={profilePreview} alt="Profile Preview" className="w-full h-full object-cover" />
                   ) : (

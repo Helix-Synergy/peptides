@@ -84,7 +84,7 @@ const PlacementAssistance = () => {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto"
         >
-          <p className="text-lg md:text-xl text-gray-700">{placementData.intro}</p>
+          <p className="text-lg md:text-xl text-gray-700 text-justify">{placementData.intro}</p>
         </motion.div>
       </section>
 
@@ -111,7 +111,7 @@ const PlacementAssistance = () => {
                 >
                   <Icon size={56} className="mb-4 text-[#714819]" />
                   <h3 className="text-xl font-bold mb-2 text-[#0f2920]">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
+                  <p className="text-gray-700 text-justify">{item.description}</p>
                 </motion.div>
               );
             })}

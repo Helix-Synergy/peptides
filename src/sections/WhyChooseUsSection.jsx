@@ -164,38 +164,46 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from 'react-router-dom';
-import valasia from '../assets/images/advisory/valasia.jpg';
-import thomas from '../assets/images/advisory/thomas.jpg';
-import kumar from '../assets/images/advisory/kumar.jpeg';
-import shivakrishna from '../assets/images/advisory/shivakrishna.jpeg';
+import anuradha from "../assets/images/advisory/anuradha.jpg";
+import kumar from "../assets/images/advisory/kumar.jpeg";
+import pushpa from "../assets/images/advisory/pushpa.jpg";
+import sarika from "../assets/images/advisory/sarika.jpg";
+import sudhakar from "../assets/images/advisory/sudhakar.jpeg";
+import valasia from "../assets/images/advisory/valasia.jpg";
+import cristiano from "../assets/images/advisory/cristiano.jpg";
+import ramakanth from "../assets/images/advisory/ramakanth.jpeg";
+import saritha from "../assets/images/advisory/saritha.jpeg";
+import sujani from "../assets/images/advisory/sujani.jpeg";
+import vinyas from "../assets/images/advisory/vinyas.jpg";
+import kalyani from "../assets/images/advisory/kalyani.jpg";
+import murthy from "../assets/images/advisory/murthy.jpg";
+import roseMary from "../assets/images/advisory/rose-mary.jpg";
+import shivakrishna from "../assets/images/advisory/shivakrishna.jpeg";
+import thomas from "../assets/images/advisory/thomas.jpg";
+import Sunitha from "../assets/images/advisory/sunithaGaru.jpeg";
 
-// Dummy data with placeholders
-const people = [
-  {
-    name: "Dr. Valasia Iakovoglou",
-    designation: "Academic Researcher",
-    place: "UNITED STATES of AMERICA",
-    img: valasia,
-  },
-  {
-    name: "Dr. Thomas J. Webster",
-    designation: "Biomedical Engineer",
-    place: "UNITED STATES of AMERICA",
-    img: thomas,
-  },
-  {
-    name: "Dr. M Kumara Swamy",
-    designation: "HOD Biotechnology",
-    place: "INDIA",
-    img: kumar,
-  },
-  {
-    name: "Dr. Shiva Krishna",
-    designation: "Researcher Microbiology",
-    place: "INDIA",
-    img: shivakrishna,
-  },
+const baseExperts = [
+  { name: "Dr. Valasia Iakovoglou", designation: "PhD in Ecophysiology/Sylviculture", place: "USA", img: valasia },
+  { name: "Dr. Thomas J. Webster", designation: "Biomedical Engineer & Chief Nano Scientific Officer", place: "USA", img: thomas },
+  { name: "Cristiano José de Andrade", designation: "Adjunct Professor", place: "Brazil", img: cristiano },
+  { name: "Sarika Kuchipudi", designation: "Senior Scientist", place: "Australia", img: sarika },
+  { name: "Dr. Sri Samba Murthy", designation: "Educator & Researcher", place: "India", img: murthy },
+  { name: "Dr. Shivakrishna Pabba", designation: "Managing Director & Lab Head", place: "India", img: shivakrishna },
+  { name: "Dr. Vinyas Mayasa", designation: "Assistant Professor", place: "India", img: vinyas },
+  { name: "Dr. Mallappa Kumara Swamy", designation: "HOD Biotechnology", place: "India", img: kumar },
+  { name: "Dr. Ramakanth Sharma", designation: "R&D Specialist", place: "India", img: ramakanth },
+  { name: "Dr. SUJANI GUDIPATI", designation: "R&D", place: "India", img: sujani },
+  { name: "Prof. E.M. Sunitha", designation: "Professor & Head of Botany", place: "India", img: Sunitha },
+  { name: "Peri Anuradha", designation: "Principal", place: "India", img: anuradha },
+  { name: "Pushpa Lalitha", designation: "Senior Food Analyst", place: "India", img: pushpa },
+  { name: "Dr. Kalyani Paidikondala", designation: "Women Scientist\nA (WOSA)-DST", place: "India", img: kalyani },
+  { name: "Dr. Rose Mary Tadiparthi", designation: "HOD, Botany Department", place: "India", img: roseMary },
+  { name: "Dr. Y. Sudhakar", designation: "Assistant Professor & HOD", place: "India", img: sudhakar },
+  { name: "Dr. Saritha Sivampeta", designation: "HOD, Department of Chemistry", place: "India", img: saritha },
 ];
+
+// Duplicating the data so the slider scrolls naturally
+const people = [...baseExperts, ...baseExperts];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -234,41 +242,49 @@ const ExpertsSection = () => {
           </motion.h2>
         </div>
 
-        {/* Cards */}
+        {/* Cards Carousel (Native CSS Marquee) */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="w-full overflow-hidden relative"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {people.map((person, i) => (
-            <motion.div
-              key={i}
-              variants={cardVariants}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center text-center hover:shadow-2xl transition p-6"
-            >
-              {/* Rounded Image Container */}
-              <div className="w-40 h-40 mb-6 relative rounded-full overflow-hidden border-4 border-[#193127]">
-                <img
-                  src={person.img || "https://placehold.co/100x100/text=Peptides+Image"}
-                  alt={person.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+          {/* Marquee Container */}
+          <div
+            className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 py-4 px-2"
+            style={{ animationDuration: '85s' }}
+          >
+            {[...people, ...people].map((person, i) => (
+              <motion.div
+                key={i}
+                variants={cardVariants}
+                className="w-[280px] bg-white rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition p-6 m-2 shrink-0 h-[380px] flex-grow-0 mx-auto"
+              >
+                {/* Rounded Image Container */}
+                <div className="w-40 h-40 mb-6 relative rounded-full overflow-hidden border-4 border-[#193127] shrink-0">
+                  <img
+                    src={person.img || "https://placehold.co/100x100/text=Peptides+Image"}
+                    alt={person.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
-              {/* Info */}
-              <h3 className="text-xl font-semibold text-[#193127] mb-2">
-                {person.name}
-              </h3>
-              <p className="text-[#193127]/80 text-sm mb-1">
-                {person.designation}
-              </p>
-              <p className="text-gray-500 text-sm">{person.place}</p>
-            </motion.div>
-          ))}
+                {/* Content Container */}
+                <div className="flex flex-col flex-grow justify-between w-full h-[120px]">
+                  <h3 className="text-xl font-bold text-[#193127] line-clamp-2 leading-tight">
+                    {person.name}
+                  </h3>
+                  <div className="mt-auto">
+                    <p className="text-sm font-medium text-gray-700 whitespace-pre-line line-clamp-3 mb-1">
+                      {person.designation}
+                    </p>
+                    <p className="text-xs text-gray-500 font-semibold uppercase">{person.place}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
-
-        {/* Button */}
         <div className="text-center mt-12">
           <Link
             to="/panel-of-experts/subject-matter-experts"
@@ -277,6 +293,7 @@ const ExpertsSection = () => {
             View All Experts
           </Link>
         </div>
+        
       </div>
     </section>
   );

@@ -1,0 +1,19 @@
+
+<IfModule mod_headers.c>
+  # Security Headers
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Content-Type-Options "nosniff"
+  
+  # Content Security Policy (CSP)
+  # Allowing Razorpay, Stripe, Tawk.to, Google Analytics/Tag Manager, LinkedIn, JD Magic Box
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com https://js.stripe.com https://embed.tawk.to https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://checkout.razorpay.com https://*.stripe.com https://drive.google.com https://accounts.google.com https://*.googleusercontent.com https://*.ggpht.com https://*.licdn.com https://*.jdmagicbox.com; connect-src 'self' https://peptidesbackend.onrender.com https://api.razorpay.com https://lumberjack.razorpay.com https://*.stripe.com https://*.tawk.to wss://*.tawk.to https://www.google-analytics.com https://www.googleapis.com; frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com https://js.stripe.com https://hooks.stripe.com https://drive.google.com;"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

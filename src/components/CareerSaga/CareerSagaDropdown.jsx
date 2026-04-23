@@ -46,10 +46,10 @@ const CareerSagaDropdown = () => {
           className="relative z-10 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Career Saga</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4 text-justify">
             Your Complete Career Development Ecosystem
           </p>
-          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4">
+          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 text-justify">
             From career coaching to job placement, we're here to guide your professional success
           </p>
         </motion.div>
@@ -69,7 +69,7 @@ const CareerSagaDropdown = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Transform Your Career with Professional Guidance
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed text-justify">
               Career Saga offers comprehensive career development services designed to help professionals 
               in the biotechnology and life sciences sectors achieve their career goals. Our integrated 
               approach combines personalized coaching, AI-powered tools, and exclusive networking opportunities.
@@ -152,7 +152,7 @@ const CareerSagaDropdown = () => {
           >
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Career?</h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90 text-justify">
                 Join thousands of professionals who have already taken their careers to the next level
               </p>
               <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors duration-200 flex items-center mx-auto">

@@ -230,7 +230,7 @@ const PeerReviewProcess = () => {
     <div className="bg-white text-[#0f2920] min-h-screen font-inter overflow-hidden relative">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
+        className="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${journalsBanner})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -278,7 +278,7 @@ const PeerReviewProcess = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="text-[#1f3b30] text-sm mt-2">
+                <p className="text-[#1f3b30] text-sm mt-2 text-justify">
                   {topic.description}
                 </p>
               </motion.div>
@@ -304,7 +304,7 @@ const PeerReviewProcess = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#0f2920] to-[#714819]">
             The Journey of a Scientific Paper
           </h1>
-          <p className="text-lg md:text-xl text-[#1f3b30] max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[#1f3b30] max-w-2xl mx-auto text-justify">
             Explore the essential stages of the peer review process, a trusted
             system that ensures the quality and reliability of scientific
             research.
@@ -348,9 +348,8 @@ const PeerReviewProcess = () => {
                   }}
                 >
                   <motion.div
-                    className={`relative p-6 md:p-8 rounded-2xl bg-gray-50 border border-gray-200 shadow-2xl transition-all duration-300 ease-in-out transform ${
-                      !isExpanded ? "hover:scale-[1.02]" : ""
-                    }`}
+                    className={`relative p-6 md:p-8 rounded-2xl bg-gray-50 border border-gray-200 shadow-2xl transition-all duration-300 ease-in-out transform ${!isExpanded ? "hover:scale-[1.02]" : ""
+                      }`}
                     style={{
                       transformOrigin: "bottom center",
                       rotate: index % 2 === 0 ? "1deg" : "-1deg",
@@ -360,7 +359,7 @@ const PeerReviewProcess = () => {
                       <stage.icon size={36} className="text-[#714819]" />
                       <h3 className="text-2xl font-bold">{stage.title}</h3>
                     </div>
-                    <p className="text-[#1f3b30] text-sm md:text-base">
+                    <p className="text-[#1f3b30] text-sm md:text-base text-justify">
                       {stage.description}
                     </p>
                     <AnimatePresence>
@@ -372,7 +371,7 @@ const PeerReviewProcess = () => {
                           transition={{ duration: 0.3 }}
                           className="mt-4"
                         >
-                          <p className="text-[#1f3b30] text-sm md:text-base">
+                          <p className="text-[#1f3b30] text-sm md:text-base text-justify">
                             {stage.description} (Extended content for
                             demonstration purposes. This would be a more
                             detailed paragraph in a real app.)
@@ -385,9 +384,8 @@ const PeerReviewProcess = () => {
                       className="absolute bottom-4 right-4 text-[#714819] hover:text-[#b2874b] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#714819] rounded-full"
                     >
                       <ChevronDown
-                        className={`transform transition-transform duration-300 ${
-                          isExpanded ? "rotate-180" : ""
-                        }`}
+                        className={`transform transition-transform duration-300 ${isExpanded ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                   </motion.div>
@@ -416,7 +414,7 @@ const PeerReviewProcess = () => {
                   className="text-[#714819] mb-4 transition-transform duration-300 group-hover:scale-110"
                 />
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-[#1f3b30]">{item.description}</p>
+                <p className="text-[#1f3b30] text-justify">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -447,7 +445,7 @@ const PeerReviewProcess = () => {
 
         {/* Closing CTA */}
         <div className="mt-8 md:mt-10 text-center pb-16">
-          <p className="text-lg md:text-2xl font-semibold mb-8 text-[#1f3b30] max-w-4xl mx-auto">
+          <p className="text-lg md:text-2xl font-semibold mb-8 text-[#1f3b30] max-w-4xl mx-auto text-justify">
             Peer-reviewed science ensures{" "}
             <span className="text-[#714819]">Trust</span>,{" "}
             <span className="text-[#714819]">Impact</span>, and{" "}
@@ -455,15 +453,15 @@ const PeerReviewProcess = () => {
           </p>
           <motion.div >
             <Link to="/contact">
-            <motion.button variants={glowAnimation} whileHover="whileHover" className="relative overflow-hidden px-12 py-5 text-xl font-bold rounded-full bg-[#0f2920] text-white shadow-xl focus:outline-none focus:ring-4 focus:ring-[#714819] focus:ring-opacity-50">
-              Start Your Journey →
-              <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-                className="absolute inset-0 bg-white opacity-10 blur-md"
-              />
-            </motion.button>
+              <motion.button variants={glowAnimation} whileHover="whileHover" className="relative overflow-hidden px-12 py-5 text-xl font-bold rounded-full bg-[#0f2920] text-white shadow-xl focus:outline-none focus:ring-4 focus:ring-[#714819] focus:ring-opacity-50">
+                Start Your Journey →
+                <motion.div
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "100%" }}
+                  transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                  className="absolute inset-0 bg-white opacity-10 blur-md"
+                />
+              </motion.button>
             </Link>
           </motion.div>
         </div>

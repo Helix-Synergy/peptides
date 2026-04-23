@@ -18,7 +18,7 @@ const IndustrialCollaborations = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
             Our Industrial Collaborations
           </h1>
-          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto opacity-90 text-justify">
             Partnering with industry leaders to drive real-world innovation.
           </p>
         </div>
@@ -31,7 +31,7 @@ const IndustrialCollaborations = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Explore Our Industry Partners
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-justify">
               We're proud to work with these innovative companies, creating valuable opportunities for our students and faculty.
             </p>
           </div>
@@ -40,20 +40,21 @@ const IndustrialCollaborations = () => {
             {industrialCollaborations.map((industry, index) => (
               <div
                 key={industry.id}
-                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 p-8 rounded-3xl bg-white shadow-2xl transition-all duration-500 hover:shadow-2xl ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 p-8 rounded-3xl bg-white shadow-2xl transition-all duration-500 hover:shadow-2xl ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                  }`}
               >
                 {/* Image & Logo */}
                 <div className="w-full lg:w-1/2 flex-shrink-0 relative">
                   <img
                     src={industry.banner.imageUrl}
                     alt={`${industry.name} banner`}
+                    referrerPolicy="no-referrer"
                     className="w-full h-80 object-cover rounded-2xl shadow-lg transform transition-transform duration-500 hover:scale-[1.02]"
                   />
                   <img
                     src={industry.logo}
                     alt={`${industry.name} logo`}
+                    referrerPolicy="no-referrer"
                     className="absolute bottom-4 left-4 w-24 h-24 object-contain bg-white rounded-full p-2 border-4 border-white shadow-xl"
                   />
                 </div>
@@ -63,7 +64,7 @@ const IndustrialCollaborations = () => {
                   <h3 className="text-3xl font-bold text-gray-800 mb-4">
                     {industry.name}
                   </h3>
-                  <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                  <p className="text-gray-600 text-lg mb-6 leading-relaxed text-justify">
                     {industry.collaborationDetails.collaborationText}
                   </p>
                   <Link
@@ -89,8 +90,8 @@ const IndustrialCollaborations = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Want to Collaborate with Us?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-80">
-If you're a Research Lab or a Company at the Forefront of your Industry and you share our Vision, we would love to Connect with you. Let's Pioneer a Better Future together.          </p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-80 text-justify">
+            If you're a Research Lab or a Company at the Forefront of your Industry and you share our Vision, we would love to Connect with you. Let's Pioneer a Better Future together.          </p>
           <Link
             to="/collaborations/collab-peptides"
             className="inline-flex items-center justify-center px-10 py-4 border-2 border-white text-lg font-bold rounded-full text-white bg-transparent hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"

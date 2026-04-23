@@ -93,10 +93,10 @@ const AcademicAssistDropdown = () => {
           className="relative z-10 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">{academicData.meta.h1}</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4 text-justify">
             {academicData.intro.title}
           </p>
-          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 whitespace-pre-line">{academicData.intro.description}</p>
+          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 whitespace-pre-line text-justify">{academicData.intro.description}</p>
         </motion.div>
       </section>
 
@@ -147,10 +147,10 @@ const AcademicAssistDropdown = () => {
                   onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/112x112/CCCCCC/000000?text=User'; }}
                 />
                 <h4 className="text-xl font-bold mb-1">{academicData.helpSection.title}</h4>
-                <p className="text-sm mb-3">{academicData.helpSection.description}</p>
+                <p className="text-sm mb-3 text-justify">{academicData.helpSection.description}</p>
                 <div className="text-base font-semibold mb-4">
-                  <p>{academicData.helpSection.phone}</p>
-                  <p>Mail: {academicData.helpSection.email}</p>
+                  <p className="text-justify">{academicData.helpSection.phone}</p>
+                  <p className="text-justify">Mail: {academicData.helpSection.email}</p>
                 </div>
                 {/* Social icons */}
                 <div className="flex gap-3 mt-2">
@@ -184,7 +184,7 @@ const AcademicAssistDropdown = () => {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">{service.title}</h2>
-                <p className="text-gray-700 mb-4 text-lg leading-relaxed whitespace-pre-line">{service.description}</p>
+                <p className="text-gray-700 mb-4 text-lg leading-relaxed whitespace-pre-line text-justify">{service.description}</p>
 
                 {/* CTA Button */}
                 {service.cta && (

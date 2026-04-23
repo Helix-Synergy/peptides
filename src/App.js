@@ -72,18 +72,6 @@
 //                 <Hero />
 //                 <AboutSection />
 //                 <WhyChooseUsSection />
-//                 <CollaborationSection />
-//                 <ServiceSlider />
-//                 <HomeContactSection />
-//               </>
-//             }
-//           />
-//           <Route path="/about-us" element={<AboutUs />} />
-//           <Route path="/contact" element={<ContactSection />} />
-//           <Route path="/gallery" element={<Gallery />} />
-//           <Route
-//             path="/contact/register-student"
-//             element={<ContactSection />}
 //           />
 //           <Route
 //             path="/contact/register-faculty"
@@ -218,7 +206,9 @@ import React, { useEffect } from "react";
 import AboutUs from "./pages/AboutUs";
 import Gallery from "./pages/Gallery";
 import Layout from "./layout/Layout";
+// ... imports ...
 import Hero from "./sections/Hero";
+import PaymentSuccess from "./pages/PaymentSuccess";
 import ServiceSlider from "./sections/ServiceSlider";
 import AboutSection from "./sections/AboutSection";
 import WhyChooseUsSection from "./sections/WhyChooseUsSection";
@@ -227,10 +217,14 @@ import CollaborationSection from "./sections/CollaborationSection";
 import HomeContactSection from "./sections/HomeContactSection";
 import ActivitiesBenefitsPage from "./components/AdvisoryCouncil/ActivitiesBenefitsPage";
 
+// ... imports ...
+
 // Components for Panel of Experts (POE)
 import AboutAdvisoryBoard from "./components/AdvisoryCouncil/AboutAdvisoryBoard";
 import OurAdvisoryCouncil from "./components/AdvisoryCouncil/OurAdvisoryCouncil";
 import BecomeAMemberComp from "./components/AdvisoryCouncil/BecomeAMember";
+
+// ... (Rest of imports remain same)
 
 // Components for Academic Assist
 import AcademicAssistDropdown from "./components/AcademicAssist/AcademicAssistDropdown";
@@ -273,29 +267,40 @@ import QuickLinks from "./components/Quicklinks";
 
 
 function App() {
+
+
   // Use a useEffect hook to send a ping to the backend service every 3 minutes.
   // This keeps the service awake on platforms like Render's free tier.
-useEffect(() => {
-  const backendUrl = "https://peptidesbackend.onrender.com";
+  useEffect(() => {
+    // Artificial Loading Delay for smooth entry
 
-  const pingBackend = async () => {
-    try {
-      const res = await fetch(backendUrl);
-      if (res.ok) {
-        console.log("✅ Backend ping successful!");
-      } else {
-        console.warn(`⚠️ Backend ping returned status: ${res.status}`);
+
+    const backendUrl = process.env.REACT_APP_API_URL;
+
+    const pingBackend = async () => {
+      try {
+        const res = await fetch(backendUrl);
+        if (res.ok) {
+          console.log("✅ Backend ping successful!");
+        } else {
+          console.warn(`⚠️ Backend ping returned status: ${res.status}`);
+        }
+      } catch (error) {
+        console.error("❌ Backend ping failed:", error);
       }
-    } catch (error) {
-      console.error("❌ Backend ping failed:", error);
-    }
-  };
+    };
 
-  pingBackend(); // ping immediately
-  const intervalId = setInterval(pingBackend, 180000); // every 3 minutes
+    pingBackend(); // ping immediately
+    const intervalId = setInterval(pingBackend, 180000); // every 3 minutes
 
-  return () => clearInterval(intervalId);
-}, []);
+    return () => {
+      clearInterval(intervalId);
+
+    };
+  }, []);
+
+
+
 
 
 
@@ -439,7 +444,9 @@ useEffect(() => {
             element={<MemberDetailPage />}
           />
 
+
           {/* Wildcard route for any undefined paths */}
+          <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="*" element={<NotFoundLab />} />
         </Route>
       </Routes>

@@ -125,7 +125,7 @@ const ActivitiesBenefitsPage = () => {
         className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${activityBanner})` }}
       >
-  <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -144,9 +144,8 @@ const ActivitiesBenefitsPage = () => {
           <motion.button
             layout
             onClick={() => setActiveTab("Activities")}
-            className={`flex-1 py-2 text-center font-semibold relative transition-colors z-10 ${
-              activeTab === "Activities" ? "text-white" : "text-[#0f2920]"
-            }`}
+            className={`flex-1 py-2 text-center font-semibold relative transition-colors z-10 ${activeTab === "Activities" ? "text-white" : "text-[#0f2920]"
+              }`}
           >
             {activeTab === "Activities" && (
               <motion.span
@@ -160,9 +159,8 @@ const ActivitiesBenefitsPage = () => {
           <motion.button
             layout
             onClick={() => setActiveTab("Benefits")}
-            className={`flex-1 py-2 text-center font-semibold relative transition-colors z-10 ${
-              activeTab === "Benefits" ? "text-white" : "text-[#0f2920]"
-            }`}
+            className={`flex-1 py-2 text-center font-semibold relative transition-colors z-10 ${activeTab === "Benefits" ? "text-white" : "text-[#0f2920]"
+              }`}
           >
             {activeTab === "Benefits" && (
               <motion.span
@@ -206,7 +204,7 @@ const ActivitiesBenefitsPage = () => {
                   <h3 className="text-xl font-bold mb-2 text-[#0f2920]">
                     {item.title}
                   </h3>
-                  <p className="text-black">{item.description}</p>
+                  <p className="text-black text-justify">{item.description}</p>
                 </motion.div>
               );
             })}
@@ -230,8 +228,8 @@ const ActivitiesBenefitsPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
-              <p className="text-3xl font-bold text-[#0f2920]">{stat.number}</p>
-              <p className="text-[#0f2920]">{stat.label}</p>
+              <p className="text-3xl font-bold text-[#0f2920] text-justify">{stat.number}</p>
+              <p className="text-[#0f2920] text-justify">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -253,23 +251,23 @@ const ActivitiesBenefitsPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[#0f2920] mb-6"
+          className="text-[#0f2920] mb-6 text-center"
         >
           Explore activities and benefits, and take your career and research to
           the next level.
         </motion.p>
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.4 }}
->
-  <Link
-    to="/contact"
-    className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
-  >
-    Get Started <ArrowRight className="ml-2 w-5 h-5" />
-  </Link>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl bg-[#1e1e1e] shadow-lg transition-all duration-300 hover:bg-[#333333] hover:scale-105"
+          >
+            Get Started <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </motion.div>
       </section>
     </main>
   );

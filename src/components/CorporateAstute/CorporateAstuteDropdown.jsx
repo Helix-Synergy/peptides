@@ -48,10 +48,10 @@ const CorporateAstuteDropdown = () => {
           className="relative z-10 text-center"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Corporate Astute</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto px-4 text-justify">
             Strategic Business Solutions for Biotechnology
           </p>
-          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4">
+          <p className="text-base text-gray-200 mt-2 max-w-3xl mx-auto px-4 text-justify">
             Empowering companies with innovative solutions, strategic partnerships, and operational excellence
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ const CorporateAstuteDropdown = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Driving Corporate Success in Biotechnology
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed text-justify">
               Corporate Astute delivers comprehensive business solutions designed specifically for the 
               biotechnology and life sciences sectors. We help companies navigate complex challenges, 
               optimize operations, and achieve sustainable growth through strategic partnerships and 
@@ -155,7 +155,7 @@ const CorporateAstuteDropdown = () => {
           >
             <div className="bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90 text-justify">
                 Partner with us to unlock new opportunities and drive sustainable growth
               </p>
 <motion.div

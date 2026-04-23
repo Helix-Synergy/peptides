@@ -46,7 +46,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import workshopBanner from "../../assets/images/PageBanners/workshops.jpg";
 
@@ -56,7 +56,7 @@ const Workshops = () => {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const upcomingWorkshops = [
-        {
+    {
       title: "ChemKraftz",
       date: "Sept 19-20, 2025",
       time: "10:00 AM - 3:00 PM",
@@ -218,7 +218,7 @@ const Workshops = () => {
     <div className="bg-white text-[#0f2920] min-h-screen font-inter overflow-hidden relative">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
+        className="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${workshopBanner})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -259,6 +259,7 @@ const Workshops = () => {
       {/* Upcoming Workshops */}
       <section className="w-full py-12 px-4 lg:px-12">
         <div className="max-w-7xl mx-auto">
+          {/*
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -292,25 +293,26 @@ const Workshops = () => {
                   </div>
                   <div className="text-gray-600">{workshop.location}</div>
                 </div>
-<div className="flex flex-col sm:flex-row gap-4">
-    <Link
-      to="/contact"
-      className="flex-1 btn-primary text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
-    >
-      Register
-    </Link>
-    <a
-      href={workshop.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex-1 btn-primary text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center"
-    >
-      Brochure
-    </a>
-  </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to="/contact"
+                    className="flex-1 btn-primary text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
+                  >
+                    Register
+                  </Link>
+                  <a
+                    href={workshop.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 btn-primary text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center"
+                  >
+                    Brochure
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
+*/}
 
           <hr className="my-12 border-t border-peptides-light-gray w-full" />
 
@@ -349,7 +351,7 @@ const Workshops = () => {
                 >
                   <CheckCircle className="h-10 w-10 text-peptides-color-brown mb-4" />
                   <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="text-sm text-gray-600 mt-2">{item.description}</p>
+                  <p className="text-sm text-gray-600 mt-2 text-justify">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -372,7 +374,7 @@ const Workshops = () => {
                     <Sparkles className="h-8 w-8 text-peptides-color-brown mr-2" />
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <p className="text-sm text-gray-600 text-justify">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -412,7 +414,7 @@ const Workshops = () => {
               <h3 className="text-2xl font-bold mb-4">
                 Want a Custom Workshop?
               </h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90 text-center">
                 Tell us your requirements and we will design a workshop for your team
               </p>
               <button

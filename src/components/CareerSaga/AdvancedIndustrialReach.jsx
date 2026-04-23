@@ -250,7 +250,7 @@ const AdvancedIndustrialReach = () => {
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <p className="text-lg md:text-xl text-gray-700">{reachData.intro}</p>
+          <p className="text-lg md:text-xl text-gray-700 text-justify">{reachData.intro}</p>
         </motion.div>
       </section>
 
@@ -277,7 +277,7 @@ const AdvancedIndustrialReach = () => {
                 >
                   <Icon size={56} className="mb-4 text-[#714819]" />
                   <h3 className="text-xl font-bold mb-2 text-[#0f2920]">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
+                  <p className="text-gray-700 text-justify">{item.description}</p>
                 </motion.div>
               );
             })}
@@ -308,7 +308,7 @@ const AdvancedIndustrialReach = () => {
                 >
                   <Icon size={56} className="mb-4 text-[#714819]" />
                   <h3 className="text-xl font-bold mb-2 text-[#0f2920]">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
+                  <p className="text-gray-700 text-justify">{item.description}</p>
                 </motion.div>
               );
             })}

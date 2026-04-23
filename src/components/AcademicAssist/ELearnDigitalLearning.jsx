@@ -141,7 +141,7 @@ const ELearnDigitalLearning = () => {
     <div className="bg-white text-peptides-dark-light min-h-screen font-inter overflow-hidden relative">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] flex items-center justify-end text-center bg-cover bg-center"
+        className="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${journalsBanner})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -171,7 +171,7 @@ const ELearnDigitalLearning = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold text-peptides-dark mb-6">
               Welcome to the Future of Learning
             </h2>
-            <p className="text-lg text-peptides-dark max-w-4xl mx-auto leading-relaxed mb-6">
+            <p className="text-lg text-peptides-dark max-w-4xl mx-auto leading-relaxed mb-6 text-justify">
               Our e-education platform gives you the power to gain new skills
               and advance your career from anywhere in the world. With a vast
               library of expert-led courses and flexible learning paths, you can
@@ -180,7 +180,7 @@ const ELearnDigitalLearning = () => {
               provide the tools, knowledge, and support you need to reach your
               goals.
             </p>
-            <p className="text-lg text-peptides-dark max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-peptides-dark max-w-4xl mx-auto leading-relaxed text-justify">
               Learning is better when you're connected. Our e-education platform
               isn't just about video lectures; it's a vibrant community of
               learners, mentors, and industry experts. Engage in live Q&A
@@ -225,7 +225,7 @@ const ELearnDigitalLearning = () => {
                     <h4 className="text-xl font-bold text-peptides-text-light mb-3">
                       {course.title}
                     </h4>
-                    <p className="text-peptides-text-muted mb-4">
+                    <p className="text-peptides-text-muted mb-4 text-justify">
                       Instructor: {course.instructor}
                     </p>
 
@@ -261,7 +261,7 @@ const ELearnDigitalLearning = () => {
               ))}
             </div>
           </motion.div> */}
-          
+
           {/* Subjects Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -324,7 +324,7 @@ const ELearnDigitalLearning = () => {
                   <h4 className="text-lg font-bold text-peptides-dark mb-2">
                     {feature.title}
                   </h4>
-                  <p className="text-sm text-peptides-dark">{feature.description}</p>
+                  <p className="text-sm text-peptides-dark text-justify">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -370,7 +370,7 @@ const ELearnDigitalLearning = () => {
               <h3 className="text-2xl font-bold mb-4">
                 Start Your Digital Learning Journey Today
               </h3>
-              <p className="text-lg mb-6 opacity-90 text-peptides-text-muted">
+              <p className="text-lg mb-6 opacity-90 text-peptides-text-muted text-center">
                 Join thousands of learners worldwide and advance your career with
                 our expert-led courses.
               </p>
