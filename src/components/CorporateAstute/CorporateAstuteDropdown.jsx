@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import { Building, Handshake, TrendingUp, Award, CheckCircle, ArrowRight, Users, Globe, Target } from 'lucide-react';
+import SEO from '../SEO';
 
 const CorporateAstuteDropdown = () => {
   const sectionRef = useRef(null);
@@ -38,6 +39,11 @@ const CorporateAstuteDropdown = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <SEO 
+        title="Corporate Astute"
+        description="Strategic Business Solutions for Biotechnology. Corporate Astute delivers comprehensive business solutions designed specifically for the biotechnology and life sciences sectors."
+        keywords="Corporate Astute, Corporate Collaborations, Analyte Assessment Services, StackUp, Partnership development, Business consulting, IT infrastructure"
+      />
       {/* Hero Section */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-indigo-700 to-blue-600">
         <motion.div

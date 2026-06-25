@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { GraduationCap, Briefcase, Users, Rocket } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AcademicAssist from '../assets/images/HomeServicesSlider/AcademicAssist.png';
-import CorporateAstute from '../assets/images/HomeServicesSlider/CorporateAstute.png';
-import CareerSaga from '../assets/images/HomeServicesSlider/CareerSaga.png';
-import Collaborations from '../assets/images/HomeServicesSlider/Collaborations.png';
+import AcademicAssist from '../assets/images/HomeServicesSlider/AcademicAssist.webp';
+import CorporateAstute from '../assets/images/HomeServicesSlider/CorporateAstute.webp';
+import CareerSaga from '../assets/images/HomeServicesSlider/CareerSaga.webp';
+import Collaborations from '../assets/images/HomeServicesSlider/Collaborations.webp';
 
 const services = [
   {

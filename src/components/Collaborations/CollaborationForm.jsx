@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Banner from "../../assets/images/PageBanners/collaborations.jpg";
+import Banner from "../../assets/images/PageBanners/collaborations.webp";
 
 // ✅ API URL from .env
 const API_URL = process.env.REACT_APP_API_URL;
@@ -101,9 +101,9 @@ const CollaborationForm = () => {
       {/* Form Section */}
       <div className="py-16 px-6" style={{ backgroundColor: "#f2efe9" }}>
         <div className="bg-white p-8 md:p-12 shadow-xl rounded-2xl w-full max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold text-center mb-8">
+          <h2 className="text-3xl font-bold text-center mb-8">
             Collaboration Form
-          </h1>
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name + Email */}

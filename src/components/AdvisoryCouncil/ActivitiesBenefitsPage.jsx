@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from 'react-router-dom';
-import activityBanner from "../../assets/images/PageBanners/activities.jpg";
+import activityBanner from "../../assets/images/PageBanners/activities.webp";
 import {
   FlaskConical,
   Telescope,

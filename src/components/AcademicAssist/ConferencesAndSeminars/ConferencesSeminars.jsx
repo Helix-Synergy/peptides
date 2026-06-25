@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Conferences from "./Conferences";   // new extracted component
 import Seminars from "./Seminars";         // already ready
-import conferencesBanner from '../../../assets/images/PageBanners/conferences.jpg'
+import conferencesBanner from '../../../assets/images/PageBanners/conferences.webp'
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState("Conferences");

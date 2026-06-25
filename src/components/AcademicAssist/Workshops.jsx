@@ -48,7 +48,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import workshopBanner from "../../assets/images/PageBanners/workshops.jpg";
+import workshopBanner from "../../assets/images/PageBanners/workshops.webp";
 
 const Workshops = () => {
   const navigate = useNavigate();
@@ -241,7 +241,7 @@ const Workshops = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 mt-8 px-4"
         >
-          <h1 className="text-xl md:text-lg text-black font-bold mb-4">
+          <h2 className="text-xl md:text-lg text-black font-bold mb-4">
             Our workshops are designed to be a transformative learning experience, offering
             more than just theoretical knowledge. We are committed to providing participants
             with substantive, hands-on sessions that allow them to apply their academic
@@ -250,7 +250,7 @@ const Workshops = () => {
             to achieving our company's strategic goals. This program is an opportunity to gain
             invaluable experience, build a robust professional network, and develop the skills
             essential for a successful career.
-          </h1>
+          </h2>
         </motion.div>
       </section>
 

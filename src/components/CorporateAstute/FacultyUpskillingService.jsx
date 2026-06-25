@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   BookOpen, Laptop, BarChart, Feather, Users, Award, Lightbulb, GraduationCap, ArrowRight, TrendingUp, Clock, Check
 } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/8.jpg'
+import Banner from '../../assets/images/PageBanners/8.webp'
 
 // === DATA FOR THIS PAGE ===
 const fusData = {

@@ -164,23 +164,23 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from 'react-router-dom';
-import anuradha from "../assets/images/advisory/anuradha.jpg";
-import kumar from "../assets/images/advisory/kumar.jpeg";
-import pushpa from "../assets/images/advisory/pushpa.jpg";
-import sarika from "../assets/images/advisory/sarika.jpg";
-import sudhakar from "../assets/images/advisory/sudhakar.jpeg";
-import valasia from "../assets/images/advisory/valasia.jpg";
-import cristiano from "../assets/images/advisory/cristiano.jpg";
-import ramakanth from "../assets/images/advisory/ramakanth.jpeg";
-import saritha from "../assets/images/advisory/saritha.jpeg";
-import sujani from "../assets/images/advisory/sujani.jpeg";
-import vinyas from "../assets/images/advisory/vinyas.jpg";
-import kalyani from "../assets/images/advisory/kalyani.jpg";
-import murthy from "../assets/images/advisory/murthy.jpg";
-import roseMary from "../assets/images/advisory/rose-mary.jpg";
-import shivakrishna from "../assets/images/advisory/shivakrishna.jpeg";
-import thomas from "../assets/images/advisory/thomas.jpg";
-import Sunitha from "../assets/images/advisory/sunithaGaru.jpeg";
+import anuradha from "../assets/images/advisory/anuradha.webp";
+import kumar from "../assets/images/advisory/kumar.webp";
+import pushpa from "../assets/images/advisory/pushpa.webp";
+import sarika from "../assets/images/advisory/sarika.webp";
+import sudhakar from "../assets/images/advisory/sudhakar.webp";
+import valasia from "../assets/images/advisory/valasia.webp";
+import cristiano from "../assets/images/advisory/cristiano.webp";
+import ramakanth from "../assets/images/advisory/ramakanth.webp";
+import saritha from "../assets/images/advisory/saritha.webp";
+import sujani from "../assets/images/advisory/sujani.webp";
+import vinyas from "../assets/images/advisory/vinyas.webp";
+import kalyani from "../assets/images/advisory/kalyani.webp";
+import murthy from "../assets/images/advisory/murthy.webp";
+import roseMary from "../assets/images/advisory/rose-mary.webp";
+import shivakrishna from "../assets/images/advisory/shivakrishna.webp";
+import thomas from "../assets/images/advisory/thomas.webp";
+import Sunitha from "../assets/images/advisory/sunithaGaru.webp";
 
 const baseExperts = [
   { name: "Dr. Valasia Iakovoglou", designation: "PhD in Ecophysiology/Sylviculture", place: "USA", img: valasia },

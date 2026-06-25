@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   Users, TrendingUp, Award, ArrowRight, Pill, Leaf, UtensilsCrossed, Wrench, Lightbulb, FlaskConical, Check, Microscope, Locate, Sprout, Cloud, Recycle, Trash2, Clock
 } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/3.jpg'
+import Banner from '../../assets/images/PageBanners/3.webp'
 
 // === DATA FOR THIS PAGE ===
 const crsData = {

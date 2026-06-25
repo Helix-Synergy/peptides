@@ -43,7 +43,7 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
-import internshipBanner from "../../assets/images/PageBanners/internships.jpg";
+import internshipBanner from "../../assets/images/PageBanners/internships.webp";
 
 const tracksData = [
   { id: 1, title: "Accounting", icon: Calculator },
@@ -179,7 +179,7 @@ const Internships = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-2 md:mb-4 mt-8 px-4"
         >
-          <h1 className="text-xl md:text-lg  text-black font-bold mb-4">
+          <h2 className="text-xl md:text-lg  text-black font-bold mb-4">
             Our internship program is designed to be a transformative
             experience, offering more than just a stepping stone in your career.
             We are committed to providing students with substantive, hands-on
@@ -190,7 +190,7 @@ const Internships = () => {
             goals. This program is an opportunity to gain invaluable experience,
             build a robust professional network, and develop the skills
             essential for a successful career.{" "}
-          </h1>
+          </h2>
         </motion.div>
       </section>
       {/* Tracks Section */}

@@ -6,7 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { PhoneCall, Menu, X, Home, Info, Mail, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.webp';
 
 const navLinks = [
   { name: 'Home', href: '/', icon: Home },

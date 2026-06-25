@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoadingScreen.css';
-import logo from '../../assets/logo.png'; // Assuming path based on search
+import logo from '../../assets/logo.webp'; // Assuming path based on search
 
 const LoadingScreen = () => {
     return (

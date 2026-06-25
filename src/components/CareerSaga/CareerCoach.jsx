@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   Code, HeartPulse, Briefcase, Palette, Award, Users, Check, ArrowRight
 } from "lucide-react";
-import Banner from '../../assets/images/about-banner.jpg'
+import Banner from '../../assets/images/about-banner.webp'
 
 // === DATA FOR THIS PAGE ===
 const jobTrainingData = {

@@ -7,7 +7,7 @@ import {
   Factory, HeartPulse, Briefcase, Code, Check, Award, ArrowRight,
   BookOpen, Building2, FlaskConical, Atom, PencilRuler, Headphones
 } from 'lucide-react';
-import Banner from '../../assets/images/PageBanners/industryCollaborationsBanner.png'
+import Banner from '../../assets/images/PageBanners/industryCollaborationsBanner.webp'
 
 // === DATA FOR THIS PAGE ===
 const reachData = {

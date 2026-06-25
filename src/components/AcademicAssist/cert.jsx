@@ -27,7 +27,7 @@ import {
   Book,
   Monitor,
 } from "lucide-react";
-import BannerImage from '../../assets/images/PageBanners/1.jpg'
+import BannerImage from '../../assets/images/PageBanners/1.webp'
 
 
 // Replaced the TrainFront icon with a custom SVG for "RRB NTPC & Group D"

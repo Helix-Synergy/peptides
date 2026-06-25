@@ -81,7 +81,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AboutSectionImg from '../assets/images/aboutSectionImg.png'
+import AboutSectionImg from '../assets/images/aboutSectionImg.webp'
 
 const AboutSection = () => {
   return (
@@ -95,6 +95,7 @@ const AboutSection = () => {
             <img
               src={AboutSectionImg}
               alt="About"
+              loading="lazy"
               className="w-full h-full object-cover object-center -rotate-45"
             />
           </div>

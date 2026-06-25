@@ -1,284 +1,76 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import React from "react";
-// // These are your existing page components
-// import AboutUs from "./pages/AboutUs";
-// import Gallery from "./pages/Gallery";
-// import Layout from "./layout/Layout";
-// import Hero from "./sections/Hero";
-// import ServiceSlider from "./sections/ServiceSlider";
-// import AboutSection from "./sections/AboutSection";
-// import WhyChooseUsSection from "./sections/WhyChooseUsSection";
-// import ContactSection from "./components/ContactSection/ContactSection";
-// import CollaborationSection from "./sections/CollaborationSection";
-// import HomeContactSection from "./sections/HomeContactSection";
-// import ActivitiesBenefitsPage from "./components/AdvisoryCouncil/ActivitiesBenefitsPage";
-
-// // Components for Panel of Experts (POE)
-// import AboutAdvisoryBoard from "./components/AdvisoryCouncil/AboutAdvisoryBoard";
-// import OurAdvisoryCouncil from "./components/AdvisoryCouncil/OurAdvisoryCouncil";
-// import BecomeAMemberComp from "./components/AdvisoryCouncil/BecomeAMember";
-
-// // Components for Academic Assist
-// import AcademicAssistDropdown from "./components/AcademicAssist/AcademicAssistDropdown";
-// import AcademicProjects from "./components/AcademicAssist/AcademicProjects";
-// import ConferencesSeminars from "./components/AcademicAssist/ConferencesAndSeminars/ConferencesSeminars";
-// import Workshops from "./components/AcademicAssist/Workshops";
-// import TechTalks from "./components/AcademicAssist/TechTalks";
-// import ResearchAssistanceThesisSupport from "./components/CorporateAstute/ResearchAssistanceThesisSupport";
-// import FacultyUpskillingService from "./components/CorporateAstute/FacultyUpskillingService";
-// import ELearnDigitalLearning from "./components/AcademicAssist/ELearnDigitalLearning";
-// import Publications from "./components/AcademicAssist/Publications";
-// import Internships from "./components/AcademicAssist/Internships";
-// import SkillDevelopment from "./components/AcademicAssist/SkillDevelopment";
-// import IndustrialTours from "./components/AcademicAssist/IndustrialTours";
-// import CERT from "./components/AcademicAssist/cert";
-
-// // Components for Corporate Astute
-// import CorporateAstuteDropdown from "./components/CorporateAstute/CorporateAstuteDropdown";
-// import CorporateCollaborations from "./components/CorporateAstute/CorporateCollaborations";
-// import ContractResearchServices from "./components/CorporateAstute/ContractResearchServices";
-// import AnalyticAssessmentServices from "./components/CorporateAstute/AnalyticAssessmentServices";
-// import StackUp from "./components/CorporateAstute/StackUp";
-// import MemberDetailPage from "./components/AdvisoryCouncil/MemberDetailPage";
-
-// import AcademicCollaborations from "./components/Collaborations/AcademicCollaborations";
-// import IndustrialCollaborations from "./components/Collaborations/IndustrialCollaborations";
-// import CollaborationForm from "./components/Collaborations/CollaborationForm";
-// import AcademicDetail from "./components/Collaborations/AcademicCollaborationDetail";
-// import IndustrialDetail from "./components/Collaborations/IndustrialCollaborationDetail";
-
-// // Components for Career Saga
-// import CareerSagaDropdown from "./components/CareerSaga/CareerSagaDropdown";
-// import CareerCoach from "./components/CareerSaga/CareerCoach";
-// import JobMate from "./components/CareerSaga/JobMate";
-// import PeptidesAssistanceMembership from "./components/CareerSaga/PeptidesAssistanceMembership";
-// import AdvancedIndustrialReach from "./components/CareerSaga/AdvancedIndustrialReach";
-// import ComingSoon from "./components/ComingSoon";
-// import NotFoundLab from "./components/NotFoundLab";
-
-
-
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route element={<Layout />}>
-//           {/* Main Pages */}
-//           <Route
-//             path="/"
-//             element={
-//               <>
-//                 <Hero />
-//                 <AboutSection />
-//                 <WhyChooseUsSection />
-//           />
-//           <Route
-//             path="/contact/register-faculty"
-//             element={<ContactSection />}
-//           />
-
-//           {/* Panel of Experts (POE) Routes - Mapped from old Advisory Council */}
-//           <Route
-//             path="/panel-of-experts/about-advisory-board"
-//             element={<AboutAdvisoryBoard />}
-//           />
-//           <Route
-//             path="/panel-of-experts/subject-matter-experts"
-//             element={<OurAdvisoryCouncil />}
-//           />
-//           <Route
-//             path="/panel-of-experts/become-a-member"
-//             element={<BecomeAMemberComp />}
-//           />
-//           <Route
-//             path="/panel-of-experts/activities-benefits"
-//             element={<ActivitiesBenefitsPage pageType="activities" />}
-//           />
-
-//           {/* Academic Assist Routes */}
-//           <Route path="/academic-assist" element={<AcademicAssistDropdown />} />
-//           <Route
-//             path="/academic-assist/projects"
-//             element={<AcademicProjects />}
-//           />
-//           <Route
-//             path="/academic-assist/conferences"
-//             element={<ConferencesSeminars />}
-//           />
-//           <Route path="/academic-assist/workshops" element={<Workshops />} />
-//           <Route
-//             path="/academic-assist/internships"
-//             element={<Internships />}
-//           />
-//           <Route
-//             path="/academic-assist/publications"
-//             element={<Publications />}
-//           />
-//           <Route
-//             path="/academic-assist/skill-development"
-//             element={<SkillDevelopment />}
-//           />
-//           <Route
-//             path="/academic-assist/industrial-tours"
-//             element={<IndustrialTours />}
-//           />
-//           <Route
-//             path="/academic-assist/e-learn"
-//             element={<ELearnDigitalLearning />}
-//           />
-//           <Route path="/academic-assist/cert" element={<CERT />} />
-
-//           {/* Corporate Astute Routes */}
-//           <Route
-//             path="/corporate-astute"
-//             element={<CorporateAstuteDropdown />}
-//           />
-//           <Route
-//             path="/corporate-astute/aas"
-//             element={<AnalyticAssessmentServices />}
-//           />
-//           <Route
-//             path="/corporate-astute/crs"
-//             element={<ContractResearchServices />}
-//           />
-//           <Route
-//             path="/corporate-astute/fuss"
-//             element={<FacultyUpskillingService />}
-//           />
-//           <Route
-//             path="/corporate-astute/raws"
-//             element={<ResearchAssistanceThesisSupport />}
-//           />
-
-//           {/* Career Saga Routes */}
-//           <Route path="/career-saga" element={<CareerSagaDropdown />} />
-//           <Route path="/career-saga/jot" element={<CareerCoach />} />
-//           <Route path="/career-saga/plast" element={<JobMate />} />
-//           <Route
-//             path="/career-saga/air"
-//             element={<AdvancedIndustrialReach />}
-//           />
-//           <Route
-//             path="/career-saga/pam"
-//             element={<PeptidesAssistanceMembership />}
-//           />
-
-//           <Route
-//             path="/collaborations/academic"
-//             element={<AcademicCollaborations />}
-//           />
-//           <Route
-//             path="/collaborations/industry"
-//             element={<IndustrialCollaborations />}
-//           />
-//           <Route
-//             path="/collaborations/collab-peptides"
-//             element={<CollaborationForm />}
-//           />
-//           <Route path="/academic/:id" element={<AcademicDetail />} />
-//           <Route path="/industry/:id" element={<IndustrialDetail />} />
-
-//           {/* Careers Routes */}
-// <Route path="/careers/jobs" element={<ComingSoon pageName="Jobs @ Peptides" />} />
-// <Route path="/careers/post-job" element={<ComingSoon pageName="Post a Job with Peptides" />} />
-
-//           <Route
-//             path="/panel-of-experts/member/:id"
-//             element={<MemberDetailPage />}
-//           />
-
-//           {/* Wildcard route for any undefined paths */}
-// <Route path="*" element={<NotFoundLab />} />
-
-//         </Route>
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useEffect } from "react";
-// These are your existing page components
-import AboutUs from "./pages/AboutUs";
-import Gallery from "./pages/Gallery";
-import Layout from "./layout/Layout";
-// ... imports ...
-import Hero from "./sections/Hero";
-import PaymentSuccess from "./pages/PaymentSuccess";
-import ServiceSlider from "./sections/ServiceSlider";
-import AboutSection from "./sections/AboutSection";
-import WhyChooseUsSection from "./sections/WhyChooseUsSection";
-import ContactSection from "./components/ContactSection/ContactSection";
-import CollaborationSection from "./sections/CollaborationSection";
-import HomeContactSection from "./sections/HomeContactSection";
-import ActivitiesBenefitsPage from "./components/AdvisoryCouncil/ActivitiesBenefitsPage";
+import React, { useEffect, Suspense, lazy } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
-// ... imports ...
+// Non-lazy components (layout, loading, quicklinks)
+import Layout from "./layout/Layout";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import QuickLinks from "./components/Quicklinks";
+import NotFoundLab from "./components/NotFoundLab";
+import SEO from "./components/SEO";
+
+// Lazy-loaded components
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const Hero = lazy(() => import("./sections/Hero"));
+const PaymentSuccess = lazy(() => import("./pages/PaymentSuccess"));
+const ServiceSlider = lazy(() => import("./sections/ServiceSlider"));
+const AboutSection = lazy(() => import("./sections/AboutSection"));
+const WhyChooseUsSection = lazy(() => import("./sections/WhyChooseUsSection"));
+const ContactSection = lazy(() => import("./components/ContactSection/ContactSection"));
+const CollaborationSection = lazy(() => import("./sections/CollaborationSection"));
+const HomeContactSection = lazy(() => import("./sections/HomeContactSection"));
+const ActivitiesBenefitsPage = lazy(() => import("./components/AdvisoryCouncil/ActivitiesBenefitsPage"));
 
 // Components for Panel of Experts (POE)
-import AboutAdvisoryBoard from "./components/AdvisoryCouncil/AboutAdvisoryBoard";
-import OurAdvisoryCouncil from "./components/AdvisoryCouncil/OurAdvisoryCouncil";
-import BecomeAMemberComp from "./components/AdvisoryCouncil/BecomeAMember";
-
-// ... (Rest of imports remain same)
+const AboutAdvisoryBoard = lazy(() => import("./components/AdvisoryCouncil/AboutAdvisoryBoard"));
+const OurAdvisoryCouncil = lazy(() => import("./components/AdvisoryCouncil/OurAdvisoryCouncil"));
+const BecomeAMemberComp = lazy(() => import("./components/AdvisoryCouncil/BecomeAMember"));
+const MemberDetailPage = lazy(() => import("./components/AdvisoryCouncil/MemberDetailPage"));
 
 // Components for Academic Assist
-import AcademicAssistDropdown from "./components/AcademicAssist/AcademicAssistDropdown";
-import AcademicProjects from "./components/AcademicAssist/AcademicProjects";
-import ConferencesSeminars from "./components/AcademicAssist/ConferencesAndSeminars/ConferencesSeminars";
-import Workshops from "./components/AcademicAssist/Workshops";
-import TechTalks from "./components/AcademicAssist/TechTalks";
-import ResearchAssistanceThesisSupport from "./components/CorporateAstute/ResearchAssistanceThesisSupport";
-import FacultyUpskillingService from "./components/CorporateAstute/FacultyUpskillingService";
-import ELearnDigitalLearning from "./components/AcademicAssist/ELearnDigitalLearning";
-import Publications from "./components/AcademicAssist/Publications";
-import Internships from "./components/AcademicAssist/Internships";
-import SkillDevelopment from "./components/AcademicAssist/SkillDevelopment";
-import IndustrialTours from "./components/AcademicAssist/IndustrialTours";
-import CERT from "./components/AcademicAssist/cert";
+const AcademicAssistDropdown = lazy(() => import("./components/AcademicAssist/AcademicAssistDropdown"));
+const AcademicProjects = lazy(() => import("./components/AcademicAssist/AcademicProjects"));
+const ConferencesSeminars = lazy(() => import("./components/AcademicAssist/ConferencesAndSeminars/ConferencesSeminars"));
+const Workshops = lazy(() => import("./components/AcademicAssist/Workshops"));
+const TechTalks = lazy(() => import("./components/AcademicAssist/TechTalks"));
+const ELearnDigitalLearning = lazy(() => import("./components/AcademicAssist/ELearnDigitalLearning"));
+const Publications = lazy(() => import("./components/AcademicAssist/Publications"));
+const Internships = lazy(() => import("./components/AcademicAssist/Internships"));
+const SkillDevelopment = lazy(() => import("./components/AcademicAssist/SkillDevelopment"));
+const IndustrialTours = lazy(() => import("./components/AcademicAssist/IndustrialTours"));
+const CERT = lazy(() => import("./components/AcademicAssist/cert"));
 
 // Components for Corporate Astute
-import CorporateAstuteDropdown from "./components/CorporateAstute/CorporateAstuteDropdown";
-import CorporateCollaborations from "./components/CorporateAstute/CorporateCollaborations";
-import ContractResearchServices from "./components/CorporateAstute/ContractResearchServices";
-import AnalyticAssessmentServices from "./components/CorporateAstute/AnalyticAssessmentServices";
-import StackUp from "./components/CorporateAstute/StackUp";
-import MemberDetailPage from "./components/AdvisoryCouncil/MemberDetailPage";
+const CorporateAstuteDropdown = lazy(() => import("./components/CorporateAstute/CorporateAstuteDropdown"));
+const CorporateCollaborations = lazy(() => import("./components/CorporateAstute/CorporateCollaborations"));
+const ContractResearchServices = lazy(() => import("./components/CorporateAstute/ContractResearchServices"));
+const AnalyticAssessmentServices = lazy(() => import("./components/CorporateAstute/AnalyticAssessmentServices"));
+const StackUp = lazy(() => import("./components/CorporateAstute/StackUp"));
+const ResearchAssistanceThesisSupport = lazy(() => import("./components/CorporateAstute/ResearchAssistanceThesisSupport"));
+const FacultyUpskillingService = lazy(() => import("./components/CorporateAstute/FacultyUpskillingService"));
 
-import AcademicCollaborations from "./components/Collaborations/AcademicCollaborations";
-import IndustrialCollaborations from "./components/Collaborations/IndustrialCollaborations";
-import CollaborationForm from "./components/Collaborations/CollaborationForm";
-import AcademicDetail from "./components/Collaborations/AcademicCollaborationDetail";
-import IndustrialDetail from "./components/Collaborations/IndustrialCollaborationDetail";
+// Components for Collaborations
+const AcademicCollaborations = lazy(() => import("./components/Collaborations/AcademicCollaborations"));
+const IndustrialCollaborations = lazy(() => import("./components/Collaborations/IndustrialCollaborations"));
+const CollaborationForm = lazy(() => import("./components/Collaborations/CollaborationForm"));
+const AcademicDetail = lazy(() => import("./components/Collaborations/AcademicCollaborationDetail"));
+const IndustrialDetail = lazy(() => import("./components/Collaborations/IndustrialCollaborationDetail"));
 
 // Components for Career Saga
-import CareerSagaDropdown from "./components/CareerSaga/CareerSagaDropdown";
-import CareerCoach from "./components/CareerSaga/CareerCoach";
-import JobMate from "./components/CareerSaga/JobMate";
-import PeptidesAssistanceMembership from "./components/CareerSaga/PeptidesAssistanceMembership";
-import AdvancedIndustrialReach from "./components/CareerSaga/AdvancedIndustrialReach";
-import ComingSoon from "./components/ComingSoon";
-import NotFoundLab from "./components/NotFoundLab";
-import QuickLinks from "./components/Quicklinks";
-
+const CareerSagaDropdown = lazy(() => import("./components/CareerSaga/CareerSagaDropdown"));
+const CareerCoach = lazy(() => import("./components/CareerSaga/CareerCoach"));
+const JobMate = lazy(() => import("./components/CareerSaga/JobMate"));
+const PeptidesAssistanceMembership = lazy(() => import("./components/CareerSaga/PeptidesAssistanceMembership"));
+const AdvancedIndustrialReach = lazy(() => import("./components/CareerSaga/AdvancedIndustrialReach"));
+const ComingSoon = lazy(() => import("./components/ComingSoon"));
 
 function App() {
-
-
-  // Use a useEffect hook to send a ping to the backend service every 3 minutes.
-  // This keeps the service awake on platforms like Render's free tier.
   useEffect(() => {
-    // Artificial Loading Delay for smooth entry
-
-
     const backendUrl = process.env.REACT_APP_API_URL;
-
     const pingBackend = async () => {
       try {
+        if (!backendUrl) return;
         const res = await fetch(backendUrl);
         if (res.ok) {
           console.log("✅ Backend ping successful!");
@@ -292,166 +84,164 @@ function App() {
 
     pingBackend(); // ping immediately
     const intervalId = setInterval(pingBackend, 180000); // every 3 minutes
-
-    return () => {
-      clearInterval(intervalId);
-
-    };
+    return () => clearInterval(intervalId);
   }, []);
 
-
-
-
-
-
   return (
-    <Router>
-      <Routes>
-        <Route element={<Layout />}>
-          {/* Main Pages */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <AboutSection />
-                <WhyChooseUsSection />
-                <CollaborationSection />
-                <ServiceSlider />
-                <HomeContactSection />
-              </>
-            }
-          />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactSection />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route
-            path="/contact/register-student"
-            element={<ContactSection />}
-          />
-          <Route
-            path="/contact/register-faculty"
-            element={<ContactSection />}
-          />
+    <HelmetProvider>
+      <Router>
+        <Suspense fallback={<LoadingScreen />}>
+        <Routes>
+          <Route element={<Layout />}>
+            {/* Main Pages */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <SEO 
+                    title="Home" 
+                    description="Peptides Knowledge Park offers expert academic workshops, corporate research support, specialized training, and career guidance for students and professionals."
+                    keywords="Academic Assist, Corporate Astute, Career Saga, Collaborations, Peptides Knowledge Park, Research, Workshops, Internships" 
+                  />
+                  <Hero />
+                  <AboutSection />
+                  <WhyChooseUsSection />
+                  <CollaborationSection />
+                  <ServiceSlider />
+                  <HomeContactSection />
+                </>
+              }
+            />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route
+              path="/contact/register-student"
+              element={<ContactSection />}
+            />
+            <Route
+              path="/contact/register-faculty"
+              element={<ContactSection />}
+            />
 
-          {/* Panel of Experts (POE) Routes - Mapped from old Advisory Council */}
-          <Route
-            path="/panel-of-experts/about-advisory-board"
-            element={<AboutAdvisoryBoard />}
-          />
-          <Route
-            path="/panel-of-experts/subject-matter-experts"
-            element={<OurAdvisoryCouncil />}
-          />
-          <Route
-            path="/panel-of-experts/become-a-member"
-            element={<BecomeAMemberComp />}
-          />
-          <Route
-            path="/panel-of-experts/activities-benefits"
-            element={<ActivitiesBenefitsPage pageType="activities" />}
-          />
+            {/* Panel of Experts (POE) Routes */}
+            <Route
+              path="/panel-of-experts/about-advisory-board"
+              element={<AboutAdvisoryBoard />}
+            />
+            <Route
+              path="/panel-of-experts/subject-matter-experts"
+              element={<OurAdvisoryCouncil />}
+            />
+            <Route
+              path="/panel-of-experts/become-a-member"
+              element={<BecomeAMemberComp />}
+            />
+            <Route
+              path="/panel-of-experts/activities-benefits"
+              element={<ActivitiesBenefitsPage pageType="activities" />}
+            />
 
-          {/* Academic Assist Routes */}
-          <Route path="/academic-assist" element={<AcademicAssistDropdown />} />
-          <Route
-            path="/academic-assist/projects"
-            element={<AcademicProjects />}
-          />
-          <Route
-            path="/academic-assist/conferences"
-            element={<ConferencesSeminars />}
-          />
-          <Route path="/academic-assist/workshops" element={<Workshops />} />
-          <Route
-            path="/academic-assist/internships"
-            element={<Internships />}
-          />
-          <Route
-            path="/academic-assist/publications"
-            element={<Publications />}
-          />
-          <Route
-            path="/academic-assist/skill-development"
-            element={<SkillDevelopment />}
-          />
-          <Route
-            path="/academic-assist/industrial-tours"
-            element={<IndustrialTours />}
-          />
-          <Route
-            path="/academic-assist/e-learn"
-            element={<ELearnDigitalLearning />}
-          />
-          <Route path="/academic-assist/cert" element={<CERT />} />
+            {/* Academic Assist Routes */}
+            <Route path="/academic-assist" element={<AcademicAssistDropdown />} />
+            <Route
+              path="/academic-assist/projects"
+              element={<AcademicProjects />}
+            />
+            <Route
+              path="/academic-assist/conferences"
+              element={<ConferencesSeminars />}
+            />
+            <Route path="/academic-assist/workshops" element={<Workshops />} />
+            <Route
+              path="/academic-assist/internships"
+              element={<Internships />}
+            />
+            <Route
+              path="/academic-assist/publications"
+              element={<Publications />}
+            />
+            <Route
+              path="/academic-assist/skill-development"
+              element={<SkillDevelopment />}
+            />
+            <Route
+              path="/academic-assist/industrial-tours"
+              element={<IndustrialTours />}
+            />
+            <Route
+              path="/academic-assist/e-learn"
+              element={<ELearnDigitalLearning />}
+            />
+            <Route path="/academic-assist/cert" element={<CERT />} />
 
-          {/* Corporate Astute Routes */}
-          <Route
-            path="/corporate-astute"
-            element={<CorporateAstuteDropdown />}
-          />
-          <Route
-            path="/corporate-astute/aas"
-            element={<AnalyticAssessmentServices />}
-          />
-          <Route
-            path="/corporate-astute/crs"
-            element={<ContractResearchServices />}
-          />
-          <Route
-            path="/corporate-astute/fuss"
-            element={<FacultyUpskillingService />}
-          />
-          <Route
-            path="/corporate-astute/raws"
-            element={<ResearchAssistanceThesisSupport />}
-          />
+            {/* Corporate Astute Routes */}
+            <Route
+              path="/corporate-astute"
+              element={<CorporateAstuteDropdown />}
+            />
+            <Route
+              path="/corporate-astute/aas"
+              element={<AnalyticAssessmentServices />}
+            />
+            <Route
+              path="/corporate-astute/crs"
+              element={<ContractResearchServices />}
+            />
+            <Route
+              path="/corporate-astute/fuss"
+              element={<FacultyUpskillingService />}
+            />
+            <Route
+              path="/corporate-astute/raws"
+              element={<ResearchAssistanceThesisSupport />}
+            />
 
-          {/* Career Saga Routes */}
-          <Route path="/career-saga" element={<CareerSagaDropdown />} />
-          <Route path="/career-saga/jot" element={<CareerCoach />} />
-          <Route path="/career-saga/plast" element={<JobMate />} />
-          <Route
-            path="/career-saga/air"
-            element={<AdvancedIndustrialReach />}
-          />
-          <Route
-            path="/career-saga/pam"
-            element={<PeptidesAssistanceMembership />}
-          />
+            {/* Career Saga Routes */}
+            <Route path="/career-saga" element={<CareerSagaDropdown />} />
+            <Route path="/career-saga/jot" element={<CareerCoach />} />
+            <Route path="/career-saga/plast" element={<JobMate />} />
+            <Route
+              path="/career-saga/air"
+              element={<AdvancedIndustrialReach />}
+            />
+            <Route
+              path="/career-saga/pam"
+              element={<PeptidesAssistanceMembership />}
+            />
 
-          <Route
-            path="/collaborations/academic"
-            element={<AcademicCollaborations />}
-          />
-          <Route
-            path="/collaborations/industry"
-            element={<IndustrialCollaborations />}
-          />
-          <Route
-            path="/collaborations/collab-peptides"
-            element={<CollaborationForm />}
-          />
-          <Route path="/academic/:id" element={<AcademicDetail />} />
-          <Route path="/industry/:id" element={<IndustrialDetail />} />
+            <Route
+              path="/collaborations/academic"
+              element={<AcademicCollaborations />}
+            />
+            <Route
+              path="/collaborations/industry"
+              element={<IndustrialCollaborations />}
+            />
+            <Route
+              path="/collaborations/collab-peptides"
+              element={<CollaborationForm />}
+            />
+            <Route path="/academic/:id" element={<AcademicDetail />} />
+            <Route path="/industry/:id" element={<IndustrialDetail />} />
 
-          {/* Careers Routes */}
-          <Route path="/careers/jobs" element={<ComingSoon pageName="Jobs @ Peptides" />} />
-          <Route path="/careers/post-job" element={<ComingSoon pageName="Post a Job with Peptides" />} />
+            {/* Careers Routes */}
+            <Route path="/careers/jobs" element={<ComingSoon pageName="Jobs @ Peptides" />} />
+            <Route path="/careers/post-job" element={<ComingSoon pageName="Post a Job with Peptides" />} />
 
-          <Route
-            path="/panel-of-experts/member/:id"
-            element={<MemberDetailPage />}
-          />
+            <Route
+              path="/panel-of-experts/member/:id"
+              element={<MemberDetailPage />}
+            />
 
-
-          {/* Wildcard route for any undefined paths */}
-          <Route path="/payment-success" element={<PaymentSuccess />} />
-          <Route path="*" element={<NotFoundLab />} />
-        </Route>
-      </Routes>
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="*" element={<NotFoundLab />} />
+          </Route>
+        </Routes>
+      </Suspense>
       <QuickLinks />
     </Router>
+    </HelmetProvider>
   );
 }
 

@@ -25,19 +25,19 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import journalsBanner from "../../assets/images/PageBanners/JournalsBanner.png";
-import BiomedicalSciences from "../../assets/images/Publications/BiomedicalSciences.png";
-import ChemistryChemicalEngineering from "../../assets/images/Publications/ChemistryChemicalEngineering.png";
-import ClinicalMedical from "../../assets/images/Publications/ClinicalMedical.png";
-import ComputerScienceBioinformatics from "../../assets/images/Publications/ComputerScienceBioinformatics.png";
-import Dentistry from "../../assets/images/Publications/Dentistry.png";
-import EnvironmentalScience from "../../assets/images/Publications/EnvironmentalScience.png";
-import HealthEducation from "../../assets/images/Publications/HealthEducation.png";
-import LifeSciences from "../../assets/images/Publications/LifeSciences.png";
-import MedicinePublicHealth from "../../assets/images/Publications/MedicinePublicHealth.png";
-import NeurosciencePsychology from "../../assets/images/Publications/NeurosciencePsychology.png";
-import PharmaceuticalSciences from "../../assets/images/Publications/PharmaceuticalSciences.png";
-import VeterinarySciences from "../../assets/images/Publications/VeterinarySciences.png";
+import journalsBanner from "../../assets/images/PageBanners/JournalsBanner.webp";
+import BiomedicalSciences from "../../assets/images/Publications/BiomedicalSciences.webp";
+import ChemistryChemicalEngineering from "../../assets/images/Publications/ChemistryChemicalEngineering.webp";
+import ClinicalMedical from "../../assets/images/Publications/ClinicalMedical.webp";
+import ComputerScienceBioinformatics from "../../assets/images/Publications/ComputerScienceBioinformatics.webp";
+import Dentistry from "../../assets/images/Publications/Dentistry.webp";
+import EnvironmentalScience from "../../assets/images/Publications/EnvironmentalScience.webp";
+import HealthEducation from "../../assets/images/Publications/HealthEducation.webp";
+import LifeSciences from "../../assets/images/Publications/LifeSciences.webp";
+import MedicinePublicHealth from "../../assets/images/Publications/MedicinePublicHealth.webp";
+import NeurosciencePsychology from "../../assets/images/Publications/NeurosciencePsychology.webp";
+import PharmaceuticalSciences from "../../assets/images/Publications/PharmaceuticalSciences.webp";
+import VeterinarySciences from "../../assets/images/Publications/VeterinarySciences.webp";
 
 // === DATA ===
 const journalTopics = [
@@ -301,9 +301,9 @@ const PeerReviewProcess = () => {
           >
             <Rocket size={100} className="text-[#714819]" />
           </motion.div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#0f2920] to-[#714819]">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#0f2920] to-[#714819]">
             The Journey of a Scientific Paper
-          </h1>
+          </h2>
           <p className="text-lg md:text-xl text-[#1f3b30] max-w-2xl mx-auto text-justify">
             Explore the essential stages of the peer review process, a trusted
             system that ensures the quality and reliability of scientific

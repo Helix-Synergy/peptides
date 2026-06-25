@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Briefcase, Users, TrendingUp, Award, ArrowRight, CheckCircle, Star, Clock } from 'lucide-react';
+import SEO from '../SEO';
 
 const CareerSagaDropdown = () => {
   const sectionRef = useRef(null);
@@ -36,6 +37,11 @@ const CareerSagaDropdown = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <SEO 
+        title="Career Saga"
+        description="Career Saga offers comprehensive career development services designed to help professionals in the biotechnology and life sciences sectors achieve their career goals."
+        keywords="Career Saga, Career Coaching, Job Mate, Resume optimization, Job matching, Interview prep, Networking events, Mentorship programs"
+      />
       {/* Hero Section */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-blue-700 to-indigo-600">
         <motion.div

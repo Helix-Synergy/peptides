@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "../assets/images/about-banner.jpg";
+import Image from "../assets/images/about-banner.webp";
 import { Rocket, Star, Handshake, ShieldCheck } from "lucide-react";
+import SEO from "../components/SEO";
 
 
 // Register GSAP plugins
@@ -88,6 +89,11 @@ const AboutUs = () => {
 
   return (
     <main className="bg-white min-h-screen font-inter">
+      <SEO 
+        title="About Us"
+        description="Learn about Peptides Knowledge Park's mission, vision, and core values. We provide Academic Support, Corporate Astute services, and more."
+        keywords="About Peptides Knowledge Park, Mission, Vision, Academic Support Services, Tutoring, Mentoring, Skill-Building Workshops, Career Counselling, Corporate Astute, Career Saga"
+      />
       {/* Hero Section */}
       <section
         className="relative h-[60vh] md:h-[60vh] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import ReddyCollegeLogo from '../assets/images/collaborations/RBVRRCollegeLogo.png'
-import AVCollegeLogo from '../assets/images/collaborations/AVCollageLogo.jpg'
-import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollegeLogo.jpg'
-import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.png'
-import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.jpg'
-import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.png'
+import ReddyCollegeLogo from '../assets/images/collaborations/RBVRRCollegeLogo.webp'
+import AVCollegeLogo from '../assets/images/collaborations/AVCollageLogo.webp'
+import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollegeLogo.webp'
+import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.webp'
+import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.webp'
+import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.webp'
 
 const colleges = [
   {

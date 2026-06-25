@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { BookOpen, Users, Award, Target, CheckCircle, ArrowRight, ChevronDown, Briefcase, ChevronRight, GraduationCap } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/6.jpg'
+import Banner from '../../assets/images/PageBanners/6.webp'
 
 /* ---------- Data (UG & PG Subjects) ---------- */
 const leaf = (title) => ({ name: title });

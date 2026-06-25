@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { collaboratingColleges } from '../../data/Collaborations';
-import Banner from '../../assets/images/PageBanners/collaborationsBanner.jpg'
+import Banner from '../../assets/images/PageBanners/collaborationsBanner.webp'
 
 const AcademicCollaborations = () => {
   return (

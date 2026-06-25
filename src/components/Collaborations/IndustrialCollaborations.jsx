@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { industrialCollaborations } from '../../data/Collaborations';
-import Banner from '../../assets/images/PageBanners/industryCollaborationsBanner.png'
+import Banner from '../../assets/images/PageBanners/industryCollaborationsBanner.webp'
 
 const IndustrialCollaborations = () => {
   return (

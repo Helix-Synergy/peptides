@@ -5,9 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 import { useRazorpay } from 'react-razorpay';
-import Banner from '../../assets/images/PageBanners/9.jpg';
+import Banner from '../../assets/images/PageBanners/9.webp';
 // Removed QR Code import since we are using Razorpay
-// import QRCode from '../../assets/images/payments/QRCODE.png';
+// import QRCode from '../../assets/images/payments/QRCODE.webp';
 
 /* ✅ USE .env ONLY */
 const API_URL = process.env.REACT_APP_API_URL;

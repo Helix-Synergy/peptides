@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import {
   FileText, Users, Network, Briefcase, Award, Check, ArrowRight
 } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/7.jpg'
+import Banner from '../../assets/images/PageBanners/7.webp'
 
 // Assuming you have a relevant banner image for Placement Assistance
-// import Banner from '../../assets/images/PageBanners/placement-banner.jpg';
+// import Banner from '../../assets/images/PageBanners/placement-banner.webp';
 
 // === DATA FOR THIS PAGE ===
 const placementData = {

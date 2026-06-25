@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import academicData from '../../pages/academicAssistData.json';
+import SEO from '../SEO';
 
 const AcademicAssistDropdown = () => {
   const location = useLocation();
@@ -84,6 +85,11 @@ const AcademicAssistDropdown = () => {
 
   return (
     <div className="bg-gradient-to-br from-blue-100 via-green-50 to-pink-50 min-h-screen font-inter">
+      <SEO 
+        title="Academic Assist"
+        description={academicData.intro.description.substring(0, 150) + "..."}
+        keywords="Academic Assist, Tutoring, Mentoring, Skill-Building Workshops, E-Learn, Industrial Tours, Internships, Publications, Research Assistance"
+      />
       {/* Hero Section */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-purple-700 to-pink-600">
         <motion.div

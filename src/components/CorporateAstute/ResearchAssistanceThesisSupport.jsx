@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   FileText, Database, Edit, ClipboardCheck, Users, TrendingUp, Award, ArrowRight, BookMarked, Brain, Lightbulb
 } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/8.jpg';
+import Banner from '../../assets/images/PageBanners/8.webp';
 
 // === DATA FOR THIS PAGE ===
 const ratsData = {

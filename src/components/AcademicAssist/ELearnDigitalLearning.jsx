@@ -23,7 +23,7 @@ import {
   Lightbulb,
   Package,
 } from "lucide-react";
-import journalsBanner from '../../assets/images/PageBanners/1.jpg'
+import journalsBanner from '../../assets/images/PageBanners/1.webp'
 
 // Placeholder image URLs for courses
 const placeholderImages = {

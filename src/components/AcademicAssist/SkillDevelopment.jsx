@@ -10,7 +10,7 @@ import {
     Leaf, FileText, Type, Image, ShieldCheck, LampDesk, Film, BookMarked, Palette, Utensils as UtensilsIcon, Globe2 as Globe2Icon,
     Stethoscope as StethoscopeIcon, UserCircle, Pill as PillIcon, Brain as BrainIcon, ArrowRight
 } from 'lucide-react';
-import skillsBanner from '../../assets/images/PageBanners/3.jpg';
+import skillsBanner from '../../assets/images/PageBanners/3.webp';
 
 const tracksData = [
     { id: 1, title: "Critical Thinking and Problem-Solving", icon: BrainIcon },
@@ -136,8 +136,8 @@ const SkillDevelopment = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-2 md:mb-4 mt-8 px-4"
                 >
-                    <h1 className="text-xl md:text-lg text-black font-bold mb-4">
-                        The future of work is here, and it's powered by Continuous Learning. We provide a dynamic learning experience that transforms your potential into Real-World Professional Expertise. Our curriculum goes beyond theory, focusing on Practical Skills that employers are actively seeking. Whether you're a Student preparing for your first job or a Professional looking to pivot, our comprehensive programs will give you the Knowledge, Confidence, and tools to Succeed.                    </h1>
+                    <h2 className="text-xl md:text-lg text-black font-bold mb-4">
+                        The future of work is here, and it's powered by Continuous Learning. We provide a dynamic learning experience that transforms your potential into Real-World Professional Expertise. Our curriculum goes beyond theory, focusing on Practical Skills that employers are actively seeking. Whether you're a Student preparing for your first job or a Professional looking to pivot, our comprehensive programs will give you the Knowledge, Confidence, and tools to Succeed.                    </h2>
                 </motion.div>
             </section>
             {/* Tracks Section */}

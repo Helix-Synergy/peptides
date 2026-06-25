@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 // import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import ScienceBanner from "../assets/images/PageBanners/hero_students_lab.jpg";
+import ScienceBanner from "../assets/images/PageBanners/hero_students_lab.webp";
 
 // LettersPullUp component for per-letter animation
 function LettersPullUp({ text, className = "" }) {
@@ -148,6 +148,8 @@ const Hero = () => {
             ref={imageRef}
             src={ScienceBanner}
             alt="Students working on science projects"
+            fetchpriority="high"
+            loading="eager"
             className="absolute top-0 right-0 w-full h-full object-cover object-center [clip-path:polygon(30%_0,100%_0,100%_100%,0_100%)]"
             style={{ clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0 100%)" }}
             initial={{ x: 600, opacity: 0, scale: 1.05 }}

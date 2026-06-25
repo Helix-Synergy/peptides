@@ -3,42 +3,42 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Import images from your assets folder as per the provided image names
-import Aerotech2026 from '../assets/images/Webinar/Aerotech_2026.jpg';
-import AIR2025 from '../assets/images/Webinar/AIR_2025.jpg';
-import AR2026 from '../assets/images/Webinar/AR_2026.jpg';
-import Battery2026 from '../assets/images/Webinar/Battery_2026.jpg';
-import Bigdata2026 from '../assets/images/Webinar/Bigdata_2026.jpg';
-import Bioelectronics2026 from '../assets/images/Webinar/Bioelectronics_2026.jpg';
-import Biofuel2026 from '../assets/images/Webinar/Biofuel_2026.jpeg';
-import Biomechanics2026 from '../assets/images/Webinar/Biomechanics_2026.jpg';
-import Blockchain2026 from '../assets/images/Webinar/Blockchain_2026.jpg';
-import Cloud2026 from '../assets/images/Webinar/Cloud_2026.jpg';
-import Cyber2026 from '../assets/images/Webinar/Cyber_2026.jpg';
-import DataAnalytics2026 from '../assets/images/Webinar/Data Analytics_2026.jpg';
-import Fermentation2026 from '../assets/images/Webinar/Fermentation_2026.jpg';
-import Food2026 from '../assets/images/Webinar/Food_2026.jpg';
-import Gene2026 from '../assets/images/Webinar/GENE-2026.jpg';
-import Genomics2026 from '../assets/images/Webinar/Genomics_2026.jpg';
-import GPS2026 from '../assets/images/Webinar/GPS_2026.jpg';
-import Green2026 from '../assets/images/Webinar/Green_2026.jpg';
-import Hydrogen2026 from '../assets/images/Webinar/Hydrogen_2026.jpg';
-import IBS2026 from '../assets/images/Webinar/IBS_2026.jpg';
-import IGC2026 from '../assets/images/Webinar/IGC_2026.jpg';
-import Immuno2026 from '../assets/images/Webinar/Immuno_2026.jpg';
-import MachineLearning2026 from '../assets/images/Webinar/Machine_Learning_2026.jpg';
-import Meta2026 from '../assets/images/Webinar/META_2026.jpg';
-import Nano2026 from '../assets/images/Webinar/Nano_2026.jpg';
-import NEST2025 from '../assets/images/Webinar/NEST_2025.jpg';
-import Quantum2026 from '../assets/images/Webinar/Quantum_2026.jpg';
-import Renewable2026 from '../assets/images/Webinar/Renewable_2026.jpg';
-import STEM2026 from '../assets/images/Webinar/STEM_2026.jpg';
-import Vaccine2026 from '../assets/images/Webinar/Vaccine_2026.jpg';
+import Aerotech2026 from '../assets/images/Webinar/Aerotech_2026.webp';
+import AIR2025 from '../assets/images/Webinar/AIR_2025.webp';
+import AR2026 from '../assets/images/Webinar/AR_2026.webp';
+import Battery2026 from '../assets/images/Webinar/Battery_2026.webp';
+import Bigdata2026 from '../assets/images/Webinar/Bigdata_2026.webp';
+import Bioelectronics2026 from '../assets/images/Webinar/Bioelectronics_2026.webp';
+import Biofuel2026 from '../assets/images/Webinar/Biofuel_2026.webp';
+import Biomechanics2026 from '../assets/images/Webinar/Biomechanics_2026.webp';
+import Blockchain2026 from '../assets/images/Webinar/Blockchain_2026.webp';
+import Cloud2026 from '../assets/images/Webinar/Cloud_2026.webp';
+import Cyber2026 from '../assets/images/Webinar/Cyber_2026.webp';
+import DataAnalytics2026 from '../assets/images/Webinar/Data Analytics_2026.webp';
+import Fermentation2026 from '../assets/images/Webinar/Fermentation_2026.webp';
+import Food2026 from '../assets/images/Webinar/Food_2026.webp';
+import Gene2026 from '../assets/images/Webinar/GENE-2026.webp';
+import Genomics2026 from '../assets/images/Webinar/Genomics_2026.webp';
+import GPS2026 from '../assets/images/Webinar/GPS_2026.webp';
+import Green2026 from '../assets/images/Webinar/Green_2026.webp';
+import Hydrogen2026 from '../assets/images/Webinar/Hydrogen_2026.webp';
+import IBS2026 from '../assets/images/Webinar/IBS_2026.webp';
+import IGC2026 from '../assets/images/Webinar/IGC_2026.webp';
+import Immuno2026 from '../assets/images/Webinar/Immuno_2026.webp';
+import MachineLearning2026 from '../assets/images/Webinar/Machine_Learning_2026.webp';
+import Meta2026 from '../assets/images/Webinar/META_2026.webp';
+import Nano2026 from '../assets/images/Webinar/Nano_2026.webp';
+import NEST2025 from '../assets/images/Webinar/NEST_2025.webp';
+import Quantum2026 from '../assets/images/Webinar/Quantum_2026.webp';
+import Renewable2026 from '../assets/images/Webinar/Renewable_2026.webp';
+import STEM2026 from '../assets/images/Webinar/STEM_2026.webp';
+import Vaccine2026 from '../assets/images/Webinar/Vaccine_2026.webp';
 
-import IDOM2025 from '../assets/images/Webinar/IDOM_2025.jpg';
-import GENT2025 from '../assets/images/Webinar/GENT_2025.jpeg';
-import Ican2025 from '../assets/images/Webinar/Ican_2025.jpg';
-import ARM2025 from '../assets/images/Webinar/ARM_2025.jpg';
-import women from '../assets/images/Webinar/women.jpg'
+import IDOM2025 from '../assets/images/Webinar/IDOM_2025.webp';
+import GENT2025 from '../assets/images/Webinar/GENT_2025.webp';
+import Ican2025 from '../assets/images/Webinar/Ican_2025.webp';
+import ARM2025 from '../assets/images/Webinar/ARM_2025.webp';
+import women from '../assets/images/Webinar/women.webp'
 
 const WebinarsData = [
 

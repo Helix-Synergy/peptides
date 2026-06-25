@@ -1,6 +1,6 @@
 // import React, { useRef, useState } from 'react';
 // import { motion } from "framer-motion";
-// import becomeMember from "../../assets/images/PageBanners/aboutPOE.jpg";
+// import becomeMember from "../../assets/images/PageBanners/aboutPOE.webp";
 
 // const API_URL = "http://localhost:5000"; // Replace with your live API URL
 
@@ -213,7 +213,7 @@ import React, { useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import becomeMember from "../../assets/images/PageBanners/aboutPOE.jpg";
+import becomeMember from "../../assets/images/PageBanners/aboutPOE.webp";
 
 const API_URL = process.env.REACT_APP_API_URL;
 if (!API_URL) console.error("REACT_APP_API_URL is missing in .env");
@@ -320,9 +320,9 @@ const BecomeAMember = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 px-4"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-4 text-white">
             Become A Member
-          </h1>
+          </h2>
         </motion.div>
       </section>
 

@@ -8,7 +8,7 @@ import {
   UtensilsCrossed, Droplet, Pill, Sprout, Wind, Recycle,
   Check, Award, Users, Leaf, ArrowRight, Clock, Package, FlaskConical, Cloud, Wrench, Microscope, Locate, Trash2, Sparkles, Handshake, TrendingUp, Lightbulb
 } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/8.jpg'
+import Banner from '../../assets/images/PageBanners/8.webp'
 
 // === DATA ===
 const servicesData = [

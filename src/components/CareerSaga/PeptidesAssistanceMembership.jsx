@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   Sparkles, Star, Trophy, Diamond, Gem, Check, ArrowRight
 } from "lucide-react";
-import Banner from '../../assets/images/PageBanners/activities.jpg'
+import Banner from '../../assets/images/PageBanners/activities.webp'
 
 
 // === DATA FOR THIS PAGE ===

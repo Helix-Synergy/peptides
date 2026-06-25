@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
-import industrialTourBanner from "../../assets/images/PageBanners/6.jpg";
+import industrialTourBanner from "../../assets/images/PageBanners/6.webp";
 import { Link } from "react-router-dom";
 
 const tracksData = [
@@ -120,7 +120,7 @@ const IndustrialTours = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-2 md:mb-4 mt-8 px-4"
         >
-          <h1 className="text-xl md:text-lg text-black font-bold mb-4">
+          <h2 className="text-xl md:text-lg text-black font-bold mb-4">
             Go beyond the textbook and into the heart of innovation. Our
             industrial tours are designed to be an immersive learning
             experience, giving students a behind-the-scenes look at how
@@ -129,7 +129,7 @@ const IndustrialTours = () => {
             happen. Each tour is an opportunity to expand your network, discover
             new career paths, and gain the practical insight you can't get in a
             lecture hall.
-          </h1>
+          </h2>
         </motion.div>
       </section>
       {/* Tracks Section */}

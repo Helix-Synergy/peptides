@@ -1,64 +1,64 @@
 // src/data/Collaborations.js
-import AVLogo from '../assets/images/collaborations/AVCollageLogo.jpg'
-import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollegeLogo.jpg'
-import ReddyCollegeLogo from '../assets/images/collaborations/RBVRRCollegeLogo.png'
-import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.png'
-import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.jpg'
+import AVLogo from '../assets/images/collaborations/AVCollageLogo.webp'
+import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollegeLogo.webp'
+import ReddyCollegeLogo from '../assets/images/collaborations/RBVRRCollegeLogo.webp'
+import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.webp'
+import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.webp'
 // Banners
-import pragathiCollegeBanner from '../assets/images/collaborations/pragathiCollegeBanner.png'
-import AVCollegeBanner from '../assets/images/collaborations/AVCollegeBanner.jpg'
-import RBVRRCollegeBanner from '../assets/images/collaborations/RBVRRCollegeBanner.jpg'
-import BJRCollegeBanner from '../assets/images/collaborations/BJRCollegeBanner.jpg'
-import KasthurbhaCollegeBanner from '../assets/images/collaborations/KasthurbhaCollegeBanner.jpg'
+import pragathiCollegeBanner from '../assets/images/collaborations/pragathiCollegeBanner.webp'
+import AVCollegeBanner from '../assets/images/collaborations/AVCollegeBanner.webp'
+import RBVRRCollegeBanner from '../assets/images/collaborations/RBVRRCollegeBanner.webp'
+import BJRCollegeBanner from '../assets/images/collaborations/BJRCollegeBanner.webp'
+import KasthurbhaCollegeBanner from '../assets/images/collaborations/KasthurbhaCollegeBanner.webp'
 
 
 // BJR College Images
-import bjrimage1 from '../assets/images/collaborations/BJR/1.jpeg'
-import bjrimage2 from '../assets/images/collaborations/BJR/2.jpeg'
-import bjrimage3 from '../assets/images/collaborations/BJR/3.jpeg'
-import bjrimage4 from '../assets/images/collaborations/BJR/4.jpeg'
-import bjrimage5 from '../assets/images/collaborations/BJR/5.jpeg'
+import bjrimage1 from '../assets/images/collaborations/BJR/1.webp'
+import bjrimage2 from '../assets/images/collaborations/BJR/2.webp'
+import bjrimage3 from '../assets/images/collaborations/BJR/3.webp'
+import bjrimage4 from '../assets/images/collaborations/BJR/4.webp'
+import bjrimage5 from '../assets/images/collaborations/BJR/5.webp'
 
 //  AV College Images
-import avImage1 from '../assets/images/collaborations/AV/1.jpeg'
-import avImage2 from '../assets/images/collaborations/AV/2.jpeg'
-import avImage3 from '../assets/images/collaborations/AV/3.jpeg'
-import avImage4 from '../assets/images/collaborations/AV/4.jpeg'
+import avImage1 from '../assets/images/collaborations/AV/1.webp'
+import avImage2 from '../assets/images/collaborations/AV/2.webp'
+import avImage3 from '../assets/images/collaborations/AV/3.webp'
+import avImage4 from '../assets/images/collaborations/AV/4.webp'
 
 //  kasturba Images
-import kasturba1 from '../assets/images/collaborations/Kasthurba/1.jpeg'
-import kasturba2 from '../assets/images/collaborations/Kasthurba/2.jpeg'
-import kasturba3 from '../assets/images/collaborations/Kasthurba/3.jpeg'
-import kasturba4 from '../assets/images/collaborations/Kasthurba/4.jpeg'
+import kasturba1 from '../assets/images/collaborations/Kasthurba/1.webp'
+import kasturba2 from '../assets/images/collaborations/Kasthurba/2.webp'
+import kasturba3 from '../assets/images/collaborations/Kasthurba/3.webp'
+import kasturba4 from '../assets/images/collaborations/Kasthurba/4.webp'
 
 // RBVRR College Images
-import rbvrr1 from '../assets/images/collaborations/RBVRR/1.jpg'
-import rbvrr2 from '../assets/images/collaborations/RBVRR/2.jpg'
-import rbvrr3 from '../assets/images/collaborations/RBVRR/3.jpg'
-import rbvrr4 from '../assets/images/collaborations/RBVRR/4.jpg'
+import rbvrr1 from '../assets/images/collaborations/RBVRR/1.webp'
+import rbvrr2 from '../assets/images/collaborations/RBVRR/2.webp'
+import rbvrr3 from '../assets/images/collaborations/RBVRR/3.webp'
+import rbvrr4 from '../assets/images/collaborations/RBVRR/4.webp'
 
 // Pragathi College Images
-import pragathi1 from '../assets/images/collaborations/Pragathi/1.jpeg'
-import pragathi2 from '../assets/images/collaborations/Pragathi/2.jpeg'
-import pragathi3 from '../assets/images/collaborations/Pragathi/3.jpeg'
-import pragathi4 from '../assets/images/collaborations/Pragathi/4.jpeg'
+import pragathi1 from '../assets/images/collaborations/Pragathi/1.webp'
+import pragathi2 from '../assets/images/collaborations/Pragathi/2.webp'
+import pragathi3 from '../assets/images/collaborations/Pragathi/3.webp'
+import pragathi4 from '../assets/images/collaborations/Pragathi/4.webp'
 
 
 
 // Lavin Labs
-import LavinImg1 from '../assets/images/collaborations/LavinLabs/1.jpeg'
-import LavinImg2 from '../assets/images/collaborations/LavinLabs/2.jpeg'
-import LavinImg3 from '../assets/images/collaborations/LavinLabs/3.jpeg'
-import LavinImg4 from '../assets/images/collaborations/LavinLabs/4.jpeg'
+import LavinImg1 from '../assets/images/collaborations/LavinLabs/1.webp'
+import LavinImg2 from '../assets/images/collaborations/LavinLabs/2.webp'
+import LavinImg3 from '../assets/images/collaborations/LavinLabs/3.webp'
+import LavinImg4 from '../assets/images/collaborations/LavinLabs/4.webp'
 
 // Vivekananda Degree College Images
-import vvLogo from '../assets/images/collaborations/vivekananda/vv1.png'
-import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.png'
-import vvBanner from '../assets/images/collaborations/vivekananda/vv2.jpg'
-import vvImage1 from '../assets/images/collaborations/vivekananda/vv1.png'
-import vvImage2 from '../assets/images/collaborations/vivekananda/vv2.jpg'
-import vvImage3 from '../assets/images/collaborations/vivekananda/vv3.jpg'
-import vvImage4 from '../assets/images/collaborations/vivekananda/vv4.jpg'
+import vvLogo from '../assets/images/collaborations/vivekananda/vv1.webp'
+import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.webp'
+import vvBanner from '../assets/images/collaborations/vivekananda/vv2.webp'
+import vvImage1 from '../assets/images/collaborations/vivekananda/vv1.webp'
+import vvImage2 from '../assets/images/collaborations/vivekananda/vv2.webp'
+import vvImage3 from '../assets/images/collaborations/vivekananda/vv3.webp'
+import vvImage4 from '../assets/images/collaborations/vivekananda/vv4.webp'
 
 
 

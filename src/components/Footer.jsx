@@ -16,7 +16,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 
 const navLinks = [
   { name: "Home", href: "/", icon: Home },
