@@ -1,0 +1,56 @@
+require('dotenv').config();
+const connectDB = require('./config/db');
+
+// Connect to Database
+connectDB();
+
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const fs = require('fs');
+
+// Import route handlers
+const contactRoutes = require('./routes/contact');
+const studentRoutes = require('./routes/studentRegistration');
+const facultyRoutes = require('./routes/facultyRegistration');
+const memberRoutes = require('./routes/becomeMember');
+const collaborateRoute = require('./routes/collaborate');
+const paymentRoutes = require('./routes/payment');
+const visitorRoute = require('./routes/visitorRoute');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Create 'uploads' directory if it doesn't exist
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir);
+}
+
+// Middleware
+app.use(cors());
+app.use(express.json({
+    verify: (req, res, buf) => {
+        req.rawBody = buf;
+    }
+}));
+app.use(express.urlencoded({ extended: true }));
+
+// Serve uploaded files statically
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Route handlers for each form
+app.use('/api/contact', contactRoutes);
+app.use('/api/register-student', studentRoutes);
+app.use('/api/register-faculty', facultyRoutes);
+app.use('/api/become-member', memberRoutes);
+app.use('/api/payment', paymentRoutes);
+app.use('/api/visitors', visitorRoute);
+app.use('/api', collaborateRoute);
+app.get("/", (req, res) => res.send("Backend is alive!"));
+
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
