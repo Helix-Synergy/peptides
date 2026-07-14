@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../assets/logo.webp";
+import MsmeLogo from "../assets/MSME Logo.png";
+import DpiitLogo from "../assets/DPIIT lOGO.png";
 
 const navLinks = [
   { name: "Home", href: "/", icon: Home },
@@ -195,6 +197,11 @@ const Footer = () => {
               <a href="https://wa.me/917997040959" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffc107] transition-colors" aria-label="WhatsApp">
                 <FaWhatsapp className="w-6 h-6" />
               </a>
+            </div>
+            {/* Affiliation Logos */}
+            <div className="flex items-center space-x-4 pt-4">
+              <img src={MsmeLogo} alt="MSME Logo" className="h-[60px] w-auto bg-white rounded-md p-1 shadow-md object-contain" />
+              <img src={DpiitLogo} alt="DPIIT Logo" className="h-[60px] w-auto bg-white rounded-md p-1 shadow-md object-contain" />
             </div>
           </div>
 
