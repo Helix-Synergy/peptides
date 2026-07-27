@@ -107,10 +107,26 @@ const CollaborateSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
+// 6. Abstract Submission Schema
+const AbstractSubmissionSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    email: { type: String, required: true },
+    phone: String,
+    company: String,
+    message: String,
+    track: String,
+    abstractTitle: String,
+    pdfFile: String, // Path to file
+    source: { type: String, default: 'SmartMaterials' },
+    createdAt: { type: Date, default: Date.now }
+});
+
 module.exports = {
     Contact: mongoose.model('Contact', ContactSchema),
     Student: mongoose.model('Student', StudentSchema),
     Faculty: mongoose.model('Faculty', FacultySchema),
     Member: mongoose.model('Member', MemberSchema),
-    Collaborate: mongoose.model('Collaborate', CollaborateSchema)
+    Collaborate: mongoose.model('Collaborate', CollaborateSchema),
+    AbstractSubmission: mongoose.model('AbstractSubmission', AbstractSubmissionSchema)
 };
