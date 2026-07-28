@@ -1,0 +1,41 @@
+name: Deploy Peptides Backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to AWS EC2
+        uses: appleboy/ssh-action@v1.2.2
+
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+
+          script: |
+            set -e
+
+            echo "Starting Peptides backend deployment..."
+
+            cd /home/ubuntu/peptides
+
+            git pull origin main
+
+            cd backend
+
+            npm install
+
+            pm2 restart peptides-backend --update-env
+
+            pm2 save
+
+            echo "Peptides backend deployed successfully!"
