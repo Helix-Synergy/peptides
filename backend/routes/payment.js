@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
-const { Student, Faculty } = require('../models/FormSchemas'); // Import models to update status if needed
+const { Student, Faculty, WebinarRegistration } = require('../models/FormSchemas'); // Import models to update status if needed
 
 // Initialize Razorpay
 const razorpay = new Razorpay({
@@ -240,10 +240,19 @@ router.get('/all', async (req, res) => {
             ]
         }).select('firstName lastName email phone amount razorpay_payment_id payment_status createdAt razorpay_order_id');
 
+        // Fetch Webinar Registrations
+        const webinars = await WebinarRegistration.find({
+            $or: [
+                { razorpay_payment_id: { $exists: true } },
+                { payment_status: { $in: ['Paid', 'PendingLink'] } }
+            ]
+        }).select('firstName lastName email phone amount razorpay_payment_id payment_status createdAt razorpay_order_id source');
+
         // Combine and sort
         const payments = [
             ...students.map(s => ({ ...s.toObject(), type: 'student' })), // normalized type lower case
-            ...faculty.map(f => ({ ...f.toObject(), type: 'faculty' }))
+            ...faculty.map(f => ({ ...f.toObject(), type: 'faculty' })),
+            ...webinars.map(w => ({ ...w.toObject(), type: 'webinar', source: w.source }))
         ].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
         res.json({ success: true, payments });

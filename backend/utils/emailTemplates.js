@@ -131,7 +131,8 @@ const paymentReceiptTemplate = (paymentDetails) => {
         itemDescription,
         amount,
         paymentId,
-        record // Full record object
+        record, // Full record object
+        logoBase64
     } = paymentDetails;
 
     // Helper to safely get field
@@ -212,8 +213,12 @@ const paymentReceiptTemplate = (paymentDetails) => {
 
                 <div class="header-logo-section">
                     <div class="logo-col">
-                        <div class="logo-text">PEPTIDES</div>
-                        <div class="logo-subtext">KNOWLEDGE PARK</div>
+                        ${logoBase64 ? 
+                            `<img src="data:image/png;base64,${logoBase64}" alt="Logo" style="height: 60px; max-width: 250px; display: block;">` 
+                            : `
+                            <div class="logo-text">PEPTIDES</div>
+                            <div class="logo-subtext">KNOWLEDGE PARK</div>
+                        `}
                     </div>
                     <div class="company-info-col">
                          <div class="company-info-item"><span class="icon">&#9990;</span> +91 7997 040 959</div>

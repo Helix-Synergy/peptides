@@ -38,7 +38,12 @@ const sendEmail = async (to, subject, htmlContent, attachments = []) => {
       const processedAttachments = [];
       if (attachments && attachments.length > 0) {
         for (const att of attachments) {
-          if (att.path && fs.existsSync(att.path)) {
+          if (att.content) {
+            processedAttachments.push({
+              filename: att.filename,
+              content: att.content
+            });
+          } else if (att.path && fs.existsSync(att.path)) {
             const fileContent = fs.readFileSync(att.path); // Buffer for Resend
             processedAttachments.push({
               filename: att.filename,

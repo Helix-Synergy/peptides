@@ -122,11 +122,32 @@ const AbstractSubmissionSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
+// 7. Webinar Registration Schema
+const WebinarRegistrationSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    email: { type: String, required: true },
+    phone: String,
+    university: String,
+    affiliation: String,
+    country: String,
+    category: String,
+
+    amount: Number,
+    currency: String,
+    razorpay_order_id: String,
+    razorpay_payment_id: String,
+    payment_status: { type: String, default: 'Pending' },
+    source: { type: String, default: 'SmartMaterials' },
+    createdAt: { type: Date, default: Date.now }
+});
+
 module.exports = {
     Contact: mongoose.model('Contact', ContactSchema),
     Student: mongoose.model('Student', StudentSchema),
     Faculty: mongoose.model('Faculty', FacultySchema),
     Member: mongoose.model('Member', MemberSchema),
     Collaborate: mongoose.model('Collaborate', CollaborateSchema),
-    AbstractSubmission: mongoose.model('AbstractSubmission', AbstractSubmissionSchema)
+    AbstractSubmission: mongoose.model('AbstractSubmission', AbstractSubmissionSchema),
+    WebinarRegistration: mongoose.model('WebinarRegistration', WebinarRegistrationSchema)
 };
