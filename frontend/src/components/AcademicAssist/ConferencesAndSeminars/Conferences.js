@@ -58,7 +58,7 @@ const Conferences = () => {
         />
         <div className="flex justify-center pb-8">
           <a
-            href="https://helixconferences.com/Conferences-2026"
+            href="https://helixconferences.com/Conferences"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-[#1f3b30] text-white rounded-lg font-bold hover:bg-[#152a22] transition-colors shadow-md"

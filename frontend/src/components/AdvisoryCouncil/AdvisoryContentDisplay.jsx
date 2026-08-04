@@ -22,6 +22,8 @@ import shivakrishna from "../../assets/images/advisory/shivakrishna.webp";
 import thomas from "../../assets/images/advisory/thomas.webp";
 import Sunitha from "../../assets/images/advisory/sunithaGaru.webp";
 import StrategyBanner from '../../assets/images/strategyBanner.webp';
+import anjaiah from "../../assets/images/advisory/Dr.Anjaiah.jpg";
+import jaganmohan from "../../assets/images/advisory/jaganmohan.jpg";
 
 const advisoryContentData = {
   "about-advisory-board": {
@@ -470,6 +472,36 @@ const advisoryContentData = {
               "Teaching and research in organic chemistry and spectroscopy",
               "Leadership and coordination in academic roles",
               "Entrepreneurial initiatives in art and craft",
+            ],
+          },
+          {
+            name: "Dr. Anjaiah",
+            image: anjaiah,
+            role: "Subject Matter Expert",
+            subtitle: "",
+            country: "India",
+            bio: "Educational qualification- M.Sc. Ph.D.",
+            achievements: [
+              "Total Years Of Experience: 19"
+            ],
+            contributions: [
+              "Physical Chemistry",
+              "Chemical Kinetics"
+            ],
+          },
+          {
+            name: "Dr. A. Jagan Mohan Reddy",
+            image: jaganmohan,
+            role: "Subject Matter Expert",
+            subtitle: "",
+            country: "India",
+            bio: "Dr. A. Jagan Mohan Reddy is an expert in Organic Chemistry and Chemistry, bringing a wealth of knowledge to the field.",
+            achievements: [
+              "Total Years Of Experience: 25"
+            ],
+            contributions: [
+              "Organic Chemistry",
+              "Chemistry"
             ],
           },
         ],

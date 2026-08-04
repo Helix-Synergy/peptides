@@ -40,6 +40,7 @@ const Internships = lazy(() => import("./components/AcademicAssist/Internships")
 const SkillDevelopment = lazy(() => import("./components/AcademicAssist/SkillDevelopment"));
 const IndustrialTours = lazy(() => import("./components/AcademicAssist/IndustrialTours"));
 const CERT = lazy(() => import("./components/AcademicAssist/cert"));
+const GlowCraftWorkshop = lazy(() => import("./components/AcademicAssist/GlowCraftWorkshop"));
 
 // Components for Corporate Astute
 const CorporateAstuteDropdown = lazy(() => import("./components/CorporateAstute/CorporateAstuteDropdown"));
@@ -153,6 +154,7 @@ function App() {
               element={<ConferencesSeminars />}
             />
             <Route path="/academic-assist/workshops" element={<Workshops />} />
+            <Route path="/academic-assist/workshops/glow-craft" element={<GlowCraftWorkshop />} />
             <Route
               path="/academic-assist/internships"
               element={<Internships />}

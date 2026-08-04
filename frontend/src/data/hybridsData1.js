@@ -48,7 +48,7 @@ export const hybridsData = [
     date: "April 23–24, 2026",
     location: "Barcelona | Spain",
     image: Foodmeet_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -58,7 +58,7 @@ export const hybridsData = [
     date: "April 23–24, 2026",
     location: "Barcelona | Spain",
     image: Climate_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -68,7 +68,7 @@ export const hybridsData = [
     date: "October 22–23, 2026",
     location: "Singapore",
     image: Pharmatech_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -78,7 +78,7 @@ export const hybridsData = [
     date: "July 25–26, 2026",
     location: "Amsterdam | Netherlands",
     image: Biomed_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -88,7 +88,7 @@ export const hybridsData = [
     date: "June 25–26, 2026",
     location: "Amsterdam | Netherlands",
     image: Biocon_2025,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -98,7 +98,7 @@ export const hybridsData = [
     date: "May 14–15, 2026",
     location: "Rome | Italy",
     image: Foodtech_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -108,7 +108,7 @@ export const hybridsData = [
     date: "June 11–12, 2026",
     location: "Paris | France",
     image: Biochemistry_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -118,7 +118,7 @@ export const hybridsData = [
     date: "May 21–22, 2026",
     location: "Tokyo | Japan",
     image: Nanotechnology_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -128,7 +128,7 @@ export const hybridsData = [
     date: "August 20–21, 2026",
     location: "Berlin | Germany",
     image: Environmental_Chemistry_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -138,7 +138,7 @@ export const hybridsData = [
     date: "November 12–13, 2026",
     location: "Amsterdam | Netherlands",
     image: Earth_Sciences_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -148,7 +148,7 @@ export const hybridsData = [
     date: "September 3–4, 2026",
     location: "Singapore",
     image: AI_Healthcare_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -158,7 +158,7 @@ export const hybridsData = [
     date: "September 10–11, 2026",
     location: "Dubai | UAE",
     image: TECHMATICS_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -168,7 +168,7 @@ export const hybridsData = [
     date: "August 6–7, 2026",
     location: "San Francisco | USA",
     image: Industrial_Engineering_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -178,7 +178,7 @@ export const hybridsData = [
     date: "November 19–20, 2026",
     location: "Dubai | UAE",
     image: Mediclave_2025,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -188,7 +188,7 @@ export const hybridsData = [
     date: "June 18–19, 2026",
     location: "Paris | France",
     image: Health_Sciences_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -198,7 +198,7 @@ export const hybridsData = [
     date: "September 17–18, 2026",
     location: "Rome | Italy",
     image: stemcell_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -208,7 +208,7 @@ export const hybridsData = [
     date: "July 16–17, 2026",
     location: "Berlin | Germany",
     image: Nursing_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -218,7 +218,7 @@ export const hybridsData = [
     date: "May 28–29, 2026",
     location: "London | UK",
     image: IBC_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -228,7 +228,7 @@ export const hybridsData = [
     date: "August 13–14, 2026",
     location: "London | UK",
     image: Biomed_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -238,7 +238,7 @@ export const hybridsData = [
     date: "October 8–9, 2026",
     location: "Zurich | Switzerland",
     image: Pharmacy_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -248,7 +248,7 @@ export const hybridsData = [
     date: "April 10–11, 2026",
     location: "Madrid | Spain",
     image: Agritech_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -258,7 +258,7 @@ export const hybridsData = [
     date: "July 9–10, 2026",
     location: "Vienna | Austria",
     image: ICC_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -268,7 +268,7 @@ export const hybridsData = [
     date: "May 7–8, 2026",
     location: "Seoul | South Korea",
     image: Material_Sciences_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -278,7 +278,7 @@ export const hybridsData = [
     date: "August 27–28, 2026",
     location: "Barcelona | Spain",
     image: Foodmeet_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   },
@@ -288,7 +288,7 @@ export const hybridsData = [
     date: "October 15–16, 2026",
     location: "Copenhagen | Denmark",
     image: Climate_2026,
-    link: "https://helixconferences.com/Conferences-2026",
+    link: "https://helixconferences.com/Conferences",
     type: "Hybrid",
     year: 2026
   }

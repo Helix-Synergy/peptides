@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+
 import { motion, useInView } from "framer-motion";
 import {
   CheckCircle,
@@ -47,13 +47,17 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import React, { useState, useRef } from "react"; // Combined React import
 
 import workshopBanner from "../../assets/images/PageBanners/workshops.webp";
+import WorkshopRegistrationModal from "./WorkshopRegistrationModal";
 
 const Workshops = () => {
   const navigate = useNavigate();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedWorkshopTitle, setSelectedWorkshopTitle] = useState('');
 
   const upcomingWorkshops = [
     {
@@ -259,7 +263,6 @@ const Workshops = () => {
       {/* Upcoming Workshops */}
       <section className="w-full py-12 px-4 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          {/*
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -271,48 +274,51 @@ const Workshops = () => {
               Upcoming Workshops
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {upcomingWorkshops.map((workshop, index) => (
+
+          <div className="flex justify-center mb-16">
               <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/40 backdrop-blur-lg border border-white/30 rounded-xl p-8 hover:shadow-xl transition-all duration-300"
+                transition={{ duration: 0.5 }}
+                onClick={() => {
+                  navigate('/academic-assist/workshops/glow-craft');
+                }}
+                className="bg-white/40 backdrop-blur-lg border border-white/30 rounded-xl p-6 hover:shadow-xl transition-all duration-300 max-w-xs cursor-pointer hover:border-peptides-color-brown/50 hover:-translate-y-2 mx-auto"
               >
-                <h3 className="text-xl font-bold text-peptides-color-brown mb-4 text-center">
-                  {workshop.title}
+                <div className="relative mb-5 rounded-lg overflow-hidden group flex items-center justify-center">
+                  <img src={workshopBanner} alt="Glow Craft" className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-bold tracking-wider text-sm">VIEW DETAILS</span>
+                  </div>
+                </div>
+
+                <h3 className="text-lg font-bold text-peptides-color-brown mb-2 text-center">
+                  Glow Craft
                 </h3>
-                <div className="text-sm text-black space-y-2 mb-6 text-center">
+                <p className="text-xs text-center text-gray-700 font-medium mb-4">Hands-on Workshop on Herbal Cosmetic Preparation</p>
+                
+                <div className="text-xs text-black space-y-2 mb-5 text-center">
                   <div className="flex items-center justify-center gap-2">
-                    <Calendar className="w-4 h-4" /> {workshop.date}
+                    <Calendar className="w-3 h-3 text-peptides-color-brown" /> August 6th, 2026
                   </div>
                   <div className="flex items-center justify-center gap-2">
-                    <Clock className="w-4 h-4" /> {workshop.time}
+                    <Clock className="w-3 h-3 text-peptides-color-brown" /> 10:30 AM - 5:30 PM
                   </div>
-                  <div className="text-gray-600">{workshop.location}</div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/contact"
-                    className="flex-1 btn-primary text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
-                  >
-                    Register
-                  </Link>
-                  <a
-                    href={workshop.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 btn-primary text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center"
-                  >
-                    Brochure
-                  </a>
-                </div>
+                
+                <button
+                  className="w-full btn-primary text-white font-bold py-2.5 rounded-lg hover:bg-blue-700 transition-colors shadow-lg text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate('/academic-assist/workshops/glow-craft');
+                  }}
+                >
+                  View Details
+                </button>
               </motion.div>
-            ))}
           </div>
-*/}
+
 
           <hr className="my-12 border-t border-peptides-light-gray w-full" />
 
