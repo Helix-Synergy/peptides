@@ -142,6 +142,18 @@ const WebinarRegistrationSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
+// 8. Workshop Registration Schema
+const WorkshopRegistrationSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    email: { type: String, required: true },
+    phone: String,
+    organization: String, // College or Company
+    workshopName: { type: String, default: 'Glow Craft' },
+    source: { type: String, default: 'Peptides' },
+    createdAt: { type: Date, default: Date.now }
+});
+
 module.exports = {
     Contact: mongoose.model('Contact', ContactSchema),
     Student: mongoose.model('Student', StudentSchema),
@@ -149,5 +161,6 @@ module.exports = {
     Member: mongoose.model('Member', MemberSchema),
     Collaborate: mongoose.model('Collaborate', CollaborateSchema),
     AbstractSubmission: mongoose.model('AbstractSubmission', AbstractSubmissionSchema),
-    WebinarRegistration: mongoose.model('WebinarRegistration', WebinarRegistrationSchema)
+    WebinarRegistration: mongoose.model('WebinarRegistration', WebinarRegistrationSchema),
+    WorkshopRegistration: mongoose.model('WorkshopRegistration', WorkshopRegistrationSchema)
 };

@@ -19,6 +19,7 @@ const paymentRoutes = require('./routes/payment');
 const visitorRoute = require('./routes/visitorRoute');
 const abstractSubmissionRoute = require('./routes/abstractSubmission');
 const webinarRegistrationRoute = require('./routes/webinarRegistration');
+const workshopRegistrationRoute = require('./routes/workshopRegistration');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -50,6 +51,7 @@ app.use('/api/payment', paymentRoutes);
 app.use('/api/visitors', visitorRoute);
 app.use('/api/abstract-submission', abstractSubmissionRoute);
 app.use('/api/webinar-registration', webinarRegistrationRoute);
+app.use('/api/workshop-registration', workshopRegistrationRoute);
 app.use('/api', collaborateRoute);
 app.get("/", (req, res) => res.send("Backend is alive!"));
 
