@@ -1,0 +1,38 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/Logo.jpg';
+import './HomeIntro.css';
+
+const HomeIntro = () => {
+  return (
+    <section className="home-intro">
+      <div className="container home-intro-container">
+        
+        <div className="home-intro-logo">
+          <img src={logo} alt="Smart Materials 2026 Logo" />
+        </div>
+        
+        <div className="home-intro-content">
+          <h2>
+            <span className="text-primary" style={{ color: '#3b82f6' }}>Advancing Global Leadership</span> in Smart Materials, Nanotechnology & Advanced Manufacturing
+          </h2>
+          
+          <p>
+            Welcome to the premier global platform for the <span className="text-highlight">Smart Materials, Nanotech & Advanced Manufacturing Congress</span>, where leading experts and decision-makers converge to advance smart materials, nanotechnology applications, and next-generation manufacturing processes. The congress unites researchers, engineers, industry leaders, and policymakers to address critical challenges and shape the future of sustainable, efficient, and intelligent industrial technologies.
+          </p>
+          
+          <p className="home-intro-quote">
+            "Empowering Innovation and Industrial Excellence through Smart Materials, Nanotechnology, and Advanced Manufacturing"
+          </p>
+          
+          <Link to="/about" className="btn btn-primary" style={{ backgroundColor: '#3b82f6', color: 'white', padding: '0.8rem 2rem', border: 'none', borderRadius: '30px', fontWeight: '500', textDecoration: 'none', display: 'inline-block', marginTop: '1rem' }}>
+            Know More
+          </Link>
+        </div>
+        
+      </div>
+    </section>
+  );
+};
+
+export default HomeIntro;

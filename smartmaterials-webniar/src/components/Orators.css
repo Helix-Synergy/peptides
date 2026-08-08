@@ -1,0 +1,234 @@
+.orators-section {
+  padding: 4rem 0 6rem;
+  background-color: #ffffff;
+}
+
+.orators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.orators-marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+  padding: 15px 0;
+  margin-top: 2rem;
+  mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+}
+
+.orators-marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2rem;
+  animation: scroll-orators 40s linear infinite;
+}
+
+.orators-marquee-wrapper:hover .orators-marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-orators {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+.orator-card {
+  width: 280px;
+  flex-shrink: 0;
+  border: 2px solid #3b82f6; /* Blue border */
+  border-radius: 16px;
+  padding: 10px; /* White gap between border and image */
+  background: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.orator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+}
+
+.orator-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.orator-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orator-info {
+  padding: 0 0.5rem 0.5rem;
+}
+
+.orator-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 0.2rem 0;
+}
+
+.orator-uni {
+  font-size: 0.95rem;
+  color: #2563eb; /* Blue color for university */
+  margin: 0 0 0.2rem 0;
+  font-weight: 600;
+}
+
+.orator-country {
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: 700;
+  margin: 0;
+}
+
+.orator-card {
+  cursor: pointer;
+}
+
+.read-more-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #2563eb;
+}
+
+.orator-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.orator-modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal-btn:hover {
+  color: #ef4444;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1.5rem;
+}
+
+.modal-image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-header-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.modal-uni {
+  color: #2563eb;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.modal-country {
+  color: #4b5563;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-body {
+  color: #374151;
+  line-height: 1.6;
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.modal-section h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #3b82f6;
+  padding-left: 0.5rem;
+}
+
+.modal-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.modal-section li {
+  margin-bottom: 0.5rem;
+}

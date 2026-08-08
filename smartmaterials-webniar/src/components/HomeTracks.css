@@ -1,0 +1,97 @@
+.tracks-section {
+    padding: 5rem 0;
+    background-color: #e8eff6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+    color: #000;
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 640px) {
+    .tracks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .tracks-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.track-grid-card {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.track-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+    border-color: #e2e8f0;
+}
+
+.track-icon-wrapper {
+    color: #3b82f6;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.track-grid-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #334155;
+    line-height: 1.3;
+}
+
+.tracks-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-blue {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-black {
+    background: #000000;
+    color: #ffffff;
+}
