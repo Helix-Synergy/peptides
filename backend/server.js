@@ -21,7 +21,10 @@ const abstractSubmissionRoute = require('./routes/abstractSubmission');
 const webinarRegistrationRoute = require('./routes/webinarRegistration');
 const workshopRegistrationRoute = require('./routes/workshopRegistration');
 const smartMaterialsVisitorRoute = require('./routes/smartMaterialsVisitorRoute');
-
+const buzzVisitorRoute = require('./routes/buzzVisitorRoute');
+const bioconVisitorRoute = require('./routes/bioconVisitorRoute');
+const pharmameetVisitorRoute = require('./routes/pharmameetVisitorRoute');
+const genaiVisitorRoute = require('./routes/genaiVisitorRoute');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -54,6 +57,10 @@ app.use('/api/abstract-submission', abstractSubmissionRoute);
 app.use('/api/webinar-registration', webinarRegistrationRoute);
 app.use('/api/workshop-registration', workshopRegistrationRoute);
 app.use('/api/smartmaterials-visitors', smartMaterialsVisitorRoute);
+app.use('/api/buzz-visitors', buzzVisitorRoute);
+app.use('/api/biocon-visitors', bioconVisitorRoute);
+app.use('/api/pharmameet-visitors', pharmameetVisitorRoute);
+app.use('/api/genai-visitors', genaiVisitorRoute);
 app.use('/api', collaborateRoute);
 app.get("/", (req, res) => res.send("Backend is alive!"));
 

@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
             razorpay_order_id: paymentDetails.razorpay_order_id,
             razorpay_payment_id: paymentDetails.razorpay_payment_id,
             payment_status: 'Paid',
-            source: 'SmartMaterials'
+            source: formData.source || 'SmartMaterials'
         };
 
         const registration = new WebinarRegistration(webinarData);
