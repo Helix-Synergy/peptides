@@ -63,12 +63,13 @@ router.post('/pending', async (req, res) => {
     try {
         const formData = req.body;
         const userEmail = formData.email;
+        const webinarSource = formData.source || 'Webinar';
 
         if (!userEmail) {
             return res.status(400).json({ success: false, message: 'Email is required' });
         }
 
-        let registration = await WebinarRegistration.findOne({ email: userEmail });
+        let registration = await WebinarRegistration.findOne({ email: userEmail, source: webinarSource });
 
         if (registration) {
             if (registration.payment_status === 'Paid') {
@@ -85,7 +86,7 @@ router.post('/pending', async (req, res) => {
             const webinarData = {
                 ...formData,
                 payment_status: 'Pending',
-                source: formData.source || 'Webinar'
+                source: webinarSource
             };
             registration = new WebinarRegistration(webinarData);
             await registration.save();
