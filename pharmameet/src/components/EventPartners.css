@@ -1,0 +1,147 @@
+.partners-section {
+  padding: 4rem 0 6rem;
+  background-color: #ffffff;
+}
+
+.sponsorship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.sponsorship-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.sponsorship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+}
+
+.sponsorship-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #93c5fd; /* light var(--primary) */
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.medal-icon {
+  font-size: 2.5rem;
+  position: absolute;
+  left: 10px;
+}
+
+.sponsorship-title {
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 2.5rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.benefit-icon {
+  color: var(--primary);
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.sponsorship-footer {
+  text-align: center;
+}
+
+.btn-become-partner {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-become-partner:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Exhibitor Section */
+.exhibitor-section {
+  background: white;
+}
+
+.exhibitor-header {
+  display: flex;
+  align-items: center;
+  background-color: #93c5fd; /* light var(--primary) */
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.exhibitor-icon {
+  font-size: 2.5rem;
+  margin-right: 1.5rem;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exhibitor-title {
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.exhibitor-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.exhibitor-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .exhibitor-header {
+    border-radius: 12px;
+  }
+}

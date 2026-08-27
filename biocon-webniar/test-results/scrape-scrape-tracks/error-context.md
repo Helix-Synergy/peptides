@@ -1,0 +1,614 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: scrape.spec.js >> scrape tracks
+- Location: scrape.spec.js:4:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForSelector: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('.MuiGrid-item') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - link "Call Us" [ref=e5] [cursor=pointer]:
+      - /url: tel:+17036516096
+    - link "WhatsApp" [ref=e10] [cursor=pointer]:
+      - /url: https://api.whatsapp.com/send/?phone=17036516096&text=Hello&type=phone_number&app_absent=0
+    - link "Submit Abstract" [ref=e15] [cursor=pointer]:
+      - /url: /abstract-submission
+    - link "Brochure download" [ref=e21] [cursor=pointer]:
+      - /url: /brochure-download
+    - link "Schedule" [ref=e27] [cursor=pointer]:
+      - /url: /smartmaterials-event-schedule
+    - link "FAQs" [ref=e33] [cursor=pointer]:
+      - /url: /faq
+  - banner [ref=e39]:
+    - generic [ref=e40]:
+      - img "Helix Conferences" [ref=e42]
+      - navigation [ref=e43]:
+        - link "Home" [ref=e44] [cursor=pointer]:
+          - /url: /
+        - link "About" [ref=e45] [cursor=pointer]:
+          - /url: /about-smartmaterials
+        - link "Executive Panel" [ref=e46] [cursor=pointer]:
+          - /url: /executive-panel-members/
+        - link "Tracks" [ref=e47] [cursor=pointer]:
+          - /url: /smartmaterials-conference-tracks/
+        - link "Orators" [ref=e48] [cursor=pointer]:
+          - /url: /smartmaterials-orators
+        - link "Schedule" [ref=e49] [cursor=pointer]:
+          - /url: /smartmaterials-event-schedule
+        - link "Venue" [ref=e50] [cursor=pointer]:
+          - /url: /venue
+        - link "Event Partners" [ref=e51] [cursor=pointer]:
+          - /url: /event_partners
+        - link "Contact" [ref=e52] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e54]:
+        - link "Register" [ref=e55] [cursor=pointer]:
+          - /url: https://helixconferences.com/buy-a-ticket
+        - generic [ref=e58]:
+          - combobox "Language Translate Widget" [ref=e60]:
+            - option "Select Language" [selected]
+            - option "Abkhaz"
+            - option "Acehnese"
+            - option "Acholi"
+            - option "Afar"
+            - option "Afrikaans"
+            - option "Albanian"
+            - option "Alur"
+            - option "Amharic"
+            - option "Arabic"
+            - option "Armenian"
+            - option "Assamese"
+            - option "Avar"
+            - option "Awadhi"
+            - option "Aymara"
+            - option "Azerbaijani"
+            - option "Balinese"
+            - option "Baluchi"
+            - option "Bambara"
+            - option "Baoulé"
+            - option "Bashkir"
+            - option "Basque"
+            - option "Batak Karo"
+            - option "Batak Simalungun"
+            - option "Batak Toba"
+            - option "Belarusian"
+            - option "Bemba"
+            - option "Bengali"
+            - option "Betawi"
+            - option "Bhojpuri"
+            - option "Bikol"
+            - option "Bosnian"
+            - option "Breton"
+            - option "Bulgarian"
+            - option "Buryat"
+            - option "Cantonese"
+            - option "Catalan"
+            - option "Cebuano"
+            - option "Chamorro"
+            - option "Chechen"
+            - option "Chichewa"
+            - option "Chinese (Simplified)"
+            - option "Chinese (Traditional)"
+            - option "Chuukese"
+            - option "Chuvash"
+            - option "Corsican"
+            - option "Crimean Tatar (Cyrillic)"
+            - option "Crimean Tatar (Latin)"
+            - option "Croatian"
+            - option "Czech"
+            - option "Danish"
+            - option "Dari"
+            - option "Dhivehi"
+            - option "Dinka"
+            - option "Dogri"
+            - option "Dombe"
+            - option "Dutch"
+            - option "Dyula"
+            - option "Dzongkha"
+            - option "Esperanto"
+            - option "Estonian"
+            - option "Ewe"
+            - option "Faroese"
+            - option "Fijian"
+            - option "Filipino"
+            - option "Finnish"
+            - option "Fon"
+            - option "French"
+            - option "French (Canada)"
+            - option "Frisian"
+            - option "Friulian"
+            - option "Fulani"
+            - option "Ga"
+            - option "Galician"
+            - option "Georgian"
+            - option "German"
+            - option "Greek"
+            - option "Guarani"
+            - option "Gujarati"
+            - option "Haitian Creole"
+            - option "Hakha Chin"
+            - option "Hausa"
+            - option "Hawaiian"
+            - option "Hebrew"
+            - option "Hiligaynon"
+            - option "Hindi"
+            - option "Hmong"
+            - option "Hungarian"
+            - option "Hunsrik"
+            - option "Iban"
+            - option "Icelandic"
+            - option "Igbo"
+            - option "Ilocano"
+            - option "Indonesian"
+            - option "Inuktut (Latin)"
+            - option "Inuktut (Syllabics)"
+            - option "Irish Gaelic"
+            - option "Italian"
+            - option "Jamaican Patois"
+            - option "Japanese"
+            - option "Javanese"
+            - option "Jingpo"
+            - option "Kalaallisut"
+            - option "Kannada"
+            - option "Kanuri"
+            - option "Kapampangan"
+            - option "Kazakh"
+            - option "Khasi"
+            - option "Khmer"
+            - option "Kiga"
+            - option "Kikongo"
+            - option "Kinyarwanda"
+            - option "Kituba"
+            - option "Kokborok"
+            - option "Komi"
+            - option "Konkani"
+            - option "Korean"
+            - option "Krio"
+            - option "Kurdish (Kurmanji)"
+            - option "Kurdish (Sorani)"
+            - option "Kyrgyz"
+            - option "Lao"
+            - option "Latgalian"
+            - option "Latin"
+            - option "Latvian"
+            - option "Ligurian"
+            - option "Limburgish"
+            - option "Lingala"
+            - option "Lithuanian"
+            - option "Lombard"
+            - option "Luganda"
+            - option "Luo"
+            - option "Luxembourgish"
+            - option "Macedonian"
+            - option "Madurese"
+            - option "Maithili"
+            - option "Makassar"
+            - option "Malagasy"
+            - option "Malay"
+            - option "Malay (Jawi)"
+            - option "Malayalam"
+            - option "Maltese"
+            - option "Mam"
+            - option "Manx"
+            - option "Maori"
+            - option "Marathi"
+            - option "Marshallese"
+            - option "Marwadi"
+            - option "Mauritian Creole"
+            - option "Meadow Mari"
+            - option "Meiteilon (Manipuri)"
+            - option "Minang"
+            - option "Mizo"
+            - option "Mongolian"
+            - option "Myanmar (Burmese)"
+            - option "N'Ko"
+            - option "Nahuatl (Eastern Huasteca)"
+            - option "Ndau"
+            - option "Ndebele (South)"
+            - option "Nepal Bhasa (Newari)"
+            - option "Nepali"
+            - option "Norwegian"
+            - option "Nuer"
+            - option "Occitan"
+            - option "Odia (Oriya)"
+            - option "Oromo"
+            - option "Ossetian"
+            - option "Pangasinan"
+            - option "Papiamento"
+            - option "Pashto"
+            - option "Persian"
+            - option "Polish"
+            - option "Portuguese (Brazil)"
+            - option "Portuguese (Portugal)"
+            - option "Punjabi (Gurmukhi)"
+            - option "Punjabi (Shahmukhi)"
+            - option "Quechua"
+            - option "Qʼeqchiʼ"
+            - option "Romani"
+            - option "Romanian"
+            - option "Rundi"
+            - option "Russian"
+            - option "Sami (North)"
+            - option "Samoan"
+            - option "Sango"
+            - option "Sanskrit"
+            - option "Santali (Latin)"
+            - option "Santali (Ol Chiki)"
+            - option "Scots Gaelic"
+            - option "Sepedi"
+            - option "Serbian"
+            - option "Sesotho"
+            - option "Seychellois Creole"
+            - option "Shan"
+            - option "Shona"
+            - option "Sicilian"
+            - option "Silesian"
+            - option "Sindhi"
+            - option "Sinhala"
+            - option "Slovak"
+            - option "Slovenian"
+            - option "Somali"
+            - option "Spanish"
+            - option "Sundanese"
+            - option "Susu"
+            - option "Swahili"
+            - option "Swati"
+            - option "Swedish"
+            - option "Tahitian"
+            - option "Tajik"
+            - option "Tamazight"
+            - option "Tamazight (Tifinagh)"
+            - option "Tamil"
+            - option "Tatar"
+            - option "Telugu"
+            - option "Tetum"
+            - option "Thai"
+            - option "Tibetan"
+            - option "Tigrinya"
+            - option "Tiv"
+            - option "Tok Pisin"
+            - option "Tongan"
+            - option "Tshiluba"
+            - option "Tsonga"
+            - option "Tswana"
+            - option "Tulu"
+            - option "Tumbuka"
+            - option "Turkish"
+            - option "Turkmen"
+            - option "Tuvan"
+            - option "Twi"
+            - option "Udmurt"
+            - option "Ukrainian"
+            - option "Urdu"
+            - option "Uyghur"
+            - option "Uzbek"
+            - option "Venda"
+            - option "Venetian"
+            - option "Vietnamese"
+            - option "Waray"
+            - option "Welsh"
+            - option "Wolof"
+            - option "Xhosa"
+            - option "Yakut"
+            - option "Yiddish"
+            - option "Yoruba"
+            - option "Yucatec Maya"
+            - option "Zapotec"
+            - option "Zulu"
+          - text: Powered by
+  - generic [ref=e61]:
+    - link "Submit abstract" [ref=e63] [cursor=pointer]:
+      - /url: /abstract-submission
+      - text: Submit Abstract
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - img "AI/Machine Learning" [ref=e67]
+        - generic [ref=e68]:
+          - heading "AI/Machine Learning" [level=2] [ref=e69]
+          - heading [level=3]
+          - paragraph [ref=e72]:
+            - text: This track explores the integration of
+            - link "AI and machine learning" [ref=e73] [cursor=pointer]:
+              - /url: /
+            - text: in materials science and manufacturing. Topics include predictive modeling, process optimization, smart automation, and quality control. Participants gain insights into leveraging AI to accelerate innovation, enhance efficiency, and design intelligent manufacturing systems that adapt to complex industrial challenges.
+      - generic [ref=e74]:
+        - img "Advanced Nanomaterials" [ref=e76]
+        - generic [ref=e77]:
+          - heading "Advanced Nanomaterials" [level=2] [ref=e78]
+          - heading [level=3]
+          - paragraph [ref=e81]:
+            - text: Focuses on the development, characterization, and application of
+            - link "advanced nanomaterials." [ref=e82] [cursor=pointer]:
+              - /url: /smartmaterials-orators
+            - text: This track covers synthesis techniques, material properties, and scalable applications across electronics, energy, and healthcare. Participants learn how nanomaterials enhance performance, enable innovation, and transform traditional manufacturing processes through nanoscale design, superior functionality, and precision engineering.
+      - generic [ref=e83]:
+        - img "Intelligent & Responsive Materials" [ref=e85]
+        - generic [ref=e86]:
+          - heading "Intelligent & Responsive Materials" [level=2] [ref=e87]
+          - heading [level=3]
+          - paragraph [ref=e90]:
+            - text: Explores materials capable of responding to environmental stimuli, such as temperature, light, or stress. This track covers design, characterization, and applications in aerospace, healthcare, and robotics. Participants learn to harness smart materials to develop adaptive, high-performance systems, enabling innovations in sensors, actuators, and next-generation industrial products.
+            - link:
+              - /url: /smartmaterials-event-schedule
+      - generic [ref=e91]:
+        - img "Healthcare & Biomedicine" [ref=e93]
+        - generic [ref=e94]:
+          - heading "Healthcare & Biomedicine" [level=2] [ref=e95]
+          - heading [level=3]
+          - paragraph [ref=e98]:
+            - text: This track highlights nanotechnology and advanced materials applications in medical devices, drug delivery, diagnostics, and tissue engineering. Participants gain insights into developing safer, more effective
+            - link "biomedical solutions," [ref=e99] [cursor=pointer]:
+              - /url: /smartmaterials-conference-tracks/
+            - text: integrating smart materials for enhanced patient outcomes, and bridging the gap between materials science innovation and practical healthcare applications.
+      - generic [ref=e100]:
+        - img "Nano-Sensors" [ref=e102]
+        - generic [ref=e103]:
+          - heading "Nano-Sensors" [level=2] [ref=e104]
+          - heading [level=3]
+          - paragraph [ref=e107]:
+            - text: Covers design, fabrication, and deployment of
+            - link "nanoscale sensors" [ref=e108] [cursor=pointer]:
+              - /url: /
+            - text: for industrial, healthcare, and environmental applications. Participants explore sensitivity enhancement, real-time monitoring, and AI integration for intelligent detection. Nano-sensors enable precise measurement, early warning systems, and adaptive feedback mechanisms in advanced manufacturing and high-tech industrial processes.
+      - generic [ref=e109]:
+        - img "Advanced Composites" [ref=e111]
+        - generic [ref=e112]:
+          - heading "Advanced Composites" [level=2] [ref=e113]
+          - heading [level=3]
+          - paragraph [ref=e116]:
+            - text: Focuses on high-performance composite materials combining strength, durability, and lightweight properties. This track covers design, fabrication, testing, and applications in
+            - link "aerospace," [ref=e117] [cursor=pointer]:
+              - /url: /about-smartmaterials
+            - text: automotive, and defense. Participants learn to engineer composites that improve structural efficiency, sustainability, and performance, while enabling innovation in next-generation manufacturing and industrial solutions.
+      - generic [ref=e118]:
+        - img "Nano-Photonics" [ref=e120]
+        - generic [ref=e121]:
+          - heading "Nano-Photonics" [level=2] [ref=e122]
+          - heading [level=3]
+          - paragraph [ref=e125]:
+            - text: Explores light-matter interactions at the nanoscale, including photonic devices, sensors, and communication technologies. Participants gain knowledge of fabrication techniques, optical characterization, and practical applications in imaging, telecommunications, and energy systems.
+            - link "Nano-photonics" [ref=e126] [cursor=pointer]:
+              - /url: /smartmaterials-event-schedule
+            - text: drives innovation in advanced manufacturing, precision instrumentation, and next-generation smart technologies.
+      - generic [ref=e127]:
+        - img "Nanoelectronics" [ref=e129]
+        - generic [ref=e130]:
+          - heading "Nanoelectronics" [level=2] [ref=e131]
+          - heading [level=3]
+          - paragraph [ref=e134]:
+            - text: Focuses on miniaturized electronic components and circuits leveraging nanoscale materials. This track covers semiconductors, transistors, and memory devices, enabling faster, more efficient electronics. Participants explore innovations that enhance device performance, reduce energy consumption, and support the development of intelligent industrial systems and
+            - link "consumer electronics." [ref=e135] [cursor=pointer]:
+              - /url: /venue
+      - generic [ref=e136]:
+        - img "Graphene Tech" [ref=e138]
+        - generic [ref=e139]:
+          - heading "Graphene Tech" [level=2] [ref=e140]
+          - heading [level=3]
+          - paragraph [ref=e143]:
+            - text: This track explores
+            - link "graphene synthesis," [ref=e144] [cursor=pointer]:
+              - /url: /contact
+            - text: properties, and applications in electronics, energy, and advanced manufacturing. Participants learn how graphene enhances conductivity, flexibility, and material strength, enabling innovative solutions in nanodevices, sensors, composites, and next-generation industrial technologies with transformative potential across multiple sectors.
+      - generic [ref=e145]:
+        - img "Smart Sensors" [ref=e147]
+        - generic [ref=e148]:
+          - heading "Smart Sensors" [level=2] [ref=e149]
+          - heading [level=3]
+          - paragraph [ref=e152]:
+            - text: Covers the development of sensors with adaptive, responsive, and real-time monitoring capabilities. Topics include IoT integration, energy harvesting, and industrial applications. Participants gain expertise in deploying intelligent sensing solutions that enhance process control, predictive maintenance, and automation across advanced manufacturing and
+            - link "smart technology ecosystems." [ref=e153] [cursor=pointer]:
+              - /url: /event_partners
+      - generic [ref=e154]:
+        - img "Quantum Materials" [ref=e156]
+        - generic [ref=e157]:
+          - heading "Quantum Materials" [level=2] [ref=e158]
+          - heading [level=3]
+          - paragraph [ref=e161]:
+            - text: Explores materials exhibiting
+            - link "quantum phenomena" [ref=e162] [cursor=pointer]:
+              - /url: /smartmaterials-orators
+            - text: for advanced computing, energy, and sensing applications. Participants learn about superconductors, topological materials, and quantum devices. This track emphasizes harnessing unique quantum properties to develop next-generation technologies, improve performance, and create innovative solutions in high-tech industries and advanced manufacturing processes.
+      - generic [ref=e163]:
+        - img "Digital Manufacturing" [ref=e165]
+        - generic [ref=e166]:
+          - heading "Digital Manufacturing" [level=2] [ref=e167]
+          - heading [level=3]
+          - paragraph [ref=e170]:
+            - text: Focuses on Industry 4.0 technologies, including CAD/CAM, IoT, AI integration, and digital twins. Participants learn to implement
+            - link "digital manufacturing" [ref=e171] [cursor=pointer]:
+              - /url: https://helixconferences.com/buy-a-ticket
+            - text: solutions for enhanced precision, efficiency, and scalability. This track emphasizes smart production systems, automation, and real-time monitoring to optimize manufacturing operations and reduce costs.
+      - generic [ref=e172]:
+        - img "Bio-Nanotechnology" [ref=e174]
+        - generic [ref=e175]:
+          - heading "Bio-Nanotechnology" [level=2] [ref=e176]
+          - heading [level=3]
+          - paragraph [ref=e179]:
+            - text: Covers the intersection of
+            - link "biology and nanotechnology" [ref=e180] [cursor=pointer]:
+              - /url: /about-smartmaterials
+            - text: for applications in healthcare, environmental monitoring, and industrial processes. Participants explore nanocarriers, biosensors, and biomaterials. This track emphasizes innovation in medical therapies, diagnostics, and sustainable manufacturing using biologically inspired nanomaterials and bio-integrated technologies.
+      - generic [ref=e181]:
+        - img "2D Materials" [ref=e183]
+        - generic [ref=e184]:
+          - heading "2D Materials" [level=2] [ref=e185]
+          - heading [level=3]
+          - paragraph [ref=e188]:
+            - text: Focuses on atomically thin materials like graphene and transition metal dichalcogenides. Participants explore synthesis, characterization, and applications in electronics, energy, and sensors.
+            - link "2D materials" [ref=e189] [cursor=pointer]:
+              - /url: /event_partners
+            - text: enable breakthroughs in flexibility, conductivity, and functionality, driving innovations in next-generation devices and advanced manufacturing processes.
+      - generic [ref=e190]:
+        - img "Advanced Robotics & Automation" [ref=e192]
+        - generic [ref=e193]:
+          - heading "Advanced Robotics & Automation" [level=2] [ref=e194]
+          - heading [level=3]
+          - paragraph [ref=e197]:
+            - text: Covers robotics systems integrated with smart materials, AI, and sensors for precision manufacturing. Participants explore autonomous operations, adaptive systems, and industrial automation. This track emphasizes the design of intelligent manufacturing workflows that enhance productivity, safety, and efficiency while integrating advanced materials and AI-driven control systems.
+            - link:
+              - /url: /smartmaterials-orators
+      - generic [ref=e198]:
+        - img "Thermoelectrics" [ref=e200]
+        - generic [ref=e201]:
+          - heading "Thermoelectrics" [level=2] [ref=e202]
+          - heading [level=3]
+          - paragraph [ref=e205]:
+            - text: Explores materials that convert heat into electricity for energy harvesting and industrial applications. Participants learn about synthesis, characterization, and device integration.
+            - link "Thermoelectric" [ref=e206] [cursor=pointer]:
+              - /url: /
+            - text: materials enable sustainable manufacturing solutions, energy-efficient devices, and smart technologies for powering sensors, robotics, and advanced industrial systems.
+      - generic [ref=e207]:
+        - img "Aerospace, Automotive & Defense" [ref=e209]
+        - generic [ref=e210]:
+          - heading "Aerospace, Automotive & Defense" [level=2] [ref=e211]
+          - heading [level=3]
+          - paragraph [ref=e214]:
+            - text: Focuses on advanced materials, composites, and nanotechnology applications in critical industries. Participants explore lightweight, high-strength, and multifunctional materials for aircraft, vehicles, and defense systems. This track emphasizes innovation, performance optimization, and sustainability in next-generation
+            - link "aerospace, automotive, and defense manufacturing." [ref=e215] [cursor=pointer]:
+              - /url: https://helixconferences.com/buy-a-ticket
+      - generic [ref=e216]:
+        - img "Laser & Plasma-Processing" [ref=e218]
+        - generic [ref=e219]:
+          - heading "Laser & Plasma-Processing" [level=2] [ref=e220]
+          - heading [level=3]
+          - paragraph [ref=e223]:
+            - text: Covers precision material processing using
+            - link "lasers and plasma" [ref=e224] [cursor=pointer]:
+              - /url: /about-smartmaterials
+            - text: for cutting, coating, and surface modification. Participants learn advanced techniques for enhanced manufacturing accuracy, material properties, and scalability. This track emphasizes integration of laser and plasma technologies with smart materials and nanotechnology for innovative industrial solutions.
+      - generic [ref=e225]:
+        - img "Meta Materials" [ref=e227]
+        - generic [ref=e228]:
+          - heading "Meta Materials" [level=2] [ref=e229]
+          - heading [level=3]
+          - paragraph [ref=e232]:
+            - text: Explores engineered materials with unique electromagnetic, acoustic, or mechanical properties. Participants gain insights into design, fabrication, and industrial applications.
+            - link "Meta materials" [ref=e233] [cursor=pointer]:
+              - /url: /smartmaterials-orators
+            - text: enable breakthroughs in optics, sensors, cloaking devices, and communication technologies, enhancing innovation and functional performance in advanced manufacturing.
+      - generic [ref=e234]:
+        - img "Nano Fibers" [ref=e236]
+        - generic [ref=e237]:
+          - heading "Nano Fibers" [level=2] [ref=e238]
+          - heading [level=3]
+          - paragraph [ref=e241]:
+            - text: Focuses on the synthesis, characterization, and applications of
+            - link "nanofibers" [ref=e242] [cursor=pointer]:
+              - /url: /contact
+            - text: in filtration, textiles, healthcare, and energy. Participants learn about scalable production, mechanical properties, and multifunctionality. Nanofibers offer lightweight, high-performance solutions for industrial, medical, and technological applications.
+  - button "Open Chat" [ref=e245] [cursor=pointer]
+  - generic [ref=e248]:
+    - generic [ref=e249]:
+      - generic [ref=e251]:
+        - img "FoodMeet Logo" [ref=e252]
+        - paragraph [ref=e253]: “Securing the Future with Smart Materials, Nanotechnology”
+      - generic [ref=e254]:
+        - heading "Quick Links" [level=2] [ref=e255]
+        - generic [ref=e256]:
+          - link "About" [ref=e260] [cursor=pointer]:
+            - /url: /about-smartmaterials
+          - link "Executive Panel" [ref=e264] [cursor=pointer]:
+            - /url: /executive-panel-members/
+          - link "Tracks" [ref=e268] [cursor=pointer]:
+            - /url: /smartmaterials-conference-tracks/
+          - link "Orators" [ref=e272] [cursor=pointer]:
+            - /url: /smartmaterials-orators
+          - link "Schedule" [ref=e276] [cursor=pointer]:
+            - /url: /smartmaterials-event-schedule
+          - link "Venue" [ref=e280] [cursor=pointer]:
+            - /url: /venue
+          - link "Event Partners" [ref=e284] [cursor=pointer]:
+            - /url: /event_partners
+          - link "Contact" [ref=e288] [cursor=pointer]:
+            - /url: /Contact
+      - generic [ref=e289]:
+        - heading "Social Media" [level=2] [ref=e290]
+        - generic [ref=e291]:
+          - link [ref=e293] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=61576697796195
+            - paragraph [ref=e296]: Facebook
+          - link [ref=e298] [cursor=pointer]:
+            - /url: https://x.com/Helixconfe69272
+            - paragraph [ref=e301]: X
+          - link [ref=e303] [cursor=pointer]:
+            - /url: https://www.instagram.com/helix_conferences/
+            - paragraph [ref=e307]: Instagram
+          - link [ref=e309] [cursor=pointer]:
+            - /url: https://www.youtube.com/@Helixconferences
+            - paragraph [ref=e313]: YouTube
+          - link [ref=e315] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/helixconferences
+            - paragraph [ref=e320]: LinkedIn
+          - link [ref=e322] [cursor=pointer]:
+            - /url: https://www.reddit.com/user/Salty-Ad6381/
+            - paragraph [ref=e325]: Reddit
+      - generic [ref=e326]:
+        - heading "Get In Touch" [level=2] [ref=e327]
+        - generic [ref=e328]:
+          - paragraph [ref=e332]: +1-703-651-6096
+          - paragraph [ref=e337]: hello@helixconferences.com
+          - paragraph [ref=e342]: "1200 West 73rd Avenue #1100, Vancouver, British Columbia‎, Canada"
+        - link "Register" [ref=e344] [cursor=pointer]:
+          - /url: https://helixconferences.com/buy-a-ticket
+    - generic [ref=e345]:
+      - paragraph [ref=e346]: "Total Visitors: 120"
+      - paragraph [ref=e347]: "Live Visitors: 120"
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | import * as fs from 'fs';
+  3  | 
+  4  | test('scrape tracks', async ({ page }) => {
+  5  |   await page.goto('https://smartmaterials.helixconferences.com/smartmaterials-conference-tracks/', { waitUntil: 'networkidle' });
+  6  |   
+  7  |   // Wait for the tracks to load
+> 8  |   await page.waitForSelector('.MuiGrid-item');
+     |              ^ Error: page.waitForSelector: Test timeout of 30000ms exceeded.
+  9  |   
+  10 |   const tracks = await page.evaluate(() => {
+  11 |     const trackElements = document.querySelectorAll('.MuiGrid-item');
+  12 |     const results = [];
+  13 |     
+  14 |     trackElements.forEach(el => {
+  15 |       const titleEl = el.querySelector('h2, h3, .MuiTypography-h5, .MuiTypography-h6');
+  16 |       const descEl = el.querySelector('p, .MuiTypography-body1, .MuiTypography-body2');
+  17 |       
+  18 |       if (titleEl && descEl) {
+  19 |         results.push({
+  20 |           title: titleEl.innerText.trim(),
+  21 |           desc: descEl.innerText.trim()
+  22 |         });
+  23 |       }
+  24 |     });
+  25 |     
+  26 |     return results;
+  27 |   });
+  28 |   
+  29 |   fs.writeFileSync('scraped_tracks.json', JSON.stringify(tracks, null, 2));
+  30 |   console.log(`Scraped ${tracks.length} tracks.`);
+  31 | });
+  32 | 
+```

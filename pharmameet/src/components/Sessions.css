@@ -1,0 +1,43 @@
+.sessions-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sessions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  border-left: 3px solid transparent;
+  transition: var(--transition);
+}
+
+.session-item:hover {
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  border-left-color: var(--primary);
+  transform: translateX(5px);
+}
+
+.session-number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.5;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  min-width: 25px;
+}
+
+.session-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--secondary-dark);
+}

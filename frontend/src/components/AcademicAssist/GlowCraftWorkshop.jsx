@@ -128,11 +128,11 @@ const GlowCraftWorkshop = () => {
                 className="flex flex-col sm:flex-row gap-4 mt-4"
             >
               <button 
-                onClick={() => setIsModalOpen(true)}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#0f2920] text-white font-bold py-4 px-6 rounded-xl hover:bg-[#1a4435] transition-all duration-300 shadow-xl shadow-[#0f2920]/20 hover:-translate-y-1"
+                disabled
+                className="flex-1 flex items-center justify-center gap-2 bg-gray-400 text-gray-100 font-bold py-4 px-6 rounded-xl cursor-not-allowed"
               >
                 <FormInput size={20} />
-                Register Now
+                Registrations Closed
               </button>
               
               <button 

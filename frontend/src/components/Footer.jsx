@@ -318,7 +318,8 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-[#333] flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 pb-4">
           <div className="text-center md:text-left text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Peptides Knowledge Park. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Peptides Knowledge Park. All Rights Reserved. <br />
+            <span className="text-xs mt-1 block opacity-80">A unit of Octacrest Corporate Pvt Ltd</span>
           </div>
 
           {/* Beautiful Visitor Counter */}

@@ -4,6 +4,7 @@ import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollege
 import ReddyCollegeLogo from '../assets/images/collaborations/RBVRRCollegeLogo.webp'
 import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.webp'
 import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.webp'
+import KVReddyCollegeLogo from '../assets/images/collaborations/kv reddy collage_logo.png'
 // Banners
 import pragathiCollegeBanner from '../assets/images/collaborations/pragathiCollegeBanner.webp'
 import AVCollegeBanner from '../assets/images/collaborations/AVCollegeBanner.webp'
@@ -52,18 +53,20 @@ import LavinImg3 from '../assets/images/collaborations/LavinLabs/3.webp'
 import LavinImg4 from '../assets/images/collaborations/LavinLabs/4.webp'
 
 // Vivekananda Degree College Images
-import vvLogo from '../assets/images/collaborations/vivekananda/vv1.webp'
-import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.webp'
-import vvBanner from '../assets/images/collaborations/vivekananda/vv2.webp'
-import vvImage1 from '../assets/images/collaborations/vivekananda/vv1.webp'
-import vvImage2 from '../assets/images/collaborations/vivekananda/vv2.webp'
-import vvImage3 from '../assets/images/collaborations/vivekananda/vv3.webp'
-import vvImage4 from '../assets/images/collaborations/vivekananda/vv4.webp'
 
+// KV Reddy College Images
+import kvReddyImg1 from '../assets/images/collaborations/kv_Reddy/20260807_142947.jpg'
+import kvReddyImg2 from '../assets/images/collaborations/kv_Reddy/20260807_143944.jpg'
+import kvReddyImg3 from '../assets/images/collaborations/kv_Reddy/20260807_154957.jpg'
+import kvReddyImg4 from '../assets/images/collaborations/kv_Reddy/20260807_144008.jpg'
+import kvReddyImg5 from '../assets/images/collaborations/kv_Reddy/20260807_150736.jpg'
+import kvReddyBanner from '../assets/images/collaborations/kv_Reddy/kv collage.webp'
 
-
-
-// export const academicCollaborations = [
+// City College Images
+import CityCollegeLogo from '../assets/images/collaborations/city_collage_logo.jpg'
+import cityImg1 from '../assets/images/collaborations/citycollage/city1.webp'
+import cityImg2 from '../assets/images/collaborations/citycollage/city2.webp'
+import cityImg3 from '../assets/images/collaborations/citycollage/city3.webp'
 //   {
 //     id: "college-1",
 //     name: "Greenwood University",
@@ -581,69 +584,103 @@ Together, we aim to create an ecosystem where women students are encouraged to e
     },
   },
   {
-    id: "vivekananda-government-degree-college",
-    name: "Vivekananda Government Degree College (Autonomous)",
-    logo: vvLogo1,
+    id: "kv-reddy-college",
+    name: "KV Ranga Reddy College",
+    logo: KVReddyCollegeLogo,
 
-    // Banner Section
     banner: {
-      title: "Collaboration with Vivekananda Government Degree College",
-      subtitle: "Fostering holistic development through academic rigor and community-oriented initiatives since 1966.",
-      imageUrl: vvBanner,
+      title: "Partnering with KV Ranga Reddy College",
+      subtitle: "Fostering academic growth, innovation, and holistic development.",
+      imageUrl: kvReddyBanner,
     },
 
-    // About the College Section
     about: {
-      title: "About Vivekananda Government Degree College",
-      content: `Vivekananda Government Degree College (Autonomous), located in Vidyanagar, Hyderabad, was established in 1966 (initially as SVES Telugu Kalasala). Affiliated with Osmania University, the institution was granted fresh Autonomous Status by UGC effective from the academic year 2024-2025 and is accredited with NAAC 'A' Grade (2022).
-
-    The college offers a comprehensive range of undergraduate programs in Science (Computer Science, Data Science, Life Sciences), Commerce (including B.Com Finance), Arts, and professional courses like BBA in Retail Operations and BCA. With features like the Telangana Skill Knowledge Centre (TSKC) and a digital-ready library, it is dedicated to shaping competent professionals.`,
+      title: "About KV Ranga Reddy College",
+      content: `KV Ranga Reddy College has a long-standing history of empowering students with high-quality education and cultivating a strong sense of community and leadership. With modern infrastructure and a commitment to academic excellence, the college prepares students for diverse challenges in a rapidly evolving global landscape.`,
     },
 
-    // Collaboration Details Section
     collaborationDetails: {
-      sectionTitle: "Our Partnership",
-      collaborationText: `Our collaboration with Vivekananda Government Degree College is rooted in a shared dedication to academic excellence and social responsibility. By aligning with the institution’s long-standing history of providing quality education, we aim to support their mission of fostering holistic development through academic rigor and community-oriented initiatives like the NCC and NSS.
-
-    Together, we are committed to bridging the gap between traditional learning and modern skill requirements, empowering students to emerge as confident professionals and impactful contributors to the nation's growth.`,
+      sectionTitle: "Our Shared Vision",
+      collaborationText: `Through our collaboration with KV Ranga Reddy College, we are providing students with unique opportunities to bridge the gap between theoretical knowledge and practical application. Together, we are launching initiatives that focus on technology, innovation, and employability.`,
     },
 
-    // Workshops Section
     workshops: {
-      sectionTitle: "Programs & Initiatives",
-      description: "Students benefit from specialized skill-based training and competitive exam preparation through initiatives like TSKC and MANA TV.",
+      sectionTitle: "Programs & Opportunities",
+      description: "Our partnership unlocks an array of academic and developmental initiatives for students.",
       list: [
-        "Telangana Skill Knowledge Centre (TSKC)",
-        "MANA TV For Competitive Exams",
-        "NCC (National Cadet Corps) - Newly Established",
-        "NSS & Women Empowerment Cell (WEC) Activities",
-        "Job Melas & Industry Connections",
-        "B.Sc Data Science & Life Sciences Projects",
-        "Digital Library & E-Corner Access",
-        "Soft Skills & Communication Training",
-        "Placement Preparation (Median Package ~3.14 LPA)",
-        "Social Awareness Programs"
+        "Academic Projects (UG & PG)",
+        "Seminars and Guest Lectures",
+        "Technical Workshops",
+        "Internships",
+        "Conferences",
+        "Career Guidance Programs (CGPs)"
       ],
     },
 
-    // Image Gallery Section
     gallery: {
       sectionTitle: "Campus Highlights",
       images: [
-        vvImage1, vvImage2, vvImage3, vvImage4
+        kvReddyImg1, kvReddyImg2, kvReddyImg3, kvReddyImg4, kvReddyImg5
       ],
     },
 
-    // News and Events Section
     news: {
-      sectionTitle: "Latest Updates",
+      sectionTitle: "Recent Updates",
       updates: [
-        "Fresh Autonomous Status granted by UGC (effective 2024-2025).",
-        "Accredited with NAAC 'A' Grade in 2022.",
-        "New NCC Unit established from 2024.",
-        "Introduction of B.Com Finance and BBA Retail Operations.",
-        "Placement successes with a median package of approximately 3.14 LPA.",
+        "New academic partnerships established for the 2026 session.",
+        "Successful completion of the Annual Innovation Summit.",
+        "Enhanced placement drives with top industry recruiters."
       ],
     },
   },
+  {
+    id: "city-college",
+    name: "Government City College",
+    logo: CityCollegeLogo,
+
+    banner: {
+      title: "Partnering with Government City College",
+      subtitle: "Empowering students with knowledge, skills, and values.",
+      imageUrl: cityImg1,
+    },
+
+    about: {
+      title: "About Government City College",
+      content: `Government City College, Hyderabad, is a prominent educational institution with a rich history of academic excellence. It has been instrumental in shaping the careers of countless students by providing quality education and fostering holistic development.`,
+    },
+
+    collaborationDetails: {
+      sectionTitle: "Our Shared Vision",
+      collaborationText: `Through our collaboration with Government City College, we are creating opportunities for students to bridge the gap between academia and industry. Together, we focus on enhancing employability, technological skills, and innovation.`,
+    },
+
+    workshops: {
+      sectionTitle: "Programs & Opportunities",
+      description: "Our partnership unlocks an array of academic and developmental initiatives for students.",
+      list: [
+        "Academic Projects (UG & PG)",
+        "Seminars and Guest Lectures",
+        "Technical Workshops",
+        "Internships",
+        "Conferences",
+        "Career Guidance Programs (CGPs)"
+      ],
+    },
+
+    gallery: {
+      sectionTitle: "Campus Highlights",
+      images: [
+        cityImg1, cityImg2, cityImg3
+      ],
+    },
+
+    news: {
+      sectionTitle: "Recent Updates",
+      updates: [
+        "New collaborative initiatives launched for the upcoming academic year.",
+        "Successful execution of skill-building workshops for final-year students.",
+        "Increased focus on industry-aligned training programs."
+      ],
+    },
+  }
 ];

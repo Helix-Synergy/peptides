@@ -139,6 +139,9 @@ const AboutUs = () => {
               Mentoring, Writing Labs, Academic Advising, Skill-Building
               Workshops, Review Programs, Career Counselling, and more.
             </p>
+            <p className="text-md text-gray-500 mt-4 max-w-3xl mx-auto font-semibold">
+              Peptides Knowledge Park is a unit of Octacrest Corporate Pvt Ltd
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold pt-10 text-peptides-dark mb-6">
               Our Mission & Vision
             </h2>

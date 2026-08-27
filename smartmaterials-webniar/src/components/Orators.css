@@ -53,6 +53,8 @@
   background: white;
   text-align: center;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .orator-card:hover {
@@ -76,6 +78,9 @@
 
 .orator-info {
   padding: 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .orator-name {
@@ -104,7 +109,7 @@
 }
 
 .read-more-btn {
-  margin-top: 1rem;
+  margin-top: auto;
   padding: 0.5rem 1rem;
   background-color: #3b82f6;
   color: white;

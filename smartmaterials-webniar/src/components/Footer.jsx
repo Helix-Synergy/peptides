@@ -13,7 +13,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchVisitorCount = async () => {
       try {
-        const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+        const API_URL = import.meta.env.VITE_API_BASE_URL;
         const response = await fetch(`${API_URL}/smartmaterials-visitors`);
         const data = await response.json();
         if (data.count) {
@@ -102,11 +102,7 @@ const Footer = () => {
           
           <div className="visitor-counter-container">
             <div className="visitor-label">
-              <span>Live Visitors</span>
-              <div className="pulsing-dot-wrapper">
-                <span className="pulsing-dot-bg"></span>
-                <span className="pulsing-dot"></span>
-              </div>
+              <span>Total Visitors</span>
             </div>
             <div className="visitor-divider"></div>
             <div className="visitor-count">

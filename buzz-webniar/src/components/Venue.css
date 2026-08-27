@@ -1,0 +1,108 @@
+.venue-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.venue-section .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
+.venue-content {
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* Left Column */
+.venue-list-area {
+  flex: 0 0 250px;
+}
+
+.venue-subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.venue-location {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.venue-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.venue-list li {
+  margin-bottom: 0.8rem;
+  color: #111827;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-icon {
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+/* Right Column: Grid */
+.venue-image-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 200px;
+  gap: 15px;
+}
+
+.venue-img {
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.placeholder-img {
+  background-color: #e5e7eb;
+}
+
+/* Masonry approximation based on screenshot */
+.v-img-1 { grid-column: span 1; }
+.v-img-2 { grid-column: span 2; }
+.v-img-3 { grid-column: span 1; }
+.v-img-4 { grid-column: span 2; }
+.v-img-5 { grid-column: span 1; }
+.v-img-6 { grid-column: span 1; }
+
+@media (max-width: 992px) {
+  .venue-content {
+    flex-direction: column;
+  }
+  .venue-list-area {
+    text-align: center;
+  }
+  .venue-list {
+    display: inline-block;
+    text-align: left;
+  }
+  .venue-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .v-img-1, .v-img-2, .v-img-3, .v-img-4, .v-img-5, .v-img-6 {
+    grid-column: span 1;
+    height: 150px;
+  }
+  .v-img-2, .v-img-4 {
+    grid-column: span 2;
+  }
+}

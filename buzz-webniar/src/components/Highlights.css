@@ -1,0 +1,57 @@
+.highlights-section {
+  position: relative;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.highlight-card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-bottom-color: var(--primary);
+}
+
+.highlight-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 106, 43, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: var(--transition);
+}
+
+.highlight-card:hover .highlight-icon {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.highlight-title {
+  font-size: 1.1rem;
+  color: var(--secondary-dark);
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+}

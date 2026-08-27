@@ -1,0 +1,89 @@
+.quick-links-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.quick-link-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.quick-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary); /* var(--primary) background */
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.quick-icon-btn:hover:not(.expandable-btn) {
+  background-color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+/* Expandable Button Styles */
+.expandable-btn {
+  justify-content: flex-start;
+  transition: max-width 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 40px;
+  border-radius: 20px;
+}
+
+.expandable-btn .icon-circle {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.expandable-btn .expandable-text {
+  white-space: nowrap;
+  color: black;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  padding-left: 8px;
+  padding-right: 15px;
+}
+
+.expandable-btn:hover {
+  max-width: 250px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.expandable-btn:hover .icon-circle {
+  background-color: var(--primary); /* var(--primary) circle when expanded */
+}
+
+.expandable-btn:hover .expandable-text {
+  opacity: 1;
+}
+
+

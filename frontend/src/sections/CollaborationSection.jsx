@@ -5,7 +5,8 @@ import AVCollegeLogo from '../assets/images/collaborations/AVCollageLogo.webp'
 import PragathiCollegeLogo from '../assets/images/collaborations/pragathiCollegeLogo.webp'
 import BJRCollegeLogo from '../assets/images/collaborations/BJRCollegeLogo.webp'
 import KasthuribaCollegeLogo from '../assets/images/collaborations/KasturibaCollegeLogo.webp'
-import vvLogo1 from '../assets/images/collaborations/vivekananda/vvlogo1.webp'
+import KVReddyCollegeLogo from '../assets/images/collaborations/kv reddy collage_logo.png'
+import CityCollegeLogo from '../assets/images/collaborations/city_collage_logo.jpg'
 
 const colleges = [
   {
@@ -44,12 +45,19 @@ const colleges = [
     description: 'Established in 1973, this college is dedicated to providing value-based education, with a strong record in both academics and sports.',
   },
   {
-    imageSrc: vvLogo1,
-    name: 'Vivekananda Government Degree College (Autonomous)',
-    address: 'Vidyanagar',
+    imageSrc: KVReddyCollegeLogo,
+    name: 'KV Ranga Reddy College',
+    address: '',
     city: 'Hyderabad',
-    description: 'Fostering holistic development through academic rigor and community-oriented initiatives since 1966.',
+    description: 'Empowering students with high-quality education and cultivating a strong sense of community and leadership.',
   },
+  {
+    imageSrc: CityCollegeLogo,
+    name: 'Government City College',
+    address: 'Near High Court',
+    city: 'Hyderabad',
+    description: 'A prominent educational institution with a rich history of academic excellence and holistic student development.',
+  }
 ];
 
 const CollaborationSection = () => {

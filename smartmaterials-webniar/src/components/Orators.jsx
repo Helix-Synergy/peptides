@@ -11,11 +11,33 @@ import roseMaryImg from '../assets/orators/rose-mary.webp';
 import sunithaImg from '../assets/orators/sunithaGaru.webp';
 import anjaiahImg from '../assets/orators/Dr.Anjaiah.jpg';
 import jaganmohanImg from '../assets/orators/jaganmohan.jpg';
+import thomasImg from '../assets/orators/Thomas J. Webster.png';
+import harryImg from '../assets/orators/Harry Ruda.png';
 
 const Orators = ({ hideTitle, limit, isScrolling }) => {
   const [selectedOrator, setSelectedOrator] = useState(null);
 
   const orators = [
+    {
+      id: 9,
+      name: 'Thomas J. Webster',
+      university: 'Brown University',
+      country: 'United States',
+      image: thomasImg,
+      about: 'Thomas J. Webster is an internationally recognized expert in nanomedicine, biomaterials, biomedical engineering, and AI-enabled medical technologies. With over 25 years of research and innovation, his work focuses on nano orthopedic implants, implantable sensors, and advanced medical devices designed to improve patient outcomes. He has founded more than a dozen companies with FDA-approved medical products used in over 30,000 patients. With 1,350+ publications, 55,000+ citations, and an H-index of 135, he has received numerous international scientific honors and has served as President of the U.S. Society for Biomaterials. His research combines nanotechnology, artificial intelligence, smart implants, and sustainable healthcare innovation.',
+      contributions: ['Nanomedicine & AI Research', 'Nano Orthopedic Implant Development', 'AI-Enabled Implantable Sensor Innovation', 'Biomedical Research & Medical Device Commercialization'],
+      achievements: ['Clinical Impact: Nano orthopedic implants used in 30,000+ patients', 'Research Excellence: 1,350+ publications, 55,000+ citations, H-index 135', 'Innovation: Founded 12+ companies with FDA-approved medical products', 'Recognition: World Top 2% Scientist and Clarivate Top 0.1% Researcher']
+    },
+    {
+      id: 10,
+      name: 'Harry Ruda',
+      university: 'University of Toronto',
+      country: 'Canada',
+      image: harryImg,
+      about: 'Harry Ruda is a distinguished nanotechnology and semiconductor researcher specializing in nanowires, nanoscale electronic devices, and advanced chemical sensing. His research on InAs nanowires and nanoscale sensors has contributed to highly sensitive charge and single-molecule detection technologies.',
+      contributions: ['Nanotechnology & Nanowire Research', 'InAs Nanowire-Based Sensors', 'Nanoscale Chemical & Single-Molecule Sensing', 'Semiconductor Nanodevice Development'],
+      achievements: ['Nanotechnology Leadership: Stanley Meek Chair in Nanotechnology and Director of the Centre for Nanotechnology', 'Research Impact: 300+ publications and 8,800+ citations', 'Scientific Recognition: h-index of 46', 'Professional Honors: Fellow of the Royal Society of Canada and Canadian Academy of Engineering.']
+    },
     {
       id: 1,
       name: 'Dr. Ramakant Sharma',

@@ -1,8 +1,10 @@
 import React from "react";
 import AutoScrollingCarousel from "./AutoScrollingCarousel";
-import featuredConferenceData from "../../../data/conferenceData"; // move your array to a data file
+import featuredConferenceData from "../../../data/conferenceData"; 
 import hybridEventsData from "../../../data/hybridsData1";
+import { pepconData } from "../../../data/pepconData";
 import { motion } from "framer-motion";
+import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Conferences = () => {
   return (
@@ -27,6 +29,42 @@ const Conferences = () => {
           Academic knowledge into real-world applications.{" "}
         </p>
       </motion.div>
+
+      {/* PEPCON Conferences Grid */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold text-center mb-10 text-[#1f3b30]">PEPCON - 2026 Conferences</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pepconData.map((conf, index) => (
+            <a href={conf.link} target={conf.link.startsWith("http") ? "_blank" : "_self"} rel="noreferrer" key={index} className="block group">
+              <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full overflow-hidden">
+                {/* Image Section */}
+                <div className="relative h-48 w-full">
+                  <img src={conf.image} alt={conf.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-semibold text-gray-700 shadow-sm flex items-center">
+                    {conf.dateStr}
+                  </div>
+                </div>
+                
+                {/* Content Section */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold text-gray-800 mb-6 line-clamp-2">{conf.title}</h3>
+                  
+                  <div className="mt-auto bg-gray-50 rounded-xl p-4 border-l-4 border-blue-400">
+                    <div className="flex items-center text-sm text-gray-600 mb-3">
+                      <FaCalendarAlt className="text-purple-500 mr-3 text-base" />
+                      <span className="font-medium">{conf.dateStr}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <FaMapMarkerAlt className="text-pink-500 mr-3 text-base" />
+                      <span className="font-medium">{conf.location}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
 
       {/* Featured Conferences */}
       {featuredConferenceData.length > 0 && (

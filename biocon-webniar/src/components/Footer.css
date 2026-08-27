@@ -1,0 +1,248 @@
+.footer-section {
+  background-color: #111827; /* Sleek dark slate to match the new green theme */
+  padding: 5rem 0 3rem;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Column 1 */
+.footer-col-logo {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.footer-logo-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.footer-logo-img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-tagline {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.footer-visitors {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Column 2 */
+.footer-col-links {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.7); /* Slightly transparent based on screenshot */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 1rem;
+}
+
+.footer-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.footer-list a:hover {
+  opacity: 0.7;
+}
+
+.social-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Column 3 */
+.footer-col-contact {
+  flex: 0 0 350px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.contact-list li {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.btn-footer-register {
+  display: inline-block;
+  background-color: var(--primary); /* Darker var(--primary) button */
+  color: white;
+  padding: 10px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-footer-register:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-col-links {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+}
+
+.footer-bottom-bar {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.copyright-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.visitor-counter-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.visitor-counter-container:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.visitor-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fbbf24; /* yellow-400 equivalent */
+}
+
+.pulsing-dot-wrapper {
+  position: relative;
+  display: flex;
+  width: 10px;
+  height: 10px;
+}
+
+.pulsing-dot-bg {
+  position: absolute;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #4ade80; /* green-400 */
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.pulsing-dot {
+  position: relative;
+  display: inline-flex;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: #22c55e; /* green-500 */
+}
+
+.visitor-divider {
+  height: 1.5rem;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.visitor-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  min-width: 50px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.visitor-counter-container:hover .visitor-count {
+  transform: scale(1.05);
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
