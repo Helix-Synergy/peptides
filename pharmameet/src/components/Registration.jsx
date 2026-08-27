@@ -109,7 +109,7 @@ const Registration = () => {
       const returnUrl = encodeURIComponent(`${window.location.origin}${window.location.pathname}`);
       const gatewayUrl = import.meta.env.VITE_OCTACREST_PAYMENT_URL || 'http://localhost:3001';
       
-      window.location.href = `${gatewayUrl}/gateway?amount=${amount}&name=${encodeURIComponent(formData.firstName + ' ' + formData.lastName)}&email=${encodeURIComponent(formData.email)}&type=webinar&recordId=${pendingData.recordId}&returnUrl=${returnUrl}&apiUrl=${encodeURIComponent(API_BASE_URL.replace('/api', ''))}`;
+      window.location.href = `${gatewayUrl}/gateway?amount=${amount}&name=${encodeURIComponent(formData.firstName + ' ' + formData.lastName)}&email=${encodeURIComponent(formData.email)}&type=webinar&recordId=${pendingData.recordId}&returnUrl=${returnUrl}&apiUrl=${encodeURIComponent(API_BASE_URL.replace(/\/api$/, ''))}`;
 
     } catch (error) {
       console.error(error);
