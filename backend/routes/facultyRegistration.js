@@ -43,26 +43,45 @@ router.post('/', upload.single('paymentScreenshot'), async (req, res) => {
             formData.phone = formData.mobile;
         }
 
-        // 1. Save to Database
-        const facultyData = { ...formData, paymentScreenshot: uploadedFile ? uploadedFile.path : null };
-        const faculty = new Faculty(facultyData);
-        await faculty.save();
-        console.log("✅ Faculty Registration saved to DB:", faculty._id);
+        // 1. Save to Database (PRIMARY)
+        let faculty = await Faculty.findOne({ email: userEmail });
+        
+        if (faculty) {
+            if (faculty.payment_status === 'Paid') {
+                return res.status(409).json({ success: false, message: 'You have already registered and paid successfully.' });
+            } else {
+                // Upsert: Update existing pending record
+                Object.assign(faculty, formData);
+                if (uploadedFile) faculty.paymentScreenshot = uploadedFile.path;
+                faculty.payment_status = 'Pending';
+                await faculty.save();
+                console.log("✅ Faculty Registration updated in DB:", faculty._id);
+            }
+        } else {
+            // Create new record
+            const facultyData = { 
+                ...formData, 
+                paymentScreenshot: uploadedFile ? uploadedFile.path : null,
+                payment_status: 'Pending'
+            };
+            faculty = new Faculty(facultyData);
+            await faculty.save();
+            console.log("✅ Faculty Registration saved to DB:", faculty._id);
+        }
 
         try {
-            // 2. Send emails
-            // Prepare attachment for both emails
+            // 2. Send emails (SECONDARY)
             const attachments = uploadedFile ? [{
                 filename: uploadedFile.originalname,
                 path: uploadedFile.path
             }] : [];
 
-            // Send email to the owner
+            // Send email to owner
             const ownerSubject = `New ${formName}`;
             const ownerHtml = ownerTemplate(formData, formName);
             await sendEmail(process.env.OWNER_EMAIL, ownerSubject, ownerHtml, attachments);
 
-            // Send confirmation email to the user
+            // Send confirmation email to user
             const userSubject = `Confirmation: ${formName} Submission`;
             const userHtml = confirmationTemplate(formData.firstName, formName);
             await sendEmail(userEmail, userSubject, userHtml, attachments);
@@ -70,7 +89,7 @@ router.post('/', upload.single('paymentScreenshot'), async (req, res) => {
             console.error("⚠️ Email failed but data saved:", emailError.message);
         }
 
-        res.status(200).json({ success: true, message: 'Registration submitted successfully!' });
+        res.status(200).json({ success: true, message: 'Registration submitted successfully!', recordId: faculty._id });
     } catch (error) {
         console.error('Error handling faculty registration:', error);
         res.status(500).json({ success: false, message: 'Internal server error.' });

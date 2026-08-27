@@ -44,10 +44,30 @@ router.post('/', upload.single('paymentScreenshot'), async (req, res) => {
         }
 
         // 1. Save to Database (PRIMARY)
-        const studentData = { ...formData, paymentScreenshot: uploadedFile ? uploadedFile.path : null };
-        const student = new Student(studentData);
-        await student.save();
-        console.log("✅ Student Registration saved to DB:", student._id);
+        let student = await Student.findOne({ email: userEmail });
+        
+        if (student) {
+            if (student.payment_status === 'Paid') {
+                return res.status(409).json({ success: false, message: 'You have already registered and paid successfully.' });
+            } else {
+                // Upsert: Update existing pending record
+                Object.assign(student, formData);
+                if (uploadedFile) student.paymentScreenshot = uploadedFile.path;
+                student.payment_status = 'Pending'; // Ensure it stays Pending if they retry
+                await student.save();
+                console.log("✅ Student Registration updated in DB:", student._id);
+            }
+        } else {
+            // Create new record
+            const studentData = { 
+                ...formData, 
+                paymentScreenshot: uploadedFile ? uploadedFile.path : null,
+                payment_status: 'Pending'
+            };
+            student = new Student(studentData);
+            await student.save();
+            console.log("✅ Student Registration saved to DB:", student._id);
+        }
 
         try {
             // 2. Send emails (SECONDARY)
@@ -70,7 +90,7 @@ router.post('/', upload.single('paymentScreenshot'), async (req, res) => {
             console.error("⚠️ Email failed but data saved:", emailError.message);
         }
 
-        res.status(200).json({ success: true, message: 'Registration submitted successfully!' });
+        res.status(200).json({ success: true, message: 'Registration submitted successfully!', recordId: student._id });
     } catch (error) {
         console.error('Error handling student registration:', error);
         res.status(500).json({ success: false, message: 'Internal server error.' });

@@ -58,6 +58,62 @@ router.post('/', async (req, res) => {
     }
 });
 
+// POST /pending - Upsert webinar registration
+router.post('/pending', async (req, res) => {
+    try {
+        const formData = req.body;
+        const userEmail = formData.email;
+
+        if (!userEmail) {
+            return res.status(400).json({ success: false, message: 'Email is required' });
+        }
+
+        let registration = await WebinarRegistration.findOne({ email: userEmail });
+
+        if (registration) {
+            if (registration.payment_status === 'Paid') {
+                return res.status(409).json({ success: false, message: 'You have already registered and paid successfully.' });
+            } else {
+                // Upsert: Update existing pending record
+                Object.assign(registration, formData);
+                registration.payment_status = 'Pending';
+                await registration.save();
+                console.log("✅ Webinar Registration updated in DB:", registration._id);
+            }
+        } else {
+            // Create new record
+            const webinarData = {
+                ...formData,
+                payment_status: 'Pending',
+                source: formData.source || 'Webinar'
+            };
+            registration = new WebinarRegistration(webinarData);
+            await registration.save();
+            console.log("✅ Webinar Registration saved to DB:", registration._id);
+        }
+
+        res.status(200).json({ success: true, recordId: registration._id });
+    } catch (error) {
+        console.error('Error handling pending webinar registration:', error);
+        res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+});
+
+// GET a specific webinar registration by ID
+router.get('/:id', async (req, res) => {
+    try {
+        const registration = await WebinarRegistration.findById(req.params.id);
+        if (!registration) {
+            return res.status(404).json({ success: false, message: 'Registration not found' });
+        }
+        res.status(200).json(registration);
+    } catch (error) {
+        console.error('Error fetching webinar registration by ID:', error);
+        res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+});
+
+
 // GET all webinar registrations
 router.get('/', async (req, res) => {
     try {
@@ -79,7 +135,7 @@ router.get('/', async (req, res) => {
 
 router.post('/send-pdf-receipt', async (req, res) => {
     try {
-        const { email, pdfBase64, paymentId } = req.body;
+        const { email, pdfBase64, paymentId, webinarName = 'Smart Materials Webinar' } = req.body;
         
         if (!email || !pdfBase64) {
             return res.status(400).json({ success: false, message: 'Missing email or pdfBase64' });
@@ -93,8 +149,10 @@ router.post('/send-pdf-receipt', async (req, res) => {
             }
         ];
 
-        const subject = `Payment Receipt: Smart Materials Webinar`;
-        const html = `<p>Dear Participant,</p><p>Thank you for your registration. Please find attached your official payment receipt for the Smart Materials Webinar.</p><br><p>Best Regards,<br>Pepcon Team</p>`;
+        // Format webinar name nicely (e.g. BuzzWebinar -> Buzz Webinar)
+        const formattedName = webinarName.replace(/([A-Z])/g, ' $1').trim();
+        const subject = `Payment Receipt: ${formattedName}`;
+        const html = `<p>Dear Participant,</p><p>Thank you for your registration. Please find attached your official payment receipt for the ${formattedName}.</p><br><p>Best Regards,<br>Pepcon Team</p>`;
         
         await sendEmail(email, subject, html, attachments);
         res.status(200).json({ success: true });

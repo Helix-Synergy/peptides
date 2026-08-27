@@ -40,7 +40,7 @@ router.post('/create-order', async (req, res) => {
 // 2. Verify Payment
 router.post('/verify-payment', async (req, res) => {
     try {
-        const { razorpay_order_id, razorpay_payment_id, razorpay_signature, formType, formId } = req.body;
+        const { razorpay_order_id, razorpay_payment_id, razorpay_signature, recordId, type } = req.body;
 
         if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
             return res.status(400).json({ message: 'Missing payment details' });
@@ -56,8 +56,27 @@ router.post('/verify-payment', async (req, res) => {
         if (expectedSignature === razorpay_signature) {
             // Payment Verification Successful
 
-            // Optionally update the registration form status here if formId is provided
-            // For now, we just return success, and the frontend will submit the form with payment details
+            // Update the registration form status
+            if (recordId) {
+                let Model;
+                if (type === 'faculty' || type === 'Faculty') {
+                    Model = Faculty;
+                } else if (type === 'webinar' || type === 'Webinar') {
+                    Model = WebinarRegistration;
+                } else {
+                    Model = Student;
+                }
+                
+                const record = await Model.findById(recordId);
+                
+                if (record) {
+                    record.payment_status = 'Paid';
+                    record.razorpay_payment_id = razorpay_payment_id;
+                    record.razorpay_order_id = razorpay_order_id;
+                    await record.save();
+                    console.log(`✅ Payment verified and record ${recordId} updated to Paid.`);
+                }
+            }
 
             res.json({
                 success: true,
